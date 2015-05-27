@@ -10,11 +10,12 @@
 		595F1F394C0A58A7F7B2B7C1 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 756E2DBB4E054859046F4273 /* libPods.a */; };
 		FB420F871B1017FB0007BBD5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FB420F861B1017FB0007BBD5 /* main.m */; };
 		FB420F8A1B1017FB0007BBD5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FB420F891B1017FB0007BBD5 /* AppDelegate.m */; };
-		FB420F8D1B1017FB0007BBD5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB420F8C1B1017FB0007BBD5 /* ViewController.m */; };
 		FB420F901B1017FB0007BBD5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB420F8E1B1017FB0007BBD5 /* Main.storyboard */; };
 		FB420F921B1017FB0007BBD5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB420F911B1017FB0007BBD5 /* Images.xcassets */; };
 		FB420F951B1017FB0007BBD5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB420F931B1017FB0007BBD5 /* LaunchScreen.xib */; };
 		FB420FA11B1017FB0007BBD5 /* GW2BroHTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FB420FA01B1017FB0007BBD5 /* GW2BroHTests.m */; };
+		FB7757931B12E92A001EB483 /* GW2BroH.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = FB7757921B12E92A001EB483 /* GW2BroH.xcconfig */; };
+		FBF47B701B124D2F000548B4 /* WebSiteHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = FBF47B6F1B124D2F000548B4 /* WebSiteHelper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,14 +37,15 @@
 		FB420F861B1017FB0007BBD5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		FB420F881B1017FB0007BBD5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		FB420F891B1017FB0007BBD5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		FB420F8B1B1017FB0007BBD5 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		FB420F8C1B1017FB0007BBD5 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		FB420F8F1B1017FB0007BBD5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FB420F911B1017FB0007BBD5 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		FB420F941B1017FB0007BBD5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		FB420F9A1B1017FB0007BBD5 /* GW2BroHTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GW2BroHTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB420F9F1B1017FB0007BBD5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FB420FA01B1017FB0007BBD5 /* GW2BroHTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GW2BroHTests.m; sourceTree = "<group>"; };
+		FB7757921B12E92A001EB483 /* GW2BroH.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = GW2BroH.xcconfig; path = xcconfig/GW2BroH.xcconfig; sourceTree = "<group>"; };
+		FBF47B6E1B124D2F000548B4 /* WebSiteHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WebSiteHelper.h; path = WebSite/WebSiteHelper.h; sourceTree = "<group>"; };
+		FBF47B6F1B124D2F000548B4 /* WebSiteHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WebSiteHelper.m; path = WebSite/WebSiteHelper.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,10 +107,11 @@
 		FB420F831B1017FB0007BBD5 /* GW2BroH */ = {
 			isa = PBXGroup;
 			children = (
+				FB7757911B12E907001EB483 /* xcconfig */,
+				FBF47B6D1B124AF8000548B4 /* ViewController */,
+				FBF47B6C1B124AEA000548B4 /* WebSite */,
 				FB420F881B1017FB0007BBD5 /* AppDelegate.h */,
 				FB420F891B1017FB0007BBD5 /* AppDelegate.m */,
-				FB420F8B1B1017FB0007BBD5 /* ViewController.h */,
-				FB420F8C1B1017FB0007BBD5 /* ViewController.m */,
 				FB420F8E1B1017FB0007BBD5 /* Main.storyboard */,
 				FB420F911B1017FB0007BBD5 /* Images.xcassets */,
 				FB420F931B1017FB0007BBD5 /* LaunchScreen.xib */,
@@ -141,6 +144,30 @@
 				FB420F9F1B1017FB0007BBD5 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FB7757911B12E907001EB483 /* xcconfig */ = {
+			isa = PBXGroup;
+			children = (
+				FB7757921B12E92A001EB483 /* GW2BroH.xcconfig */,
+			);
+			name = xcconfig;
+			sourceTree = "<group>";
+		};
+		FBF47B6C1B124AEA000548B4 /* WebSite */ = {
+			isa = PBXGroup;
+			children = (
+				FBF47B6E1B124D2F000548B4 /* WebSiteHelper.h */,
+				FBF47B6F1B124D2F000548B4 /* WebSiteHelper.m */,
+			);
+			name = WebSite;
+			sourceTree = "<group>";
+		};
+		FBF47B6D1B124AF8000548B4 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = ViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -225,6 +252,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB7757931B12E92A001EB483 /* GW2BroH.xcconfig in Resources */,
 				FB420F901B1017FB0007BBD5 /* Main.storyboard in Resources */,
 				FB420F951B1017FB0007BBD5 /* LaunchScreen.xib in Resources */,
 				FB420F921B1017FB0007BBD5 /* Images.xcassets in Resources */,
@@ -278,7 +306,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FB420F8D1B1017FB0007BBD5 /* ViewController.m in Sources */,
+				FBF47B701B124D2F000548B4 /* WebSiteHelper.m in Sources */,
 				FB420F8A1B1017FB0007BBD5 /* AppDelegate.m in Sources */,
 				FB420F871B1017FB0007BBD5 /* main.m in Sources */,
 			);
@@ -404,7 +432,7 @@
 		};
 		FB420FA51B1017FB0007BBD5 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B1C33BB0A6ABF3B0116DF588 /* Pods.debug.xcconfig */;
+			baseConfigurationReference = FB7757921B12E92A001EB483 /* GW2BroH.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = GW2BroH/Info.plist;
