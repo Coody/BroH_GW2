@@ -8,6 +8,8 @@
 
 #import "AppDelegate.h"
 
+#import "ViewControllerStartMenu.h"
+
 @interface AppDelegate ()
 
 @end
@@ -17,6 +19,36 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    /**/
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    /**/
+    self.window.backgroundColor = [UIColor blackColor];
+    
+    /**/
+    [[UIApplication sharedApplication] setStatusBarStyle: UIStatusBarStyleLightContent];
+    
+    ViewControllerStartMenu *startMenuVC = [ViewControllerStartMenu new];
+    self.window.rootViewController = startMenuVC;
+    [self.window makeKeyAndVisible];
+    
+    //    SvTabBarFirstViewController *viewController1, *viewController2;
+    //
+    //    viewController1 = [[SvTabBarFirstViewController alloc] initWithNibName:nil bundle:nil];
+    //    viewController1.title = @"First";
+    //
+    //    viewController2 = [[SvTabBarFirstViewController alloc] initWithNibName:nil bundle:nil];
+    //    viewController2.title = @"Second";
+    //
+    //    self.tabBarController = [[[UITabBarController alloc] init] autorelease];
+    //    self.tabBarController.delegate = self;
+    //    self.tabBarController.viewControllers = [NSArray arrayWithObjects:viewController1, viewController2, nil];
+    //
+    //    [viewController1 release];
+    //    [viewController2 release];
+    //
+    //    self.window.rootViewController = self.tabBarController;
+    //    [self.window makeKeyAndVisible];
     return YES;
 }
 

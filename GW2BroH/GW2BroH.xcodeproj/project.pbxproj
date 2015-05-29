@@ -10,9 +10,9 @@
 		595F1F394C0A58A7F7B2B7C1 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 756E2DBB4E054859046F4273 /* libPods.a */; };
 		FB2CA7591B18343E009ED57F /* ViewControllerStartMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = FB2CA7561B18343E009ED57F /* ViewControllerStartMenu.m */; };
 		FB2CA75A1B18343E009ED57F /* ViewControllerTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = FB2CA7581B18343E009ED57F /* ViewControllerTabBar.m */; };
+		FB2CA75E1B183F94009ED57F /* GW2BroH_Tools.m in Sources */ = {isa = PBXBuildFile; fileRef = FB2CA75D1B183F94009ED57F /* GW2BroH_Tools.m */; };
 		FB420F871B1017FB0007BBD5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FB420F861B1017FB0007BBD5 /* main.m */; };
 		FB420F8A1B1017FB0007BBD5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FB420F891B1017FB0007BBD5 /* AppDelegate.m */; };
-		FB420F901B1017FB0007BBD5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB420F8E1B1017FB0007BBD5 /* Main.storyboard */; };
 		FB420F921B1017FB0007BBD5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB420F911B1017FB0007BBD5 /* Images.xcassets */; };
 		FB420F951B1017FB0007BBD5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB420F931B1017FB0007BBD5 /* LaunchScreen.xib */; };
 		FB420FA11B1017FB0007BBD5 /* GW2BroHTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FB420FA01B1017FB0007BBD5 /* GW2BroHTests.m */; };
@@ -36,12 +36,13 @@
 		FB2CA7561B18343E009ED57F /* ViewControllerStartMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewControllerStartMenu.m; path = ../../../Documents/BroH_GW2/GW2BroH/GW2BroH/ViewController/ViewControllerStartMenu.m; sourceTree = "<group>"; };
 		FB2CA7571B18343E009ED57F /* ViewControllerTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewControllerTabBar.h; path = ../../../Documents/BroH_GW2/GW2BroH/GW2BroH/ViewController/ViewControllerTabBar.h; sourceTree = "<group>"; };
 		FB2CA7581B18343E009ED57F /* ViewControllerTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewControllerTabBar.m; path = ../../../Documents/BroH_GW2/GW2BroH/GW2BroH/ViewController/ViewControllerTabBar.m; sourceTree = "<group>"; };
+		FB2CA75C1B183F94009ED57F /* GW2BroH_Tools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GW2BroH_Tools.h; sourceTree = "<group>"; };
+		FB2CA75D1B183F94009ED57F /* GW2BroH_Tools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GW2BroH_Tools.m; sourceTree = "<group>"; };
 		FB420F811B1017FB0007BBD5 /* GW2BroH.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GW2BroH.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB420F851B1017FB0007BBD5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FB420F861B1017FB0007BBD5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		FB420F881B1017FB0007BBD5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		FB420F891B1017FB0007BBD5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		FB420F8F1B1017FB0007BBD5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FB420F911B1017FB0007BBD5 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		FB420F941B1017FB0007BBD5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		FB420F9A1B1017FB0007BBD5 /* GW2BroHTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GW2BroHTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -85,6 +86,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		FB2CA75B1B183F94009ED57F /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				FB2CA75C1B183F94009ED57F /* GW2BroH_Tools.h */,
+				FB2CA75D1B183F94009ED57F /* GW2BroH_Tools.m */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
 		FB420F781B1017FB0007BBD5 = {
 			isa = PBXGroup;
 			children = (
@@ -108,10 +118,10 @@
 		FB420F831B1017FB0007BBD5 /* GW2BroH */ = {
 			isa = PBXGroup;
 			children = (
+				FB2CA75B1B183F94009ED57F /* Tools */,
 				FBF47B6D1B124AF8000548B4 /* ViewController */,
 				FB420F881B1017FB0007BBD5 /* AppDelegate.h */,
 				FB420F891B1017FB0007BBD5 /* AppDelegate.m */,
-				FB420F8E1B1017FB0007BBD5 /* Main.storyboard */,
 				FB420F911B1017FB0007BBD5 /* Images.xcassets */,
 				FB420F931B1017FB0007BBD5 /* LaunchScreen.xib */,
 				FB420F841B1017FB0007BBD5 /* Supporting Files */,
@@ -238,7 +248,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FB420F901B1017FB0007BBD5 /* Main.storyboard in Resources */,
 				FB420F951B1017FB0007BBD5 /* LaunchScreen.xib in Resources */,
 				FB420F921B1017FB0007BBD5 /* Images.xcassets in Resources */,
 			);
@@ -292,6 +301,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FB2CA75A1B18343E009ED57F /* ViewControllerTabBar.m in Sources */,
+				FB2CA75E1B183F94009ED57F /* GW2BroH_Tools.m in Sources */,
 				FB420F8A1B1017FB0007BBD5 /* AppDelegate.m in Sources */,
 				FB420F871B1017FB0007BBD5 /* main.m in Sources */,
 				FB2CA7591B18343E009ED57F /* ViewControllerStartMenu.m in Sources */,
@@ -317,14 +327,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		FB420F8E1B1017FB0007BBD5 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				FB420F8F1B1017FB0007BBD5 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		FB420F931B1017FB0007BBD5 /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -372,7 +374,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -409,7 +411,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -418,6 +420,7 @@
 		};
 		FB420FA51B1017FB0007BBD5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B1C33BB0A6ABF3B0116DF588 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = GW2BroH/Info.plist;
