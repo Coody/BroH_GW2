@@ -8,7 +8,7 @@
 
 #import "AppDelegate.h"
 
-#import "ViewControllerStartMenu.h"
+#import "ViewControllerTabBar.h"
 
 @interface AppDelegate ()
 
@@ -26,11 +26,24 @@
     self.window.backgroundColor = [UIColor blackColor];
     
     /**/
-    [[UIApplication sharedApplication] setStatusBarStyle: UIStatusBarStyleLightContent];
+    [[UIApplication sharedApplication] setStatusBarStyle: UIStatusBarStyleDefault];
     
-    ViewControllerStartMenu *startMenuVC = [ViewControllerStartMenu new];
-    self.window.rootViewController = startMenuVC;
+    
+    ViewControllerTabBar *tabBarController = [[ViewControllerTabBar alloc] init];
+    
+    self.window.rootViewController = tabBarController;
+    
     [self.window makeKeyAndVisible];
+    
+    
+    
+    
+    
+    
+    
+//    ViewControllerStartMenu *startMenuVC = [ViewControllerStartMenu new];
+//    self.window.rootViewController = startMenuVC;
+    
     
     //    SvTabBarFirstViewController *viewController1, *viewController2;
     //

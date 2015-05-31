@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+/**
+ * @brief - Welcome Page!
+ * @details -
+ */
 @interface ViewControllerStartMenu : UIViewController
 
 @end
