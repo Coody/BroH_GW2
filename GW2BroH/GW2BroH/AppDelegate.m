@@ -12,6 +12,8 @@
 
 @interface AppDelegate ()
 
+@property (nonatomic , strong) UINavigationController *navController;
+
 @end
 
 @implementation AppDelegate
@@ -20,48 +22,32 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-    /**/
+    /* 設定 bundle */
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    /**/
+    
+    /* 背景顏色 */
     self.window.backgroundColor = [UIColor blackColor];
     
-    /**/
+    /* status bar style */
     [[UIApplication sharedApplication] setStatusBarStyle: UIStatusBarStyleDefault];
     
-    
+    /* custom tab bar controller */
     ViewControllerTabBar *tabBarController = [[ViewControllerTabBar alloc] init];
     
-    self.window.rootViewController = tabBarController;
+    /* 設定 navigation controller 為 custom tab bar controller ,
+     請參考：https://developer.apple.com/library/prerelease/ios/documentation/WindowsViews/Conceptual/ViewControllerCatalog/Chapters/NavigationControllers.html 
+     */
+    self.navController = [[UINavigationController alloc] initWithRootViewController:tabBarController];
     
+    /* 先隱藏 */
+    self.navController.navigationBarHidden = YES;
+    
+    /* 讓 rootViewController 裝入 navigation controller */
+    self.window.rootViewController = self.navController;
+    
+    //
     [self.window makeKeyAndVisible];
     
-    
-    
-    
-    
-    
-    
-//    ViewControllerStartMenu *startMenuVC = [ViewControllerStartMenu new];
-//    self.window.rootViewController = startMenuVC;
-    
-    
-    //    SvTabBarFirstViewController *viewController1, *viewController2;
-    //
-    //    viewController1 = [[SvTabBarFirstViewController alloc] initWithNibName:nil bundle:nil];
-    //    viewController1.title = @"First";
-    //
-    //    viewController2 = [[SvTabBarFirstViewController alloc] initWithNibName:nil bundle:nil];
-    //    viewController2.title = @"Second";
-    //
-    //    self.tabBarController = [[[UITabBarController alloc] init] autorelease];
-    //    self.tabBarController.delegate = self;
-    //    self.tabBarController.viewControllers = [NSArray arrayWithObjects:viewController1, viewController2, nil];
-    //
-    //    [viewController1 release];
-    //    [viewController2 release];
-    //
-    //    self.window.rootViewController = self.tabBarController;
-    //    [self.window makeKeyAndVisible];
     return YES;
 }
 
