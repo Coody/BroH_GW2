@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		595F1F394C0A58A7F7B2B7C1 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 756E2DBB4E054859046F4273 /* libPods.a */; };
-		FB2CA75A1B18343E009ED57F /* ViewControllerTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = FB2CA7581B18343E009ED57F /* ViewControllerTabBar.m */; };
 		FB2CA75E1B183F94009ED57F /* GW2BroH_Tools.m in Sources */ = {isa = PBXBuildFile; fileRef = FB2CA75D1B183F94009ED57F /* GW2BroH_Tools.m */; };
 		FB38C4091B1ABDB1001B424C /* ViewControllerStartMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = FB38C4081B1ABDB1001B424C /* ViewControllerStartMenu.m */; };
 		FB38C40C1B1ABDC4001B424C /* ViewControllerWorldBoss.m in Sources */ = {isa = PBXBuildFile; fileRef = FB38C40B1B1ABDC4001B424C /* ViewControllerWorldBoss.m */; };
@@ -21,6 +20,7 @@
 		FB420F921B1017FB0007BBD5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB420F911B1017FB0007BBD5 /* Images.xcassets */; };
 		FB420F951B1017FB0007BBD5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB420F931B1017FB0007BBD5 /* LaunchScreen.xib */; };
 		FB420FA11B1017FB0007BBD5 /* GW2BroHTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FB420FA01B1017FB0007BBD5 /* GW2BroHTests.m */; };
+		FB82A9C11B50E592006A5F07 /* ViewControllerTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = FB82A9C01B50E592006A5F07 /* ViewControllerTabBar.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,8 +37,6 @@
 		3B7586483FBE633A96ED3A40 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		756E2DBB4E054859046F4273 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1C33BB0A6ABF3B0116DF588 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
-		FB2CA7571B18343E009ED57F /* ViewControllerTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewControllerTabBar.h; path = ../../../Documents/BroH_GW2/GW2BroH/GW2BroH/ViewController/ViewControllerTabBar.h; sourceTree = "<group>"; };
-		FB2CA7581B18343E009ED57F /* ViewControllerTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewControllerTabBar.m; path = ../../../Documents/BroH_GW2/GW2BroH/GW2BroH/ViewController/ViewControllerTabBar.m; sourceTree = "<group>"; };
 		FB2CA75C1B183F94009ED57F /* GW2BroH_Tools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GW2BroH_Tools.h; sourceTree = "<group>"; };
 		FB2CA75D1B183F94009ED57F /* GW2BroH_Tools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GW2BroH_Tools.m; sourceTree = "<group>"; };
 		FB38C4071B1ABDB1001B424C /* ViewControllerStartMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewControllerStartMenu.h; path = ViewController/StartMenu/ViewControllerStartMenu.h; sourceTree = "<group>"; };
@@ -64,6 +62,8 @@
 		FB420F9A1B1017FB0007BBD5 /* GW2BroHTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GW2BroHTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB420F9F1B1017FB0007BBD5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FB420FA01B1017FB0007BBD5 /* GW2BroHTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GW2BroHTests.m; sourceTree = "<group>"; };
+		FB82A9BF1B50E592006A5F07 /* ViewControllerTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewControllerTabBar.h; path = ViewController/ViewControllerTabBar.h; sourceTree = "<group>"; };
+		FB82A9C01B50E592006A5F07 /* ViewControllerTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewControllerTabBar.m; path = ViewController/ViewControllerTabBar.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -235,8 +235,8 @@
 				FB38C4031B1ABC78001B424C /* Dungeons */,
 				FB38C4051B1ABCFA001B424C /* Guild */,
 				FB38C4061B1ABD1C001B424C /* More */,
-				FB2CA7571B18343E009ED57F /* ViewControllerTabBar.h */,
-				FB2CA7581B18343E009ED57F /* ViewControllerTabBar.m */,
+				FB82A9BF1B50E592006A5F07 /* ViewControllerTabBar.h */,
+				FB82A9C01B50E592006A5F07 /* ViewControllerTabBar.m */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -375,11 +375,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FB2CA75A1B18343E009ED57F /* ViewControllerTabBar.m in Sources */,
 				FB38C4091B1ABDB1001B424C /* ViewControllerStartMenu.m in Sources */,
 				FB2CA75E1B183F94009ED57F /* GW2BroH_Tools.m in Sources */,
 				FB420F8A1B1017FB0007BBD5 /* AppDelegate.m in Sources */,
 				FB38C4151B1ABE0E001B424C /* ViewControllerGuild.m in Sources */,
+				FB82A9C11B50E592006A5F07 /* ViewControllerTabBar.m in Sources */,
 				FB38C4181B1ABE1D001B424C /* ViewControllerMore.m in Sources */,
 				FB38C40F1B1ABDD9001B424C /* ViewControllerItems.m in Sources */,
 				FB38C4121B1ABDFF001B424C /* ViewControllerDungeons.m in Sources */,

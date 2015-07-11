@@ -8,11 +8,52 @@
 
 #import "ViewControllerTabBar.h"
 
-@interface ViewControllerTabBar ()
+// for ViewController
+/* startMenu ViewController */
+#import "ViewControllerStartMenu.h"
+/* Other ViewControllers */
+#import "ViewControllerWorldBoss.h"
+#import "ViewControllerItems.h"
+#import "ViewControllerDungeons.h"
+#import "ViewControllerGuild.h"
+#import "ViewControllerMore.h"
+
+// for constants
+#import "Constants.h"
+
+@interface ViewControllerTabBar () <UITabBarControllerDelegate>
+{
+    NSArray *_startMenuArray;
+    NSArray *_otherVCArray;
+    
+    BOOL _isChangeIndex;
+}
 
 @end
 
 @implementation ViewControllerTabBar
+
+-(id)init{
+    self = [super init];
+    if ( self != nil ) {
+        self.delegate = self;
+        _startMenuArray = @[([[ViewControllerStartMenu alloc] init])];
+        _otherVCArray = @[([[ViewControllerWorldBoss alloc] init]),
+                          ([[ViewControllerItems alloc] init]),
+                          ([[ViewControllerDungeons alloc] init]),
+                          ([[ViewControllerGuild alloc] init]),
+                          ([[ViewControllerMore alloc] init])
+                          ];
+        self.viewControllers = _startMenuArray;
+        self.tabBar.hidden = YES;
+        
+        _isChangeIndex = NO;
+        
+//        UIImage* anImage = [UIImage imageNamed:@"MyViewControllerImage.png"];
+        
+    }
+    return self;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -24,14 +65,36 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+-(void)setSelectedIndex:(NSUInteger)selectedIndex{
+    if ( _isChangeIndex == YES ) {
+        return;
+    }
+    NSUInteger tempSelectedIndex = selectedIndex;
+    switch (tempSelectedIndex) {
+        case EnumTabBarIndexStartMenu:
+        {
+            _isChangeIndex = YES;
+            self.viewControllers = _startMenuArray;
+            self.tabBar.hidden = YES;
+            self.navigationController.navigationBarHidden = YES;
+            [super setSelectedIndex:tempSelectedIndex];
+        }
+            break;
+        case EnumTabBarIndexWorldBoss:
+        {
+            _isChangeIndex = YES;
+            self.viewControllers = _otherVCArray;
+            self.tabBar.hidden = NO;
+            tempSelectedIndex = tempSelectedIndex - 10;
+            self.navigationController.navigationBarHidden = NO;
+            [super setSelectedIndex:tempSelectedIndex];
+        }
+            break;
+        default:
+            break;
+    }
+    _isChangeIndex = NO;
 }
-*/
+
 
 @end
