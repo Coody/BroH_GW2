@@ -9,7 +9,6 @@
 #import "ViewControllerStartMenu.h"
 
 // for Tools
-#import "GW2BroH_Tools.h"
 #import "Constants.h"
 
 @interface ViewControllerStartMenu ()
