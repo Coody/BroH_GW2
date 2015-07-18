@@ -29,6 +29,7 @@
 //        UITabBarItem* theItem = [[UITabBarItem alloc] initWithTitle:@"Home" image:anImage tag:0];
 
         // TODO: 使用 image ，不要使用系統預設
+        NSString *path = [NSBundle mainBundle].resourcePath;
         UITabBarItem* theItem = [[UITabBarItem alloc] initWithTabBarSystemItem:(UITabBarSystemItemHistory) tag:0];
         self.tabBarItem = theItem;
     }
