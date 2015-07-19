@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewControllerMore : UIViewController
+@interface ViewControllerMore : UINavigationController
 
 @end

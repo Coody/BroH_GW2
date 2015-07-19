@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		595F1F394C0A58A7F7B2B7C1 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 756E2DBB4E054859046F4273 /* libPods.a */; };
+		5AB68C981B5B9EAA00B3A49D /* Images in Resources */ = {isa = PBXBuildFile; fileRef = 5AB68C971B5B9EAA00B3A49D /* Images */; };
+		5AB68C9B1B5BB42600B3A49D /* ViewWorldBoss.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AB68C9A1B5BB42600B3A49D /* ViewWorldBoss.m */; };
 		FB2CA75E1B183F94009ED57F /* GW2BroH_Tools.m in Sources */ = {isa = PBXBuildFile; fileRef = FB2CA75D1B183F94009ED57F /* GW2BroH_Tools.m */; };
 		FB38C4091B1ABDB1001B424C /* ViewControllerStartMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = FB38C4081B1ABDB1001B424C /* ViewControllerStartMenu.m */; };
 		FB38C40C1B1ABDC4001B424C /* ViewControllerWorldBoss.m in Sources */ = {isa = PBXBuildFile; fileRef = FB38C40B1B1ABDC4001B424C /* ViewControllerWorldBoss.m */; };
@@ -19,8 +21,6 @@
 		FB420F8A1B1017FB0007BBD5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FB420F891B1017FB0007BBD5 /* AppDelegate.m */; };
 		FB420F921B1017FB0007BBD5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB420F911B1017FB0007BBD5 /* Images.xcassets */; };
 		FB420F951B1017FB0007BBD5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB420F931B1017FB0007BBD5 /* LaunchScreen.xib */; };
-		FB420FA11B1017FB0007BBD5 /* GW2BroHTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FB420FA01B1017FB0007BBD5 /* GW2BroHTests.m */; };
-		FB6A33571B5AA4180091A92A /* Resources in Resources */ = {isa = PBXBuildFile; fileRef = FB6A33561B5AA4180091A92A /* Resources */; };
 		FB82A9C11B50E592006A5F07 /* ViewControllerTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = FB82A9C01B50E592006A5F07 /* ViewControllerTabBar.m */; };
 		FB8987501B5782D000D56917 /* GW2_Request_Gems.m in Sources */ = {isa = PBXBuildFile; fileRef = FB8987241B5782D000D56917 /* GW2_Request_Gems.m */; };
 		FB8987511B5782D000D56917 /* GW2_Request_Items.m in Sources */ = {isa = PBXBuildFile; fileRef = FB8987261B5782D000D56917 /* GW2_Request_Items.m */; };
@@ -33,18 +33,11 @@
 		FB8987581B5782D000D56917 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = FB8987361B5782D000D56917 /* README.md */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		FB420F9B1B1017FB0007BBD5 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FB420F791B1017FB0007BBD5 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = FB420F801B1017FB0007BBD5;
-			remoteInfo = GW2BroH;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
 		3B7586483FBE633A96ED3A40 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		5AB68C971B5B9EAA00B3A49D /* Images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Images; sourceTree = "<group>"; };
+		5AB68C991B5BB42600B3A49D /* ViewWorldBoss.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewWorldBoss.h; path = ViewController/WorldBoss/ViewWorldBoss.h; sourceTree = "<group>"; };
+		5AB68C9A1B5BB42600B3A49D /* ViewWorldBoss.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewWorldBoss.m; path = ViewController/WorldBoss/ViewWorldBoss.m; sourceTree = "<group>"; };
 		756E2DBB4E054859046F4273 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1C33BB0A6ABF3B0116DF588 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		FB2CA75C1B183F94009ED57F /* GW2BroH_Tools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GW2BroH_Tools.h; sourceTree = "<group>"; };
@@ -69,10 +62,8 @@
 		FB420F891B1017FB0007BBD5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		FB420F911B1017FB0007BBD5 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		FB420F941B1017FB0007BBD5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		FB420F9A1B1017FB0007BBD5 /* GW2BroHTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GW2BroHTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB420F9F1B1017FB0007BBD5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FB420FA01B1017FB0007BBD5 /* GW2BroHTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GW2BroHTests.m; sourceTree = "<group>"; };
-		FB6A33561B5AA4180091A92A /* Resources */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Resources; sourceTree = "<group>"; };
 		FB82A9BF1B50E592006A5F07 /* ViewControllerTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewControllerTabBar.h; path = ViewController/ViewControllerTabBar.h; sourceTree = "<group>"; };
 		FB82A9C01B50E592006A5F07 /* ViewControllerTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewControllerTabBar.m; path = ViewController/ViewControllerTabBar.m; sourceTree = "<group>"; };
 		FB8987231B5782D000D56917 /* GW2_Request_Gems.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GW2_Request_Gems.h; sourceTree = "<group>"; };
@@ -100,13 +91,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				595F1F394C0A58A7F7B2B7C1 /* libPods.a in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FB420F971B1017FB0007BBD5 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -152,6 +136,8 @@
 		FB38C4021B1ABC70001B424C /* WorldBoss */ = {
 			isa = PBXGroup;
 			children = (
+				5AB68C991B5BB42600B3A49D /* ViewWorldBoss.h */,
+				5AB68C9A1B5BB42600B3A49D /* ViewWorldBoss.m */,
 				FB38C40A1B1ABDC4001B424C /* ViewControllerWorldBoss.h */,
 				FB38C40B1B1ABDC4001B424C /* ViewControllerWorldBoss.m */,
 			);
@@ -209,7 +195,6 @@
 			isa = PBXGroup;
 			children = (
 				FB420F811B1017FB0007BBD5 /* GW2BroH.app */,
-				FB420F9A1B1017FB0007BBD5 /* GW2BroHTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -217,7 +202,7 @@
 		FB420F831B1017FB0007BBD5 /* GW2BroH */ = {
 			isa = PBXGroup;
 			children = (
-				FB6A33561B5AA4180091A92A /* Resources */,
+				5AB68C971B5B9EAA00B3A49D /* Images */,
 				FB8987211B5782D000D56917 /* WebSiteHelper */,
 				FB2CA75B1B183F94009ED57F /* Tools */,
 				FBF47B6D1B124AF8000548B4 /* ViewController */,
@@ -349,24 +334,6 @@
 			productReference = FB420F811B1017FB0007BBD5 /* GW2BroH.app */;
 			productType = "com.apple.product-type.application";
 		};
-		FB420F991B1017FB0007BBD5 /* GW2BroHTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = FB420FA71B1017FB0007BBD5 /* Build configuration list for PBXNativeTarget "GW2BroHTests" */;
-			buildPhases = (
-				FB420F961B1017FB0007BBD5 /* Sources */,
-				FB420F971B1017FB0007BBD5 /* Frameworks */,
-				FB420F981B1017FB0007BBD5 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				FB420F9C1B1017FB0007BBD5 /* PBXTargetDependency */,
-			);
-			name = GW2BroHTests;
-			productName = GW2BroHTests;
-			productReference = FB420F9A1B1017FB0007BBD5 /* GW2BroHTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -378,10 +345,7 @@
 				TargetAttributes = {
 					FB420F801B1017FB0007BBD5 = {
 						CreatedOnToolsVersion = 6.3.2;
-					};
-					FB420F991B1017FB0007BBD5 = {
-						CreatedOnToolsVersion = 6.3.2;
-						TestTargetID = FB420F801B1017FB0007BBD5;
+						DevelopmentTeam = E3HA4ULF6C;
 					};
 				};
 			};
@@ -399,7 +363,6 @@
 			projectRoot = "";
 			targets = (
 				FB420F801B1017FB0007BBD5 /* GW2BroH */,
-				FB420F991B1017FB0007BBD5 /* GW2BroHTests */,
 			);
 		};
 /* End PBXProject section */
@@ -410,15 +373,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				FB420F951B1017FB0007BBD5 /* LaunchScreen.xib in Resources */,
+				5AB68C981B5B9EAA00B3A49D /* Images in Resources */,
 				FB420F921B1017FB0007BBD5 /* Images.xcassets in Resources */,
-				FB6A33571B5AA4180091A92A /* Resources in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FB420F981B1017FB0007BBD5 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -466,6 +422,7 @@
 				FB8987551B5782D000D56917 /* GW2_Details_Armor.m in Sources */,
 				FB8987531B5782D000D56917 /* GW2_WebApi_Items.m in Sources */,
 				FB8987541B5782D000D56917 /* GW2_WebApi_Items_Armor.m in Sources */,
+				5AB68C9B1B5BB42600B3A49D /* ViewWorldBoss.m in Sources */,
 				FB8987521B5782D000D56917 /* GW2_WebApi_Gems.m in Sources */,
 				FB38C4091B1ABDB1001B424C /* ViewControllerStartMenu.m in Sources */,
 				FB8987581B5782D000D56917 /* README.md in Sources */,
@@ -484,23 +441,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FB420F961B1017FB0007BBD5 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				FB420FA11B1017FB0007BBD5 /* GW2BroHTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		FB420F9C1B1017FB0007BBD5 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = FB420F801B1017FB0007BBD5 /* GW2BroH */;
-			targetProxy = FB420F9B1B1017FB0007BBD5 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		FB420F931B1017FB0007BBD5 /* LaunchScreen.xib */ = {
@@ -516,6 +457,7 @@
 /* Begin XCBuildConfiguration section */
 		FB420FA21B1017FB0007BBD5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B1C33BB0A6ABF3B0116DF588 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -531,6 +473,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Hsien Zhung Chou (RBX4N3M3H2)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -553,12 +496,14 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "283c6294-f4b0-4aee-bc18-f042f56e1672";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
 		};
 		FB420FA31B1017FB0007BBD5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3B7586483FBE633A96ED3A40 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -574,6 +519,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Hsien Zhung Chou (RBX4N3M3H2)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -589,6 +535,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PROVISIONING_PROFILE = "283c6294-f4b0-4aee-bc18-f042f56e1672";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -599,9 +546,11 @@
 			baseConfigurationReference = B1C33BB0A6ABF3B0116DF588 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Hsien Zhung Chou (RBX4N3M3H2)";
 				INFOPLIST_FILE = GW2BroH/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "283c6294-f4b0-4aee-bc18-f042f56e1672";
 			};
 			name = Debug;
 		};
@@ -610,43 +559,11 @@
 			baseConfigurationReference = 3B7586483FBE633A96ED3A40 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Hsien Zhung Chou (RBX4N3M3H2)";
 				INFOPLIST_FILE = GW2BroH/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
-		FB420FA81B1017FB0007BBD5 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = GW2BroHTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GW2BroH.app/GW2BroH";
-			};
-			name = Debug;
-		};
-		FB420FA91B1017FB0007BBD5 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = GW2BroHTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GW2BroH.app/GW2BroH";
+				PROVISIONING_PROFILE = "283c6294-f4b0-4aee-bc18-f042f56e1672";
 			};
 			name = Release;
 		};
@@ -667,15 +584,6 @@
 			buildConfigurations = (
 				FB420FA51B1017FB0007BBD5 /* Debug */,
 				FB420FA61B1017FB0007BBD5 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		FB420FA71B1017FB0007BBD5 /* Build configuration list for PBXNativeTarget "GW2BroHTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				FB420FA81B1017FB0007BBD5 /* Debug */,
-				FB420FA91B1017FB0007BBD5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

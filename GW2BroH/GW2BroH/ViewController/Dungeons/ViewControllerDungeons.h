@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewControllerDungeons : UIViewController
+@interface ViewControllerDungeons : UINavigationController
 
 @end

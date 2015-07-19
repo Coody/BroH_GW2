@@ -8,12 +8,16 @@
 
 #import "ViewControllerWorldBoss.h"
 
+// for view
+#import "ViewWorldBoss.h"
+
 // for tools
 #import "Constants.h"
+#import "GW2BroH_Tools.h"
 
 @interface ViewControllerWorldBoss ()
 
-@property (nonatomic , strong) UITableView *worldBossTableView;
+@property (nonatomic , strong) ViewWorldBoss *worldBossView;
 
 @end
 
@@ -24,14 +28,15 @@
     if ( self ) {
         [self.view setFrame:[UIScreen mainScreen].bounds];
         [self.view setBackgroundColor:VC_OTHERS_BACKGROUND_COLOR];
-        
-//        UIImage* anImage = [UIImage imageNamed:@"MyViewControllerImage.png"];
-//        UITabBarItem* theItem = [[UITabBarItem alloc] initWithTitle:@"Home" image:anImage tag:0];
 
-        // TODO: 使用 image ，不要使用系統預設
-        NSString *path = [NSBundle mainBundle].resourcePath;
-        UITabBarItem* theItem = [[UITabBarItem alloc] initWithTabBarSystemItem:(UITabBarSystemItemHistory) tag:0];
+        
+        UIImage *tabBarImage = [GW2BroH_Tools getImageWithClass:self withImageName:@"Boss"];
+        UITabBarItem* theItem = [[UITabBarItem alloc] initWithTitle:@"World Boss"
+                                                              image:tabBarImage
+                                                      selectedImage:tabBarImage];
         self.tabBarItem = theItem;
+
+        self.navigationBarHidden = YES;
     }
     return self;
 }
@@ -39,10 +44,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
 }
 
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
+    
+    [self createWorldBossView];
 }
 
 - (void)viewDidAppear:(BOOL)animated{
@@ -62,14 +70,14 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+#pragma mark - initial
+-(void)createWorldBossView
+{
+    if ( _worldBossView == nil ) {
+        _worldBossView = [[ViewWorldBoss alloc] init];
+    }
+    
+    [self.view addSubview:_worldBossView];
 }
-*/
 
 @end

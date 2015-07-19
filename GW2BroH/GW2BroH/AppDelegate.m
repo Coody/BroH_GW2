@@ -34,16 +34,16 @@
     /* custom tab bar controller */
     ViewControllerTabBar *tabBarController = [[ViewControllerTabBar alloc] init];
     
-    /* 設定 navigation controller 為 custom tab bar controller ,
-     請參考：https://developer.apple.com/library/prerelease/ios/documentation/WindowsViews/Conceptual/ViewControllerCatalog/Chapters/NavigationControllers.html 
-     */
-    self.navController = [[UINavigationController alloc] initWithRootViewController:tabBarController];
-    
-    /* 先隱藏 */
-    self.navController.navigationBarHidden = YES;
+//    /* 設定 navigation controller 為 custom tab bar controller ,
+//     請參考：https://developer.apple.com/library/prerelease/ios/documentation/WindowsViews/Conceptual/ViewControllerCatalog/Chapters/NavigationControllers.html 
+//     */
+//    self.navController = [[UINavigationController alloc] initWithRootViewController:tabBarController];
+//    
+//    /* 先隱藏 */
+//    self.navController.navigationBarHidden = YES;
     
     /* 讓 rootViewController 裝入 navigation controller */
-    self.window.rootViewController = self.navController;
+    self.window.rootViewController = tabBarController;
     
     //
     [self.window makeKeyAndVisible];

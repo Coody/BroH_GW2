@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewControllerWorldBoss : UIViewController
+@interface ViewControllerWorldBoss : UINavigationController
 
 @end

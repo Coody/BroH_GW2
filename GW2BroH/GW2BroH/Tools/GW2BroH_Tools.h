@@ -8,6 +8,14 @@
 
 #import <Foundation/Foundation.h>
 
+@class UIImage;
+
 @interface GW2BroH_Tools : NSObject
+
++(NSString *)getPathWithClass:(id)tempClass withImageName:(NSString *)tempImageName;
+
++(UIImage *)getImageWithClass:(id)tempClass withImageName:(NSString *)tempImageName;
+
++(float) statusBarHeight;
 
 @end

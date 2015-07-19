@@ -58,6 +58,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    [self setTitle:@""];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -76,7 +77,7 @@
             _isChangeIndex = YES;
             self.viewControllers = _startMenuArray;
             self.tabBar.hidden = YES;
-            self.navigationController.navigationBarHidden = YES;
+//            self.navigationController.navigationBarHidden = YES;
             [super setSelectedIndex:tempSelectedIndex];
         }
             break;
@@ -86,7 +87,7 @@
             self.viewControllers = _otherVCArray;
             self.tabBar.hidden = NO;
             tempSelectedIndex = tempSelectedIndex - 10;
-            self.navigationController.navigationBarHidden = NO;
+//            self.navigationController.navigationBarHidden = NO;
             [super setSelectedIndex:tempSelectedIndex];
         }
             break;
