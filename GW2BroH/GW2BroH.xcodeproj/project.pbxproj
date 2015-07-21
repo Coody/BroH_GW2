@@ -31,6 +31,7 @@
 		FB8987561B5782D000D56917 /* WebApi.m in Sources */ = {isa = PBXBuildFile; fileRef = FB8987331B5782D000D56917 /* WebApi.m */; };
 		FB8987571B5782D000D56917 /* WebSiteRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = FB8987351B5782D000D56917 /* WebSiteRequest.m */; };
 		FB8987581B5782D000D56917 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = FB8987361B5782D000D56917 /* README.md */; };
+		FB90BC971B5E108B0099EA29 /* TableViewCell_SeparateCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FB90BC961B5E108B0099EA29 /* TableViewCell_SeparateCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -83,6 +84,8 @@
 		FB8987341B5782D000D56917 /* WebSiteRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebSiteRequest.h; sourceTree = "<group>"; };
 		FB8987351B5782D000D56917 /* WebSiteRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebSiteRequest.m; sourceTree = "<group>"; };
 		FB8987361B5782D000D56917 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		FB90BC951B5E108B0099EA29 /* TableViewCell_SeparateCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TableViewCell_SeparateCell.h; path = ViewController/UIComponent/TableViewCell_SeparateCell.h; sourceTree = "<group>"; };
+		FB90BC961B5E108B0099EA29 /* TableViewCell_SeparateCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TableViewCell_SeparateCell.m; path = ViewController/UIComponent/TableViewCell_SeparateCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -297,9 +300,19 @@
 			path = GW2WebsiteBase;
 			sourceTree = "<group>";
 		};
+		FB90BC941B5E104E0099EA29 /* UIComponent */ = {
+			isa = PBXGroup;
+			children = (
+				FB90BC951B5E108B0099EA29 /* TableViewCell_SeparateCell.h */,
+				FB90BC961B5E108B0099EA29 /* TableViewCell_SeparateCell.m */,
+			);
+			name = UIComponent;
+			sourceTree = "<group>";
+		};
 		FBF47B6D1B124AF8000548B4 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				FB90BC941B5E104E0099EA29 /* UIComponent */,
 				FB38C4011B1ABC64001B424C /* StartMenu */,
 				FB38C4021B1ABC70001B424C /* WorldBoss */,
 				FB38C4041B1ABCD8001B424C /* Items */,
@@ -345,7 +358,6 @@
 				TargetAttributes = {
 					FB420F801B1017FB0007BBD5 = {
 						CreatedOnToolsVersion = 6.3.2;
-						DevelopmentTeam = E3HA4ULF6C;
 					};
 				};
 			};
@@ -429,6 +441,7 @@
 				FB2CA75E1B183F94009ED57F /* GW2BroH_Tools.m in Sources */,
 				FB8987511B5782D000D56917 /* GW2_Request_Items.m in Sources */,
 				FB8987561B5782D000D56917 /* WebApi.m in Sources */,
+				FB90BC971B5E108B0099EA29 /* TableViewCell_SeparateCell.m in Sources */,
 				FB420F8A1B1017FB0007BBD5 /* AppDelegate.m in Sources */,
 				FB8987501B5782D000D56917 /* GW2_Request_Gems.m in Sources */,
 				FB38C4151B1ABE0E001B424C /* ViewControllerGuild.m in Sources */,
@@ -546,7 +559,7 @@
 			baseConfigurationReference = B1C33BB0A6ABF3B0116DF588 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Hsien Zhung Chou (RBX4N3M3H2)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = GW2BroH/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -559,7 +572,7 @@
 			baseConfigurationReference = 3B7586483FBE633A96ED3A40 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Hsien Zhung Chou (RBX4N3M3H2)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = GW2BroH/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
