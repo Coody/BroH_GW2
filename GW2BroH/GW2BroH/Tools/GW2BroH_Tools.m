@@ -14,13 +14,25 @@
 
 +(NSString *)getPathWithClass:(id)tempClass withImageName:(NSString *)tempImageName
 {
-    return [NSString stringWithFormat:@"%@/Images/%@/%@",[NSBundle mainBundle].resourcePath,NSStringFromClass([tempClass class]),@"Boss"];
+    return [NSString stringWithFormat:@"%@/Images/%@/%@",[NSBundle mainBundle].resourcePath,NSStringFromClass([tempClass class]),tempImageName];
 }
 
 +(UIImage *)getImageWithClass:(id)tempClass withImageName:(NSString *)tempImageName
 {
     return [[UIImage alloc] initWithContentsOfFile:[GW2BroH_Tools getPathWithClass:tempClass withImageName:tempImageName]];
 }
+
+
++(NSString *)getPathWithString:(NSString*)tempString withImageName:(NSString *)tempImageName
+{
+    return [NSString stringWithFormat:@"%@/Images/%@/%@",[NSBundle mainBundle].resourcePath,tempString,tempImageName];
+}
+
++(UIImage *)getImageWithString:(NSString*)tempString withImageName:(NSString *)tempImageName
+{
+    return [[UIImage alloc] initWithContentsOfFile:[GW2BroH_Tools getPathWithString:tempString withImageName:tempImageName]];
+}
+
 
 +(float) statusBarHeight
 {

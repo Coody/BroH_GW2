@@ -8,6 +8,15 @@
 
 #import "TableViewCell_SeparateCell+WorldBossCell.h"
 
+// for Model
+#import "WorldBossModel.h"
+
 @implementation TableViewCell_SeparateCell (WorldBossCell)
+
+-(void)setupCellWithWorldBossModel:(WorldBossModel *)tempWorldBossModel{
+    
+    // TODO: 設置 view
+    
+}
 
 @end

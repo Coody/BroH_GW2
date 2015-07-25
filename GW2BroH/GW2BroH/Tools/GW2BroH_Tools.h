@@ -16,6 +16,10 @@
 
 +(UIImage *)getImageWithClass:(id)tempClass withImageName:(NSString *)tempImageName;
 
++(NSString *)getPathWithString:(NSString*)tempString withImageName:(NSString *)tempImageName;
+
++(UIImage *)getImageWithString:(NSString*)tempString withImageName:(NSString *)tempImageName;
+
 +(float) statusBarHeight;
 
 @end

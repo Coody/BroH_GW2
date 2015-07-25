@@ -8,6 +8,10 @@
 
 #import "TableViewCell_SeparateCell.h"
 
+@class WorldBossModel;
+
 @interface TableViewCell_SeparateCell (WorldBossCell)
+
+-(void)setupCellWithWorldBossModel:(WorldBossModel *)tempWorldBossModel;
 
 @end

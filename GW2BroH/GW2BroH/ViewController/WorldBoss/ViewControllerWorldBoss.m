@@ -15,6 +15,9 @@
 #import "Constants.h"
 #import "GW2BroH_Tools.h"
 
+// for Model
+#import "WorldBossModel.h"
+
 @interface ViewControllerWorldBoss ()
 
 @property (nonatomic , strong) ViewWorldBoss *worldBossView;
@@ -36,7 +39,8 @@
                                                       selectedImage:tabBarImage];
         self.tabBarItem = theItem;
 
-        self.navigationBarHidden = YES;
+//        self.navigationBarHidden = YES;
+        self.navigationBar.barTintColor = VC_NAVIGATION_BAR_COLOR;
     }
     return self;
 }
@@ -51,6 +55,13 @@
     [super viewWillAppear:animated];
     
     [self createWorldBossView];
+    
+#define CoodyTest
+#ifdef CoodyTest
+    WorldBossModel *temp = [[WorldBossModel alloc] init];
+    WorldBossModel *temp2 = [[WorldBossModel alloc] init];
+#endif
+    [_worldBossView addWorldBossWithArray:@[temp,temp2]];
 }
 
 - (void)viewDidAppear:(BOOL)animated{

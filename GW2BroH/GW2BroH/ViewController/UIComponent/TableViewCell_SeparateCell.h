@@ -8,22 +8,36 @@
 
 #import <UIKit/UIKit.h>
 
-@class WorldBossModel;
+#define D_CellHight_Normal 120
+#define D_CellHight_Selected 260
 
+
+/**  */
 typedef enum : NSInteger{
     EnumSeparatorTableViewCell_None = 0,
     EnumSeparatorTableViewCell_WorldBoss
 }EnumSeparatorTableViewCell;
 
+/**
+ *
+ */
 @interface TableViewCell_SeparateCell : UITableViewCell
 
+// basic property
+@property (nonatomic , readonly) EnumSeparatorTableViewCell cellType;
+
+// for public UI component
 @property (nonatomic , strong) UIImageView *imageView_First;
 @property (nonatomic , strong) UILabel *textLabel_First;
 @property (nonatomic , strong) UILabel *textLabel_Second;
 @property (nonatomic , strong) UILabel *textLabel_Third;
 
--(void)setupCell:(WorldBossModel *)tempModel withType:(EnumSeparatorTableViewCell)tempEnumSeparatorTableViewCell;
+/***/
+-(void)setupCell:(id)tempModel withType:(EnumSeparatorTableViewCell)tempEnumSeparatorTableViewCell;
 
+/** 清除所有 Cell 內的元件設定 */
 -(void)clear;
+
+-(void)isFirstCell;
 
 @end

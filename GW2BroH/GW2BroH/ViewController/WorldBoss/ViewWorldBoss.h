@@ -10,4 +10,6 @@
 
 @interface ViewWorldBoss : UIView
 
+-(void)addWorldBossWithArray:(NSArray *)tempWorldBossArray;
+
 @end

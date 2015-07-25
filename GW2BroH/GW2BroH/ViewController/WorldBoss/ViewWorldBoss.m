@@ -12,10 +12,16 @@
 #import "Constants.h"
 #import "GW2BroH_Tools.h"
 
-#pragma mark -
-@interface ViewWorldBoss()
+// for TableViewCell
+#import "TableViewCell_SeparateCell.h"
 
+#pragma mark -
+@interface ViewWorldBoss() < UITableViewDataSource,
+                             UITableViewDelegate >
+
+@property (nonatomic , strong) UILabel *noDataLabel;
 @property (nonatomic , strong) UITableView *worldBossTableView;
+@property (nonatomic , strong) NSMutableArray *worldBossArray;
 
 @end
 
@@ -28,34 +34,107 @@
         CGRect tempFrame = [UIScreen mainScreen].bounds;
         float statusHight = [GW2BroH_Tools statusBarHeight];
         [self setFrame:CGRectMake(0,
-                                  [GW2BroH_Tools statusBarHeight],
+                                  [GW2BroH_Tools statusBarHeight] + 45,
                                   tempFrame.size.width,
-                                  tempFrame.size.height - statusHight - 50 )];
+                                  tempFrame.size.height - statusHight - 50 - 45 )];
         [self setBackgroundColor:VC_OTHERS_BACKGROUND_COLOR];
         
+        _worldBossArray = [[NSMutableArray alloc] init];
+        
         [self createWorldBossTableView];
+        
+        [self createNoDataLabel];
     }
     return self;
 }
 
 #pragma mark - initial ui 元件
-- (void)createWorldBossTableView
-{
+- (void)createWorldBossTableView{
     if ( _worldBossTableView == nil ) {
-        float statesBarHight = [GW2BroH_Tools statusBarHeight];
         _worldBossTableView = [[UITableView alloc] initWithFrame:CGRectMake(0,
-                                                                            statesBarHight,
+                                                                            0,
                                                                             self.frame.size.width,
-                                                                            self.frame.size.height - statesBarHight)];
+                                                                            self.frame.size.height)];
         [_worldBossTableView setBackgroundColor:[UIColor clearColor]];
         [_worldBossTableView setSeparatorStyle:(UITableViewCellSeparatorStyleSingleLine)];
         _worldBossTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+#ifdef D_Dev_Ver
+        _worldBossTableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
+#endif
+        _worldBossTableView.delegate = self;
+        _worldBossTableView.dataSource = self;
     }
     [_worldBossTableView setHidden:NO];
-//    [_worldBossTableView setBackgroundColor:[UIColor grayColor]];
-//    [_worldBossTableView setAlpha:0.6f];
     
     [self addSubview:_worldBossTableView];
+}
+
+-(void)createNoDataLabel{
+    if ( _noDataLabel == nil ) {
+        _noDataLabel = [[UILabel alloc] initWithFrame:CGRectMake(self.frame.size.width - 150,
+                                                                 10,
+                                                                 300,
+                                                                 D_CellHight_Normal)];
+        [_noDataLabel setText:@"目前沒有任何世界王！\n請確認網路或是重新開啟 App！" ];
+        _noDataLabel.numberOfLines = 0;
+        [_noDataLabel setTextColor:[UIColor blackColor]];
+        [_noDataLabel setHidden:YES];
+    }
+    [self addSubview:_noDataLabel];
+}
+
+#pragma mark - 開放方法
+-(void)addWorldBossWithArray:(NSArray *)tempWorldBossArray{
+    if ( tempWorldBossArray  <= 0 ) {
+        [self hideTableView:YES];
+    }
+    else{
+        [self hideTableView:NO];
+        [_worldBossArray removeAllObjects];
+        [_worldBossArray addObjectsFromArray:tempWorldBossArray];
+        [_worldBossTableView reloadData];
+    }
+}
+
+#pragma mark - 內部方法
+-(void)hideTableView:(BOOL)isHidden{
+    [_worldBossTableView setHidden:isHidden];
+    [_noDataLabel setHidden:!isHidden];
+}
+
+#pragma mark - UITableView Delegate
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return D_CellHight_Normal;
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+}
+
+#pragma mark - UITableView Data Source Delegate
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return [_worldBossArray count];
+}
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    // 設定 Cell 的識別符號
+    static NSString *worldBossCell = @"WorldBossCell";
+    
+    // 從 TableView 中取用是別的 Cell 來 reuse
+    TableViewCell_SeparateCell *cell = [tableView dequeueReusableCellWithIdentifier:worldBossCell];
+    if ( cell == nil ) {
+        cell = [[TableViewCell_SeparateCell alloc] init];
+    }
+    
+    // 設置
+    [cell setupCell:_worldBossArray[indexPath.row] withType:EnumSeparatorTableViewCell_WorldBoss];
+    
+    if ( indexPath.row == 0 ) {
+        [cell isFirstCell];
+    }
+    
+    return cell;
 }
 
 @end

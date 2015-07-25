@@ -10,8 +10,9 @@
 
 @interface WorldBossModel : NSObject
 
+@property (nonatomic , strong) NSString *bossImageName;
 @property (nonatomic , strong) NSString *bossName;
+@property (nonatomic , strong) NSString *brief;
 @property (nonatomic , strong) NSString *details;
-@property (nonatomic , strong) NSString *imageUrl;
 
 @end

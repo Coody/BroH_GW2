@@ -19,7 +19,8 @@ typedef enum : NSInteger{
 }EnumTabBarIndex;
 
 #define VC_START_MENU_BACKGROUND_COLOR [UIColor colorWithRed:0.36 green:0.47 blue:0.66 alpha:1.0f]
-#define VC_OTHERS_BACKGROUND_COLOR [UIColor colorWithRed:0.63f green:0.76f blue:0.91f alpha:1.0f]
+#define VC_OTHERS_BACKGROUND_COLOR [UIColor colorWithRed:0.84f green:0.92f blue:1.0f alpha:1.0f]
+#define VC_NAVIGATION_BAR_COLOR [UIColor colorWithRed:0.1f green:0.35f blue:0.63f alpha:1.0f]
 
 #define FRAME_SIZE(TEXT,FONT) [(TEXT) boundingRectWithSize: CGSizeMake( CGFLOAT_MAX, CGFLOAT_MAX) options: NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName: FONT} context: nil].size
 
