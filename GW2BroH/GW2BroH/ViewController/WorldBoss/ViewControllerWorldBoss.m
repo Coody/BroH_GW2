@@ -19,6 +19,9 @@
 // for Model
 #import "WorldBossModel.h"
 
+// TODO:多國語系
+#define D_String_WorldBoss @"世界王時間"
+
 @interface ViewControllerWorldBoss ()
 
 @property (nonatomic , strong) ViewWorldBoss *worldBossView;
@@ -42,7 +45,7 @@
         
         self.navigationBar.barTintColor = VC_NAVIGATION_BAR_COLOR;
         
-        [self setTitleWithString:@"世界王時間"];
+        [self setTitleWithString:D_String_WorldBoss];
     }
     return self;
 }
@@ -58,12 +61,19 @@
     
     [self createWorldBossView];
     
-//#define CoodyTest
+#define CoodyTest
 #ifdef CoodyTest
-    WorldBossModel *temp = [[WorldBossModel alloc] init];
-    WorldBossModel *temp2 = [[WorldBossModel alloc] init];
+    NSMutableArray *testArray = [NSMutableArray array];
+    for ( int i = 0 ; i < 10 ; i++ ) {
+        WorldBossModel *tempModel = [[WorldBossModel alloc] init];
+        tempModel.bossName = @"屍龍";
+        tempModel.bossImageName = @"teq";
+        tempModel.brief = @"位在 ooxx 的地圖位置。";
+        tempModel.details = @"打法：請疊在屍龍腳底下，技能請帶反射牆、堅定、減傷。";
+        [testArray addObject:tempModel];
+    }
 #endif
-    [_worldBossView addWorldBossWithArray:@[]];
+    [_worldBossView addWorldBossWithArray:testArray];
 }
 
 - (void)viewDidAppear:(BOOL)animated{

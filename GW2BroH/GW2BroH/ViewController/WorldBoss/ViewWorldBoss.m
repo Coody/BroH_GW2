@@ -15,6 +15,10 @@
 // for TableViewCell
 #import "TableViewCell_SeparateCell.h"
 
+// TODO:多國語系
+#define D_String_NoDataString @"目前沒有任何世界王！\n\n請確認網路狀態、\n\n或是重新開啟 App！"
+
+
 #pragma mark -
 @interface ViewWorldBoss() < UITableViewDataSource,
                              UITableViewDelegate >
@@ -22,6 +26,8 @@
 @property (nonatomic , strong) UILabel *noDataLabel;
 @property (nonatomic , strong) UITableView *worldBossTableView;
 @property (nonatomic , strong) NSMutableArray *worldBossArray;
+
+@property (nonatomic) NSInteger recentSelectIndex;
 
 @end
 
@@ -34,12 +40,13 @@
         CGRect tempFrame = [UIScreen mainScreen].bounds;
         float statusHight = [GW2BroH_Tools statusBarHeight];
         [self setFrame:CGRectMake(0,
-                                  [GW2BroH_Tools statusBarHeight] + 44,
+                                  [GW2BroH_Tools statusBarHeight] + 45,
                                   tempFrame.size.width,
-                                  tempFrame.size.height - statusHight - 50 - 44 )];
+                                  tempFrame.size.height - statusHight - 50 - 45 )];
         [self setBackgroundColor:VC_OTHERS_BACKGROUND_COLOR];
         
         _worldBossArray = [[NSMutableArray alloc] init];
+        _recentSelectIndex = NSNotFound;
         
         [self createWorldBossTableView];
         
@@ -72,7 +79,7 @@
                                                                  0,
                                                                  300,
                                                                  self.frame.size.height)];
-        [_noDataLabel setText:@"目前沒有任何世界王！\n\n請確認網路狀態、\n\n或是重新開啟 App！" ];
+        [_noDataLabel setText:D_String_NoDataString];
         _noDataLabel.numberOfLines = 0;
         [_noDataLabel setTextColor:VC_NAVIGATION_BAR_COLOR];
         [_noDataLabel setTextAlignment:(NSTextAlignmentCenter)];
@@ -84,12 +91,12 @@
 
 #pragma mark - 開放方法
 -(void)addWorldBossWithArray:(NSArray *)tempWorldBossArray{
+    [_worldBossArray removeAllObjects];
     if ( [tempWorldBossArray count] <= 0 ) {
         [self hideTableView:YES];
     }
     else{
         [self hideTableView:NO];
-        [_worldBossArray removeAllObjects];
         [_worldBossArray addObjectsFromArray:tempWorldBossArray];
         [_worldBossTableView reloadData];
     }
@@ -101,14 +108,35 @@
     [_noDataLabel setHidden:!isHidden];
 }
 
+-(BOOL)checkIsSelected:(NSInteger)tempIndexRow{
+    return (_recentSelectIndex == tempIndexRow);
+}
+
 #pragma mark - UITableView Delegate
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return D_CellHight_Normal;
+    if ( [self checkIsSelected:indexPath.row] ) {
+        return D_CellHight_Selected;
+    }
+    else{
+        return D_CellHight_Normal;
+    }
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    TableViewCell_SeparateCell *cell = (TableViewCell_SeparateCell *)[_worldBossTableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:_recentSelectIndex inSection:0]];
+    [cell setSelected:NO];
+    if ( _recentSelectIndex == indexPath.row ) {
+        _recentSelectIndex = NSNotFound;
+    }
+    else{
+        _recentSelectIndex = indexPath.row;
+    }
     
+    [tableView beginUpdates];
+    [tableView endUpdates];
+    
+    [tableView scrollToRowAtIndexPath:indexPath atScrollPosition:(UITableViewScrollPositionTop) animated:YES];
 }
 
 #pragma mark - UITableView Data Source Delegate
@@ -118,11 +146,17 @@
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     // 設定 Cell 的識別符號
-    static NSString *worldBossCell = @"WorldBossCell";
+    NSString *worldBossCell = [NSString stringWithFormat:@"WorldBossCell_%d",((int)indexPath.row)%10];
+    
+    static BOOL isRegister = NO;
+    if (!isRegister) {
+        [tableView registerClass:[TableViewCell_SeparateCell class] forCellReuseIdentifier:worldBossCell];
+        isRegister = YES;
+    }
     
     // 從 TableView 中取用是別的 Cell 來 reuse
-    TableViewCell_SeparateCell *cell = [tableView dequeueReusableCellWithIdentifier:worldBossCell];
-    if ( cell == nil ) {
+    id cell = [tableView dequeueReusableCellWithIdentifier:worldBossCell];
+    if ( cell == nil || ![cell isMemberOfClass:[TableViewCell_SeparateCell class]]) {
         cell = [[TableViewCell_SeparateCell alloc] init];
     }
     

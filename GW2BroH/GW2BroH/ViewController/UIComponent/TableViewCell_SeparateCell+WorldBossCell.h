@@ -14,4 +14,6 @@
 
 -(void)setupCellWithWorldBossModel:(WorldBossModel *)tempWorldBossModel;
 
+-(void)selectedWorldBossCell:(BOOL)isSelected;
+
 @end

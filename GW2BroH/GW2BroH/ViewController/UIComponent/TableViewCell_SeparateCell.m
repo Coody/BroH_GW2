@@ -21,12 +21,14 @@
 @property (nonatomic , strong) UIImage *redCellBoundImage;
 @property (nonatomic , strong) UIImage *blueCellBoundImage;
 
+@property (nonatomic , strong) NSTimer *countTimer;
+
 @end
 
 @implementation TableViewCell_SeparateCell
 
--(id)init{
-    self = [super init];
+-(id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{
+    self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if ( self != nil ) {
         _cellType = EnumSeparatorTableViewCell_None;
         
@@ -40,9 +42,16 @@
                                                                             10,
                                                                             [UIScreen mainScreen].bounds.size.width - 20,
                                                                             D_CellHight_Normal - 20)];
+        CGFloat top = 25; // 頂端高度
+        CGFloat bottom = 25 ; // 底部高度
+        CGFloat left = 10; // 左部寬度
+        CGFloat right = 10; // 右部寬度
+        UIEdgeInsets insets = UIEdgeInsetsMake(top, left, bottom, right);
         _redCellBoundImage = [GW2BroH_Tools getImageWithString:@"ViewControllerWorldBoss" withImageName:@"CellBackgroundImage_Red"];
+        // 指定为拉伸模式，伸缩后重新赋值
+        _redCellBoundImage = [_redCellBoundImage resizableImageWithCapInsets:insets resizingMode:UIImageResizingModeStretch];
         _blueCellBoundImage = [GW2BroH_Tools getImageWithString:@"ViewControllerWorldBoss" withImageName:@"CellBackgroundImage_Blue"];
-        [_cellBoundImageView setImage:_blueCellBoundImage];
+        _blueCellBoundImage = [_blueCellBoundImage resizableImageWithCapInsets:insets resizingMode:UIImageResizingModeStretch];
         [self addSubview:_cellBoundImageView];
     }
     return self;
@@ -50,19 +59,22 @@
 
 -(void)setupCell:(id)tempModel withType:(EnumSeparatorTableViewCell)tempEnumSeparatorTableViewCell{
     
+    [_cellBoundImageView setImage:_blueCellBoundImage];
+    
     // 判斷 Cell type 是否相同，相同不處理，只替換內部顯示內容；不同才要 Clear
     if ( _cellType != tempEnumSeparatorTableViewCell ) {
         [self clear];
     }
     
     switch (tempEnumSeparatorTableViewCell) {
-        case EnumSeparatorTableViewCell_None:
+        case EnumSeparatorTableViewCell_WorldBoss:
         {
             _cellType = EnumSeparatorTableViewCell_WorldBoss;
             
             [self setupCellWithWorldBossModel:tempModel];
         }
             break;
+        case EnumSeparatorTableViewCell_None:
         default:
         {
             _cellType = EnumSeparatorTableViewCell_None;
@@ -77,7 +89,38 @@
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
-
+    
+    if ( selected ) {
+        __weak __typeof(self) weakSelf = self;
+        [UIView animateWithDuration:0.3f animations:^{
+            __strong __typeof(weakSelf) strongSelf = weakSelf;
+            strongSelf.cellBoundImageView.frame = CGRectMake(10,
+                                                             10,
+                                                             [UIScreen mainScreen].bounds.size.width - 20,
+                                                             D_CellHight_Selected - 20);
+        }];
+    }
+    else{
+        __weak __typeof(self) weakSelf = self;
+        [UIView animateWithDuration:0.3f animations:^{
+            __strong __typeof(weakSelf) strongSelf = weakSelf;
+            strongSelf.cellBoundImageView.frame = CGRectMake(10,
+                                                             10,
+                                                             [UIScreen mainScreen].bounds.size.width - 20,
+                                                             D_CellHight_Normal - 20);
+        }];
+    }
+    
+    switch (_cellType) {
+        case EnumSeparatorTableViewCell_WorldBoss:
+        {
+            [self selectedWorldBossCell:selected];
+        }
+            break;
+        case EnumSeparatorTableViewCell_None:
+        default:
+            break;
+    }
     // Configure the view for the selected state
 }
 
