@@ -155,7 +155,7 @@
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     // 設定 Cell 的識別符號
-    NSString *worldBossCell = [NSString stringWithFormat:@"WorldBossCell_%d",((int)indexPath.row)%10];
+    NSString *worldBossCell = [NSString stringWithFormat:@"WorldBossCell_%d",((int)indexPath.row)%20];
     
     static BOOL isRegister = NO;
     if (!isRegister) {

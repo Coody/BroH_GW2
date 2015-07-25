@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 #define D_CellHight_Normal 112
-#define D_CellHight_Selected 260
+#define D_CellHight_Selected 440
 
 
 /**  */
