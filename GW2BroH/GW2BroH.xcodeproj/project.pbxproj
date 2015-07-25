@@ -10,6 +10,8 @@
 		595F1F394C0A58A7F7B2B7C1 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 756E2DBB4E054859046F4273 /* libPods.a */; };
 		5AB68C981B5B9EAA00B3A49D /* Images in Resources */ = {isa = PBXBuildFile; fileRef = 5AB68C971B5B9EAA00B3A49D /* Images */; };
 		5AB68C9B1B5BB42600B3A49D /* ViewWorldBoss.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AB68C9A1B5BB42600B3A49D /* ViewWorldBoss.m */; };
+		5ADA08211B63A20A00B7B038 /* TableViewCell_SeparateCell+WorldBossCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ADA08201B63A20A00B7B038 /* TableViewCell_SeparateCell+WorldBossCell.m */; };
+		5ADA08241B63A4E800B7B038 /* WorldBossModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ADA08231B63A4E800B7B038 /* WorldBossModel.m */; };
 		FB2CA75E1B183F94009ED57F /* GW2BroH_Tools.m in Sources */ = {isa = PBXBuildFile; fileRef = FB2CA75D1B183F94009ED57F /* GW2BroH_Tools.m */; };
 		FB38C4091B1ABDB1001B424C /* ViewControllerStartMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = FB38C4081B1ABDB1001B424C /* ViewControllerStartMenu.m */; };
 		FB38C40C1B1ABDC4001B424C /* ViewControllerWorldBoss.m in Sources */ = {isa = PBXBuildFile; fileRef = FB38C40B1B1ABDC4001B424C /* ViewControllerWorldBoss.m */; };
@@ -39,6 +41,10 @@
 		5AB68C971B5B9EAA00B3A49D /* Images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Images; sourceTree = "<group>"; };
 		5AB68C991B5BB42600B3A49D /* ViewWorldBoss.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewWorldBoss.h; path = ViewController/WorldBoss/ViewWorldBoss.h; sourceTree = "<group>"; };
 		5AB68C9A1B5BB42600B3A49D /* ViewWorldBoss.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewWorldBoss.m; path = ViewController/WorldBoss/ViewWorldBoss.m; sourceTree = "<group>"; };
+		5ADA081F1B63A20A00B7B038 /* TableViewCell_SeparateCell+WorldBossCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TableViewCell_SeparateCell+WorldBossCell.h"; sourceTree = "<group>"; };
+		5ADA08201B63A20A00B7B038 /* TableViewCell_SeparateCell+WorldBossCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "TableViewCell_SeparateCell+WorldBossCell.m"; sourceTree = "<group>"; };
+		5ADA08221B63A4E800B7B038 /* WorldBossModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WorldBossModel.h; path = ViewController/WorldBoss/WorldBossModel.h; sourceTree = "<group>"; };
+		5ADA08231B63A4E800B7B038 /* WorldBossModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WorldBossModel.m; path = ViewController/WorldBoss/WorldBossModel.m; sourceTree = "<group>"; };
 		756E2DBB4E054859046F4273 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1C33BB0A6ABF3B0116DF588 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		FB2CA75C1B183F94009ED57F /* GW2BroH_Tools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GW2BroH_Tools.h; sourceTree = "<group>"; };
@@ -139,6 +145,8 @@
 		FB38C4021B1ABC70001B424C /* WorldBoss */ = {
 			isa = PBXGroup;
 			children = (
+				5ADA08221B63A4E800B7B038 /* WorldBossModel.h */,
+				5ADA08231B63A4E800B7B038 /* WorldBossModel.m */,
 				5AB68C991B5BB42600B3A49D /* ViewWorldBoss.h */,
 				5AB68C9A1B5BB42600B3A49D /* ViewWorldBoss.m */,
 				FB38C40A1B1ABDC4001B424C /* ViewControllerWorldBoss.h */,
@@ -305,6 +313,8 @@
 			children = (
 				FB90BC951B5E108B0099EA29 /* TableViewCell_SeparateCell.h */,
 				FB90BC961B5E108B0099EA29 /* TableViewCell_SeparateCell.m */,
+				5ADA081F1B63A20A00B7B038 /* TableViewCell_SeparateCell+WorldBossCell.h */,
+				5ADA08201B63A20A00B7B038 /* TableViewCell_SeparateCell+WorldBossCell.m */,
 			);
 			name = UIComponent;
 			sourceTree = "<group>";
@@ -430,6 +440,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5ADA08211B63A20A00B7B038 /* TableViewCell_SeparateCell+WorldBossCell.m in Sources */,
 				FB8987571B5782D000D56917 /* WebSiteRequest.m in Sources */,
 				FB8987551B5782D000D56917 /* GW2_Details_Armor.m in Sources */,
 				FB8987531B5782D000D56917 /* GW2_WebApi_Items.m in Sources */,
@@ -448,6 +459,7 @@
 				FB82A9C11B50E592006A5F07 /* ViewControllerTabBar.m in Sources */,
 				FB38C4181B1ABE1D001B424C /* ViewControllerMore.m in Sources */,
 				FB38C40F1B1ABDD9001B424C /* ViewControllerItems.m in Sources */,
+				5ADA08241B63A4E800B7B038 /* WorldBossModel.m in Sources */,
 				FB38C4121B1ABDFF001B424C /* ViewControllerDungeons.m in Sources */,
 				FB38C40C1B1ABDC4001B424C /* ViewControllerWorldBoss.m in Sources */,
 				FB420F871B1017FB0007BBD5 /* main.m in Sources */,

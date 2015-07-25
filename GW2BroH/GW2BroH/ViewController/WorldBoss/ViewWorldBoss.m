@@ -43,9 +43,13 @@
 {
     if ( _worldBossTableView == nil ) {
         float statesBarHight = [GW2BroH_Tools statusBarHeight];
-        _worldBossTableView = [[UITableView alloc] initWithFrame:CGRectMake(0,0, self.frame.size.width, self.frame.size.height)];
+        _worldBossTableView = [[UITableView alloc] initWithFrame:CGRectMake(0,
+                                                                            statesBarHight,
+                                                                            self.frame.size.width,
+                                                                            self.frame.size.height - statesBarHight)];
         [_worldBossTableView setBackgroundColor:[UIColor clearColor]];
         [_worldBossTableView setSeparatorStyle:(UITableViewCellSeparatorStyleSingleLine)];
+        _worldBossTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     }
     [_worldBossTableView setHidden:NO];
 //    [_worldBossTableView setBackgroundColor:[UIColor grayColor]];
