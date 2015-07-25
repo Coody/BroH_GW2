@@ -99,6 +99,15 @@
         [self hideTableView:NO];
         [_worldBossArray addObjectsFromArray:tempWorldBossArray];
         [_worldBossTableView reloadData];
+        
+        if ( _recentSelectIndex != NSNotFound ) {
+            NSIndexPath *tempIndexPath = [NSIndexPath indexPathForRow:_recentSelectIndex inSection:0];
+            TableViewCell_SeparateCell *cell = (TableViewCell_SeparateCell *)[_worldBossTableView cellForRowAtIndexPath:tempIndexPath];
+            [cell setSelected:YES];
+            [_worldBossTableView selectRowAtIndexPath:tempIndexPath
+                                             animated:YES
+                                       scrollPosition:(UITableViewScrollPositionTop)];
+        }
     }
 }
 
