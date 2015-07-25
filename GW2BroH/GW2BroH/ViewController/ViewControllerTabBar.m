@@ -49,6 +49,9 @@
         
         _isChangeIndex = NO;
         
+        [[UITabBar appearance] setTintColor:[UIColor whiteColor]];
+        [[UITabBar appearance] setBarTintColor:VC_NAVIGATION_BAR_COLOR];
+        
 //        UIImage* anImage = [UIImage imageNamed:@"MyViewControllerImage.png"];
         
     }
@@ -58,7 +61,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    [self setTitle:@""];
 }
 
 - (void)didReceiveMemoryWarning {

@@ -7,6 +7,7 @@
 //
 
 #import "ViewControllerMore.h"
+#import "UINavigationController+Title.h"
 
 // for tools
 #import "Constants.h"
@@ -31,6 +32,9 @@
         // TODO: 使用 image ，不要使用系統預設
         UITabBarItem* theItem = [[UITabBarItem alloc] initWithTabBarSystemItem:(UITabBarSystemItemMore) tag:4];
         self.tabBarItem = theItem;
+        
+        self.navigationBar.barTintColor = VC_NAVIGATION_BAR_COLOR;
+        [self setTitleWithString:@"其他"];
     }
     return self;
 }

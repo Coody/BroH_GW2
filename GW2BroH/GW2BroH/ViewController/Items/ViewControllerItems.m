@@ -7,6 +7,7 @@
 //
 
 #import "ViewControllerItems.h"
+#import "UINavigationController+Title.h"
 
 // for tools
 #import "Constants.h"
@@ -30,6 +31,10 @@
         // TODO: 使用 image ，不要使用系統預設
         UITabBarItem* theItem = [[UITabBarItem alloc] initWithTabBarSystemItem:(UITabBarSystemItemSearch) tag:1];
         self.tabBarItem = theItem;
+        
+        self.navigationBar.barTintColor = VC_NAVIGATION_BAR_COLOR;
+        
+        [self setTitleWithString:@"Gem & 物品"];
     }
     return self;
 }

@@ -7,6 +7,7 @@
 //
 
 #import "ViewControllerWorldBoss.h"
+#import "UINavigationController+Title.h"
 
 // for view
 #import "ViewWorldBoss.h"
@@ -38,9 +39,10 @@
                                                               image:tabBarImage
                                                       selectedImage:tabBarImage];
         self.tabBarItem = theItem;
-
-//        self.navigationBarHidden = YES;
+        
         self.navigationBar.barTintColor = VC_NAVIGATION_BAR_COLOR;
+        
+        [self setTitleWithString:@"世界王時間"];
     }
     return self;
 }
@@ -56,12 +58,12 @@
     
     [self createWorldBossView];
     
-#define CoodyTest
+//#define CoodyTest
 #ifdef CoodyTest
     WorldBossModel *temp = [[WorldBossModel alloc] init];
     WorldBossModel *temp2 = [[WorldBossModel alloc] init];
 #endif
-    [_worldBossView addWorldBossWithArray:@[temp,temp2]];
+    [_worldBossView addWorldBossWithArray:@[]];
 }
 
 - (void)viewDidAppear:(BOOL)animated{

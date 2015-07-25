@@ -24,4 +24,6 @@ typedef enum : NSInteger{
 
 #define FRAME_SIZE(TEXT,FONT) [(TEXT) boundingRectWithSize: CGSizeMake( CGFLOAT_MAX, CGFLOAT_MAX) options: NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName: FONT} context: nil].size
 
+#define D_Default_Font_Name @"Helvetica Neue"
+
 #endif

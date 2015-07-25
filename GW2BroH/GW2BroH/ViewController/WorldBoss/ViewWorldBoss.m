@@ -34,9 +34,9 @@
         CGRect tempFrame = [UIScreen mainScreen].bounds;
         float statusHight = [GW2BroH_Tools statusBarHeight];
         [self setFrame:CGRectMake(0,
-                                  [GW2BroH_Tools statusBarHeight] + 45,
+                                  [GW2BroH_Tools statusBarHeight] + 44,
                                   tempFrame.size.width,
-                                  tempFrame.size.height - statusHight - 50 - 45 )];
+                                  tempFrame.size.height - statusHight - 50 - 44 )];
         [self setBackgroundColor:VC_OTHERS_BACKGROUND_COLOR];
         
         _worldBossArray = [[NSMutableArray alloc] init];
@@ -58,9 +58,6 @@
         [_worldBossTableView setBackgroundColor:[UIColor clearColor]];
         [_worldBossTableView setSeparatorStyle:(UITableViewCellSeparatorStyleSingleLine)];
         _worldBossTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-#ifdef D_Dev_Ver
-        _worldBossTableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
-#endif
         _worldBossTableView.delegate = self;
         _worldBossTableView.dataSource = self;
     }
@@ -71,13 +68,15 @@
 
 -(void)createNoDataLabel{
     if ( _noDataLabel == nil ) {
-        _noDataLabel = [[UILabel alloc] initWithFrame:CGRectMake(self.frame.size.width - 150,
-                                                                 10,
+        _noDataLabel = [[UILabel alloc] initWithFrame:CGRectMake(self.frame.size.width*0.5 - 150,
+                                                                 0,
                                                                  300,
-                                                                 D_CellHight_Normal)];
-        [_noDataLabel setText:@"目前沒有任何世界王！\n請確認網路或是重新開啟 App！" ];
+                                                                 self.frame.size.height)];
+        [_noDataLabel setText:@"目前沒有任何世界王！\n\n請確認網路狀態、\n\n或是重新開啟 App！" ];
         _noDataLabel.numberOfLines = 0;
-        [_noDataLabel setTextColor:[UIColor blackColor]];
+        [_noDataLabel setTextColor:VC_NAVIGATION_BAR_COLOR];
+        [_noDataLabel setTextAlignment:(NSTextAlignmentCenter)];
+        [_noDataLabel setFont:[UIFont boldSystemFontOfSize:22.0f]];
         [_noDataLabel setHidden:YES];
     }
     [self addSubview:_noDataLabel];
@@ -85,7 +84,7 @@
 
 #pragma mark - 開放方法
 -(void)addWorldBossWithArray:(NSArray *)tempWorldBossArray{
-    if ( tempWorldBossArray  <= 0 ) {
+    if ( [tempWorldBossArray count] <= 0 ) {
         [self hideTableView:YES];
     }
     else{
