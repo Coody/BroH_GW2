@@ -11,7 +11,11 @@
 
 // for tools
 #import "Constants.h"
+#import "GW2BroH_Tools.h"
 
+//TODO: 多國語系
+#define D_String_Items_Title @"Gem & 物品"
+#define D_String_TP @"拍賣場"
 
 @interface ViewControllerItems ()
 
@@ -28,13 +32,15 @@
         //        UIImage* anImage = [UIImage imageNamed:@"MyViewControllerImage.png"];
         //        UITabBarItem* theItem = [[UITabBarItem alloc] initWithTitle:@"Home" image:anImage tag:0];
         
-        // TODO: 使用 image ，不要使用系統預設
-        UITabBarItem* theItem = [[UITabBarItem alloc] initWithTabBarSystemItem:(UITabBarSystemItemSearch) tag:1];
+        UIImage *tabBarImage = [GW2BroH_Tools getImageWithClass:self withImageName:@"tp"];
+        UITabBarItem* theItem = [[UITabBarItem alloc] initWithTitle:D_String_TP
+                                                              image:tabBarImage
+                                                      selectedImage:tabBarImage];
         self.tabBarItem = theItem;
         
         self.navigationBar.barTintColor = VC_NAVIGATION_BAR_COLOR;
         
-        [self setTitleWithString:@"Gem & 物品"];
+        [self setTitleWithString:D_String_Items_Title];
     }
     return self;
 }

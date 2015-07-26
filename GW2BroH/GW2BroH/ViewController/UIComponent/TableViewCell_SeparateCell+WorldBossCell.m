@@ -102,7 +102,11 @@
 
 #pragma mark - Select Cell
 -(void)selectedWorldBossCell:(BOOL)isSelected{
+    if ( self.textLabel_Third == nil ) {
+        self.textLabel_Third = [[UILabel alloc] init];
+    }
     [self.textLabel_Third setHidden:!isSelected];
+    [self addSubview:self.textLabel_Third];
 }
 
 @end

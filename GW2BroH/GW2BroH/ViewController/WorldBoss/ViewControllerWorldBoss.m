@@ -21,6 +21,7 @@
 
 // TODO:多國語系
 #define D_String_WorldBoss @"世界王時間"
+#define D_String_Boss @"世界王"
 
 @interface ViewControllerWorldBoss ()
 
@@ -38,7 +39,7 @@
 
         
         UIImage *tabBarImage = [GW2BroH_Tools getImageWithClass:self withImageName:@"Boss"];
-        UITabBarItem* theItem = [[UITabBarItem alloc] initWithTitle:@"World Boss"
+        UITabBarItem* theItem = [[UITabBarItem alloc] initWithTitle:D_String_Boss
                                                               image:tabBarImage
                                                       selectedImage:tabBarImage];
         self.tabBarItem = theItem;

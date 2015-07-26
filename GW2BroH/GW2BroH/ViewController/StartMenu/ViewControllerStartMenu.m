@@ -85,7 +85,7 @@
 
 /** 進入時就要處理 broh members 清單 */
 -(void)dnloadMemberList{
-    // TODO: 思考要怎麼下載比較有效率？直接下載？還是用 parse？
+    // TODO: 思考要怎麼下載比較有效率？直接下載？還是直接用 parse？
     
     
 }

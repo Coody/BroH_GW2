@@ -11,7 +11,11 @@
 
 // for tools
 #import "Constants.h"
+#import "GW2BroH_Tools.h"
 
+//TODO: 多國語系
+#define D_String_Dungeon @"副本"
+#define D_String_Dungeon_Movie @"副本 & 影片"
 
 @interface ViewControllerDungeons ()
 
@@ -29,12 +33,14 @@
         //        UIImage* anImage = [UIImage imageNamed:@"MyViewControllerImage.png"];
         //        UITabBarItem* theItem = [[UITabBarItem alloc] initWithTitle:@"Home" image:anImage tag:0];
         
-        // TODO: 使用 image ，不要使用系統預設
-        UITabBarItem* theItem = [[UITabBarItem alloc] initWithTabBarSystemItem:(UITabBarSystemItemFeatured) tag:2];
+        UIImage *tabBarImage = [GW2BroH_Tools getImageWithClass:self withImageName:@"dungeon"];
+        UITabBarItem* theItem = [[UITabBarItem alloc] initWithTitle:D_String_Dungeon
+                                                              image:tabBarImage
+                                                      selectedImage:tabBarImage];
         self.tabBarItem = theItem;
         
         self.navigationBar.barTintColor = VC_NAVIGATION_BAR_COLOR;
-        [self setTitleWithString:@"副本"];
+        [self setTitleWithString:D_String_Dungeon_Movie];
     }
     return self;
 }
