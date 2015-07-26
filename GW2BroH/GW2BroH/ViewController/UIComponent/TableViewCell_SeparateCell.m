@@ -31,6 +31,7 @@
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if ( self != nil ) {
         _cellType = EnumSeparatorTableViewCell_None;
+        _isSelectCell = NO;
         
         self.frame = CGRectMake(0, 0,
                                 [UIScreen mainScreen].bounds.size.width,
@@ -89,39 +90,60 @@
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
-    
-    if ( selected ) {
-        __weak __typeof(self) weakSelf = self;
-        [UIView animateWithDuration:0.3f animations:^{
-            __strong __typeof(weakSelf) strongSelf = weakSelf;
-            strongSelf.cellBoundImageView.frame = CGRectMake(10,
-                                                             10,
-                                                             [UIScreen mainScreen].bounds.size.width - 20,
-                                                             D_CellHight_Selected - 20);
-        }];
+    // Configure the view for the selected state
+}
+
+-(void)setIsSelectCell:(BOOL)isSelectCell{
+    [self setIsSelectCell:isSelectCell withAnimation:YES];
+}
+
+-(void)setIsSelectCell:(BOOL)isSelectCell withAnimation:(BOOL)isAnimate{
+    if ( isSelectCell ) {
+        if ( isAnimate ) {
+            __weak __typeof(self) weakSelf = self;
+            [UIView animateWithDuration:0.3f animations:^{
+                __strong __typeof(weakSelf) strongSelf = weakSelf;
+                strongSelf.cellBoundImageView.frame = CGRectMake(10,
+                                                                 10,
+                                                                 [UIScreen mainScreen].bounds.size.width - 20,
+                                                                 D_CellHight_Selected - 20);
+            }];
+        }
+        else{
+            self.cellBoundImageView.frame = CGRectMake(10,
+                                                       10,[UIScreen mainScreen].bounds.size.width - 20,
+                                                       D_CellHight_Selected - 20);
+        }
     }
     else{
-        __weak __typeof(self) weakSelf = self;
-        [UIView animateWithDuration:0.3f animations:^{
-            __strong __typeof(weakSelf) strongSelf = weakSelf;
-            strongSelf.cellBoundImageView.frame = CGRectMake(10,
-                                                             10,
-                                                             [UIScreen mainScreen].bounds.size.width - 20,
-                                                             D_CellHight_Normal - 20);
-        }];
+        if ( isAnimate ) {
+            __weak __typeof(self) weakSelf = self;
+            [UIView animateWithDuration:0.3f animations:^{
+                __strong __typeof(weakSelf) strongSelf = weakSelf;
+                strongSelf.cellBoundImageView.frame = CGRectMake(10,
+                                                                 10,
+                                                                 [UIScreen mainScreen].bounds.size.width - 20,
+                                                                 D_CellHight_Normal - 20);
+            }];
+        }
+        else{
+            self.cellBoundImageView.frame = CGRectMake(10,
+                                                       10,
+                                                       [UIScreen mainScreen].bounds.size.width - 20,
+                                                       D_CellHight_Normal - 20);
+        }
     }
     
     switch (_cellType) {
         case EnumSeparatorTableViewCell_WorldBoss:
         {
-            [self selectedWorldBossCell:selected];
+            [self selectedWorldBossCell:isSelectCell];
         }
             break;
         case EnumSeparatorTableViewCell_None:
         default:
             break;
     }
-    // Configure the view for the selected state
 }
 
 -(void)clear{

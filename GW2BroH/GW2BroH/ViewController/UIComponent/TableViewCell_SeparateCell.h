@@ -25,6 +25,7 @@ typedef enum : NSInteger{
 
 // basic property
 @property (nonatomic , readonly) EnumSeparatorTableViewCell cellType;
+@property (nonatomic , readwrite) BOOL isSelectCell;
 
 // for public UI component
 @property (nonatomic , strong) UIImageView *imageView_First;
@@ -39,5 +40,7 @@ typedef enum : NSInteger{
 -(void)clear;
 
 -(void)isFirstCell;
+
+-(void)setIsSelectCell:(BOOL)isSelectCell withAnimation:(BOOL)isAnimate;
 
 @end

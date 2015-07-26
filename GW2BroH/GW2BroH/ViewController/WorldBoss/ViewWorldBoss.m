@@ -28,6 +28,7 @@
 @property (nonatomic , strong) NSMutableArray *worldBossArray;
 
 @property (nonatomic) NSInteger recentSelectIndex;
+@property (nonatomic , strong) NSMutableDictionary *selectDic;
 
 @end
 
@@ -46,6 +47,7 @@
         [self setBackgroundColor:VC_OTHERS_BACKGROUND_COLOR];
         
         _worldBossArray = [[NSMutableArray alloc] init];
+        _selectDic = [[NSMutableDictionary alloc] init];
         _recentSelectIndex = NSNotFound;
         
         [self createWorldBossTableView];
@@ -92,6 +94,7 @@
 #pragma mark - 開放方法
 -(void)addWorldBossWithArray:(NSArray *)tempWorldBossArray{
     [_worldBossArray removeAllObjects];
+    [_selectDic removeAllObjects];
     if ( [tempWorldBossArray count] <= 0 ) {
         [self hideTableView:YES];
     }
@@ -99,14 +102,18 @@
         [self hideTableView:NO];
         [_worldBossArray addObjectsFromArray:tempWorldBossArray];
         [_worldBossTableView reloadData];
+        NSInteger unitIndex = 0;
+        for ( id unit in _worldBossArray ) {
+            [_selectDic setObject:[NSNumber numberWithBool:NO] forKey:[NSString stringWithFormat:@"%ld" , (long)unitIndex]];
+            unitIndex++;
+        }
         
         if ( _recentSelectIndex != NSNotFound ) {
-            NSIndexPath *tempIndexPath = [NSIndexPath indexPathForRow:_recentSelectIndex inSection:0];
-            TableViewCell_SeparateCell *cell = (TableViewCell_SeparateCell *)[_worldBossTableView cellForRowAtIndexPath:tempIndexPath];
-            [cell setSelected:YES];
-            [_worldBossTableView selectRowAtIndexPath:tempIndexPath
-                                             animated:YES
-                                       scrollPosition:(UITableViewScrollPositionTop)];
+            [_selectDic setValue:[NSNumber numberWithBool:YES] forKey:[NSString stringWithFormat:@"%ld" , (long)_recentSelectIndex]];
+            [_worldBossTableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:_recentSelectIndex inSection:0]
+                                       atScrollPosition:(UITableViewScrollPositionTop)
+                                               animated:YES];
+            
         }
     }
 }
@@ -133,16 +140,27 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    [tableView deselectRowAtIndexPath:indexPath animated:NO];
+    
+    [tableView beginUpdates];
+    
+    // 清除其他有點的 cell
     TableViewCell_SeparateCell *cell = (TableViewCell_SeparateCell *)[_worldBossTableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:_recentSelectIndex inSection:0]];
-    [cell setSelected:NO];
-    if ( _recentSelectIndex == indexPath.row ) {
+    [cell setIsSelectCell:NO];
+    [_selectDic setValue:[NSNumber numberWithBool:NO] forKey:[NSString stringWithFormat:@"%ld" , _recentSelectIndex]];
+    
+    if ( [self checkIsSelected:indexPath.row] ) {
+        // 點到自己
         _recentSelectIndex = NSNotFound;
     }
     else{
+        // 點到別的 cell
+        TableViewCell_SeparateCell *cell = (TableViewCell_SeparateCell *)[_worldBossTableView cellForRowAtIndexPath:indexPath];
+        [cell setIsSelectCell:YES];
+        [_selectDic setValue:[NSNumber numberWithBool:YES] forKey:[NSString stringWithFormat:@"%ld" , _recentSelectIndex]];
         _recentSelectIndex = indexPath.row;
     }
     
-    [tableView beginUpdates];
     [tableView endUpdates];
     
     [tableView scrollToRowAtIndexPath:indexPath atScrollPosition:(UITableViewScrollPositionTop) animated:YES];
@@ -154,26 +172,28 @@
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    // 設定 Cell 的識別符號
-    NSString *worldBossCell = [NSString stringWithFormat:@"WorldBossCell_%d",((int)indexPath.row)%20];
+//    // 設定 Cell 的識別符號
+//    NSString *worldBossCell = @"WorldBossCell";
+//    
+//    [tableView registerClass:[TableViewCell_SeparateCell class] forCellReuseIdentifier:worldBossCell];
+//    
+//    // 從 TableView 中取用是別的 Cell 來 reuse
+//    id cell = [tableView dequeueReusableCellWithIdentifier:worldBossCell];
+//    if ( cell == nil ) {
+//        cell = [[TableViewCell_SeparateCell alloc] init];
+//    }
     
-    static BOOL isRegister = NO;
-    if (!isRegister) {
-        [tableView registerClass:[TableViewCell_SeparateCell class] forCellReuseIdentifier:worldBossCell];
-        isRegister = YES;
-    }
-    
-    // 從 TableView 中取用是別的 Cell 來 reuse
-    id cell = [tableView dequeueReusableCellWithIdentifier:worldBossCell];
-    if ( cell == nil || ![cell isMemberOfClass:[TableViewCell_SeparateCell class]]) {
-        cell = [[TableViewCell_SeparateCell alloc] init];
-    }
+    // 贊時不用 cell reuse ，讓 OS 自行處理 Cell 的記憶體（使用上面的 cell reuse 測試後，發現記憶體會莫名上升）
+    TableViewCell_SeparateCell *cell = [[TableViewCell_SeparateCell alloc] init];
     
     // 設置
     [cell setupCell:_worldBossArray[indexPath.row] withType:EnumSeparatorTableViewCell_WorldBoss];
-    
     if ( indexPath.row == 0 ) {
         [cell isFirstCell];
+    }
+    if ( _recentSelectIndex == indexPath.row &&
+         _recentSelectIndex != NSNotFound ) {
+        [cell setIsSelectCell:YES withAnimation:NO];
     }
     
     return cell;
