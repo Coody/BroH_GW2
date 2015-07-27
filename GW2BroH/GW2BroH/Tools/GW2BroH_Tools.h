@@ -17,16 +17,25 @@
  * @param - tempClass: 取得 image view 得 viewcontroller 名稱（通常只要輸入 [ViewControllerOOXX class] 就好）
  * @param - tempImageName: image 的名稱（不帶 .png ）
  */
-+(NSString *)getPathWithClass:(id)tempClass withImageName:(NSString *)tempImageName;
++(NSString *)getPathWithClass:(id)tempClass
+                withImageName:(NSString *)tempImageName;
 
 /***/
-+(UIImage *)getImageWithClass:(id)tempClass withImageName:(NSString *)tempImageName;
++(UIImage *)getImageWithClass:(id)tempClass
+                withImageName:(NSString *)tempImageName;
 
 /***/
-+(NSString *)getPathWithString:(NSString*)tempString withImageName:(NSString *)tempImageName;
++(NSString *)getPathWithString:(NSString*)tempString
+                 withImageName:(NSString *)tempImageName;
 
 /***/
-+(UIImage *)getImageWithString:(NSString*)tempString withImageName:(NSString *)tempImageName;
++(UIImage *)getImageWithString:(NSString*)tempString
+                 withImageName:(NSString *)tempImageName;
+
+/***/
++(NSString *)getPathWithString:(NSString*)tempString
+                  withFileName:(NSString *)tempFileName
+                      withType:(NSString *)tempType;
 
 /***/
 +(float) statusBarHeight;

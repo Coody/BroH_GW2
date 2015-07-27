@@ -43,6 +43,8 @@
                                                                             10,
                                                                             [UIScreen mainScreen].bounds.size.width - 20,
                                                                             D_CellHight_Normal - 20)];
+        
+        // 初始話基礎底圖、以及讓底圖可以擴大
         CGFloat top = 25; // 頂端高度
         CGFloat bottom = 25 ; // 底部高度
         CGFloat left = 10; // 左部寬度
@@ -53,6 +55,7 @@
         _redCellBoundImage = [_redCellBoundImage resizableImageWithCapInsets:insets resizingMode:UIImageResizingModeStretch];
         _blueCellBoundImage = [GW2BroH_Tools getImageWithString:@"ViewControllerWorldBoss" withImageName:@"CellBackgroundImage_Blue"];
         _blueCellBoundImage = [_blueCellBoundImage resizableImageWithCapInsets:insets resizingMode:UIImageResizingModeStretch];
+        
         [self addSubview:_cellBoundImageView];
     }
     return self;
@@ -181,6 +184,12 @@
 -(void)isFirstCell{
     // TODO: 跟其他 Cell 有差別（外框顏色變紅色、倒數時間變大）
     [_cellBoundImageView setImage:_redCellBoundImage];
+    // 加入陰影
+    _cellBoundImageView.layer.shadowColor = [UIColor blackColor].CGColor;
+    _cellBoundImageView.layer.shadowOffset = CGSizeMake(0, 3);
+    _cellBoundImageView.layer.shadowOpacity = 3;
+    _cellBoundImageView.layer.shadowRadius = 3.0;
+    _cellBoundImageView.clipsToBounds = NO;
 }
 
 @end
