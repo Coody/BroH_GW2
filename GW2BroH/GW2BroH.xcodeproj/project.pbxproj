@@ -10,6 +10,7 @@
 		595F1F394C0A58A7F7B2B7C1 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 756E2DBB4E054859046F4273 /* libPods.a */; };
 		5A44D9F21B640354007BA30D /* TableViewCell_SeparateCell+WorldBossCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A44D9F11B640354007BA30D /* TableViewCell_SeparateCell+WorldBossCell.m */; };
 		5A44D9F51B640362007BA30D /* UINavigationController+Title.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A44D9F41B640362007BA30D /* UINavigationController+Title.m */; };
+		5A79907B1B67DA7400167484 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 5A79907A1B67DA7400167484 /* README.md */; };
 		5AB68C981B5B9EAA00B3A49D /* Datas in Resources */ = {isa = PBXBuildFile; fileRef = 5AB68C971B5B9EAA00B3A49D /* Datas */; };
 		5AB68C9B1B5BB42600B3A49D /* ViewWorldBoss.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AB68C9A1B5BB42600B3A49D /* ViewWorldBoss.m */; };
 		5ADA08241B63A4E800B7B038 /* WorldBossModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ADA08231B63A4E800B7B038 /* WorldBossModel.m */; };
@@ -43,6 +44,7 @@
 		5A44D9F11B640354007BA30D /* TableViewCell_SeparateCell+WorldBossCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "TableViewCell_SeparateCell+WorldBossCell.m"; path = "ViewController/UIComponent/TableViewCell_SeparateCell+WorldBossCell.m"; sourceTree = "<group>"; };
 		5A44D9F31B640362007BA30D /* UINavigationController+Title.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UINavigationController+Title.h"; path = "ViewController/UINavigationController+Title.h"; sourceTree = "<group>"; };
 		5A44D9F41B640362007BA30D /* UINavigationController+Title.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UINavigationController+Title.m"; path = "ViewController/UINavigationController+Title.m"; sourceTree = "<group>"; };
+		5A79907A1B67DA7400167484 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../../README.md; sourceTree = "<group>"; };
 		5AB68C971B5B9EAA00B3A49D /* Datas */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Datas; sourceTree = "<group>"; };
 		5AB68C991B5BB42600B3A49D /* ViewWorldBoss.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewWorldBoss.h; path = ViewController/WorldBoss/ViewWorldBoss.h; sourceTree = "<group>"; };
 		5AB68C9A1B5BB42600B3A49D /* ViewWorldBoss.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewWorldBoss.m; path = ViewController/WorldBoss/ViewWorldBoss.m; sourceTree = "<group>"; };
@@ -216,6 +218,7 @@
 		FB420F831B1017FB0007BBD5 /* GW2BroH */ = {
 			isa = PBXGroup;
 			children = (
+				5A79907A1B67DA7400167484 /* README.md */,
 				5AB68C971B5B9EAA00B3A49D /* Datas */,
 				FB8987211B5782D000D56917 /* WebSiteHelper */,
 				FB2CA75B1B183F94009ED57F /* Tools */,
@@ -457,6 +460,7 @@
 				FB8987581B5782D000D56917 /* README.md in Sources */,
 				FB2CA75E1B183F94009ED57F /* GW2BroH_Tools.m in Sources */,
 				FB8987511B5782D000D56917 /* GW2_Request_Items.m in Sources */,
+				5A79907B1B67DA7400167484 /* README.md in Sources */,
 				FB8987561B5782D000D56917 /* WebApi.m in Sources */,
 				FB90BC971B5E108B0099EA29 /* TableViewCell_SeparateCell.m in Sources */,
 				FB420F8A1B1017FB0007BBD5 /* AppDelegate.m in Sources */,

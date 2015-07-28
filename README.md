@@ -1,5 +1,11 @@
 # BroH_GW2 iOS App 說明
 - 為了 GW2 所做的 iOS App
+- 包含五個 Tab Bar 功能：
+-- 世界王時間
+-- 拍賣場 & Gem 換金查詢
+-- 副本
+-- 公會相關
+-- 其他
 
 # GW2 WebApi 參考網站
 
@@ -8,6 +14,7 @@
 # 第三方 framework
 
 - AFNetworking
+- JSONModel
 
 # 專案使用方式
 
