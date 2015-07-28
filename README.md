@@ -1,7 +1,7 @@
 # BroH_GW2 iOS App 說明
 為了 GW2 所做的 iOS App
 
-### BroH_GW2 功能說明：
+### 此 App 的功能說明：
 包含五個 Tab Bar 功能：
 - 世界王時間
 - 拍賣場 & Gem 換金查詢
