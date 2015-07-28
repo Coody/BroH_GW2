@@ -95,6 +95,8 @@
 -(void)addWorldBossWithArray:(NSArray *)tempWorldBossArray{
     [_worldBossArray removeAllObjects];
     [_selectDic removeAllObjects];
+    
+    // 判斷陣列內是否有 World Boss Model 資料
     if ( [tempWorldBossArray count] <= 0 ) {
         [self hideTableView:YES];
     }
@@ -103,11 +105,14 @@
         [_worldBossArray addObjectsFromArray:tempWorldBossArray];
         [_worldBossTableView reloadData];
         NSInteger unitIndex = 0;
+        
+        // 將所有 cell 的狀態設定為「未選擇」，並且設定 Key 為此 cell 的 index
         for ( id unit in _worldBossArray ) {
             [_selectDic setObject:[NSNumber numberWithBool:NO] forKey:[NSString stringWithFormat:@"%ld" , (long)unitIndex]];
             unitIndex++;
         }
         
+        // 如果有之前被選擇的 cell 時，要打開 cell 並且 scroll 到那個 cell
         if ( _recentSelectIndex != NSNotFound ) {
             [_selectDic setValue:[NSNumber numberWithBool:YES] forKey:[NSString stringWithFormat:@"%ld" , (long)_recentSelectIndex]];
             [_worldBossTableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:_recentSelectIndex inSection:0]
@@ -140,6 +145,7 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    // 取消選擇
     [tableView deselectRowAtIndexPath:indexPath animated:NO];
     
     [tableView beginUpdates];
@@ -163,6 +169,7 @@
     
     [tableView endUpdates];
     
+    // 滾到被點擊的 cell
     [tableView scrollToRowAtIndexPath:indexPath atScrollPosition:(UITableViewScrollPositionTop) animated:YES];
 }
 
