@@ -9,10 +9,9 @@
 - 公會相關
 - 其他
 
-### GW2 WebApi 參考網站
+### 官方 GW2 Api 網站
 
 - https://wiki.guildwars2.com/wiki/API:Main
-- 
 
 ### 第三方 framework
 
