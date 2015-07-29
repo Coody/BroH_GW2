@@ -43,7 +43,7 @@
     else{
         [self.imageView_First setHidden:NO];
     }
-    [self.imageView_First setFrame:CGRectMake(20, 20, 146 , 73)];
+    [self.imageView_First setFrame:CGRectMake(20, 22, 146 , 73)];
     [self.imageView_First setImage:[GW2BroH_Tools getImageWithString:@"ViewControllerWorldBoss" withImageName:tempImageName]];
     
     [self addSubview:self.imageView_First];

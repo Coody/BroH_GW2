@@ -18,6 +18,11 @@
     [titleLabel setText:tempTitle];
     [titleLabel setTextAlignment:(NSTextAlignmentCenter)];
     [titleLabel setFont:[UIFont boldSystemFontOfSize:26.0f]];
+    titleLabel.layer.shadowColor = [UIColor blackColor].CGColor;
+    titleLabel.layer.shadowOffset = CGSizeMake(0, 2);
+    titleLabel.layer.shadowOpacity = 1;
+    titleLabel.layer.shadowRadius = 2.0;
+    titleLabel.clipsToBounds = NO;
     [self.view addSubview:titleLabel];
 }
 

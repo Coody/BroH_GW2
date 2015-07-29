@@ -39,10 +39,10 @@
         [self setBackgroundColor:[UIColor clearColor]];
         [self setSelectionStyle:(UITableViewCellSelectionStyleNone)];
         
-        _cellBoundImageView = [[UIImageView alloc] initWithFrame:CGRectMake(10,
+        _cellBoundImageView = [[UIImageView alloc] initWithFrame:CGRectMake(8,
                                                                             10,
-                                                                            [UIScreen mainScreen].bounds.size.width - 20,
-                                                                            D_CellHight_Normal - 20)];
+                                                                            [UIScreen mainScreen].bounds.size.width - 10,
+                                                                            D_CellHight_Normal - 10)];
         
         // 初始話基礎底圖、以及讓底圖可以擴大
         CGFloat top = 25; // 頂端高度
@@ -51,7 +51,6 @@
         CGFloat right = 10; // 右部寬度
         UIEdgeInsets insets = UIEdgeInsetsMake(top, left, bottom, right);
         _redCellBoundImage = [GW2BroH_Tools getImageWithString:@"ViewControllerWorldBoss" withImageName:@"CellBackgroundImage_Red"];
-        // 指定为拉伸模式，伸缩后重新赋值
         _redCellBoundImage = [_redCellBoundImage resizableImageWithCapInsets:insets resizingMode:UIImageResizingModeStretch];
         _blueCellBoundImage = [GW2BroH_Tools getImageWithString:@"ViewControllerWorldBoss" withImageName:@"CellBackgroundImage_Blue"];
         _blueCellBoundImage = [_blueCellBoundImage resizableImageWithCapInsets:insets resizingMode:UIImageResizingModeStretch];
@@ -106,16 +105,16 @@
             __weak __typeof(self) weakSelf = self;
             [UIView animateWithDuration:0.3f animations:^{
                 __strong __typeof(weakSelf) strongSelf = weakSelf;
-                strongSelf.cellBoundImageView.frame = CGRectMake(10,
+                strongSelf.cellBoundImageView.frame = CGRectMake(8,
                                                                  10,
-                                                                 [UIScreen mainScreen].bounds.size.width - 20,
-                                                                 D_CellHight_Selected - 20);
+                                                                 [UIScreen mainScreen].bounds.size.width - 10,
+                                                                 D_CellHight_Selected - 10);
             }];
         }
         else{
-            self.cellBoundImageView.frame = CGRectMake(10,
-                                                       10,[UIScreen mainScreen].bounds.size.width - 20,
-                                                       D_CellHight_Selected - 20);
+            self.cellBoundImageView.frame = CGRectMake(8,
+                                                       10,[UIScreen mainScreen].bounds.size.width - 10,
+                                                       D_CellHight_Selected - 10);
         }
     }
     else{
@@ -123,17 +122,17 @@
             __weak __typeof(self) weakSelf = self;
             [UIView animateWithDuration:0.3f animations:^{
                 __strong __typeof(weakSelf) strongSelf = weakSelf;
-                strongSelf.cellBoundImageView.frame = CGRectMake(10,
+                strongSelf.cellBoundImageView.frame = CGRectMake(8,
                                                                  10,
-                                                                 [UIScreen mainScreen].bounds.size.width - 20,
-                                                                 D_CellHight_Normal - 20);
+                                                                 [UIScreen mainScreen].bounds.size.width - 10,
+                                                                 D_CellHight_Normal - 10);
             }];
         }
         else{
-            self.cellBoundImageView.frame = CGRectMake(10,
+            self.cellBoundImageView.frame = CGRectMake(8,
                                                        10,
-                                                       [UIScreen mainScreen].bounds.size.width - 20,
-                                                       D_CellHight_Normal - 20);
+                                                       [UIScreen mainScreen].bounds.size.width - 10,
+                                                       D_CellHight_Normal - 10);
         }
     }
     
@@ -184,12 +183,6 @@
 -(void)isFirstCell{
     // TODO: 跟其他 Cell 有差別（外框顏色變紅色、倒數時間變大）
     [_cellBoundImageView setImage:_redCellBoundImage];
-    // 加入陰影
-    _cellBoundImageView.layer.shadowColor = [UIColor blackColor].CGColor;
-    _cellBoundImageView.layer.shadowOffset = CGSizeMake(0, 3);
-    _cellBoundImageView.layer.shadowOpacity = 3;
-    _cellBoundImageView.layer.shadowRadius = 3.0;
-    _cellBoundImageView.clipsToBounds = NO;
 }
 
 @end
