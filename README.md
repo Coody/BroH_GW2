@@ -1,4 +1,8 @@
-# BroH_GW2 iOS App 說明
+# BroH_GW2 iOS App
+![建立者](https://img.shields.io/badge/建立者-Coody-orange.svg)
+![License](https://img.shields.io/dub/l/vibe-d.svg)
+
+### 專案目標：
 為了 GW2 所做的 iOS App
 
 ### 此 App 的功能說明：
