@@ -8,7 +8,15 @@
 
 #import "ViewItems.h"
 
+@interface ViewItems()
+
+@property (nonatomic , strong) UITableView *itemsTableView;
+
+@end
+
 @implementation ViewItems
+
+
 
 /*
 // Only override drawRect: if you perform custom drawing.

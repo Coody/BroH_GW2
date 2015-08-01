@@ -8,6 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+#pragma mark - Protocol
+@protocol ViewItems_Protocol <NSObject>
+
+@end
+
+#pragma mark - Interface
 @interface ViewItems : UIView
 
 @end

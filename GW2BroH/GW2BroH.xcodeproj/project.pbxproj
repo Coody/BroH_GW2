@@ -175,10 +175,10 @@
 		FB38C4041B1ABCD8001B424C /* Items */ = {
 			isa = PBXGroup;
 			children = (
-				FB38C40D1B1ABDD9001B424C /* ViewControllerItems.h */,
-				FB38C40E1B1ABDD9001B424C /* ViewControllerItems.m */,
 				5ADAAF781B6CDAFF00689789 /* ViewItems.h */,
 				5ADAAF791B6CDAFF00689789 /* ViewItems.m */,
+				FB38C40D1B1ABDD9001B424C /* ViewControllerItems.h */,
+				FB38C40E1B1ABDD9001B424C /* ViewControllerItems.m */,
 			);
 			name = Items;
 			sourceTree = "<group>";

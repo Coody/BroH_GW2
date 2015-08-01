@@ -9,6 +9,9 @@
 #import "ViewControllerItems.h"
 #import "UINavigationController+Title.h"
 
+// for view
+#import "ViewItems.h"
+
 // for tools
 #import "Constants.h"
 #import "GW2BroH_Tools.h"
@@ -18,6 +21,8 @@
 #define D_String_TP @"拍賣場"
 
 @interface ViewControllerItems ()
+
+@property (nonatomic , strong) ViewItems *itemsView;
 
 @end
 
@@ -76,7 +81,10 @@
 #pragma mark - 內部方法
 
 -(void)createViewItems{
-    
+    if ( _itemsView == nil ) {
+        _itemsView = [[ViewItems alloc] init];
+    }
+    [self.view addSubview:_itemsView];
 }
 
 
