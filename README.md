@@ -1,7 +1,10 @@
-# BroH_GW2 iOS App 說明
+# BroH_GW2 iOS App
+![建立者](https://img.shields.io/badge/建立者-Coody-orange.svg)
+
+### 專案目標：
 為了 GW2 所做的 iOS App
 
-### BroH_GW2 功能說明：
+### 此 App 的功能說明：
 包含五個 Tab Bar 功能：
 - 世界王時間
 - 拍賣場 & Gem 換金查詢
@@ -9,10 +12,9 @@
 - 公會相關
 - 其他
 
-### GW2 WebApi 參考網站
+### 官方 GW2 Api 網站
 
 - https://wiki.guildwars2.com/wiki/API:Main
-- 
 
 ### 第三方 framework
 

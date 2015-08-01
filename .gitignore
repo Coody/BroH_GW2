@@ -245,5 +245,5 @@ GW2BroH/Pods/JSONModel/JSONModel/JSONModelTransformations/JSONValueTransformer.h
 GW2BroH/Pods/JSONModel/JSONModel/JSONModelTransformations/JSONValueTransformer.m
 GW2BroH/Pods/Target Support Files/JSONModel/JSONModel-dummy.m
 GW2BroH/Pods/Target Support Files/JSONModel/JSONModel-prefix.pch
-GW2BroH/Podfile.lock
-GW2BroH/Pods/Manifest.lock
+Podfile.lock
+Manifest.lock
