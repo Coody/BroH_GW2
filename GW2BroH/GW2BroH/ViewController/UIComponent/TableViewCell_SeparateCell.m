@@ -29,6 +29,7 @@
     if ( self != nil ) {
         _cellType = EnumSeparatorTableViewCell_None;
         _isSelectCell = NO;
+        _isDoSomething = NO;
         
         self.frame = CGRectMake(0, 0,
                                 [UIScreen mainScreen].bounds.size.width,

@@ -11,7 +11,6 @@
 #define D_CellHight_Normal 112
 #define D_CellHight_Selected 440
 
-
 /**  */
 typedef enum : NSInteger{
     EnumSeparatorTableViewCell_None = 0,
@@ -39,6 +38,9 @@ typedef enum : NSInteger{
 @property (nonatomic , strong) UILabel *textLabel_Second;
 @property (nonatomic , strong) UILabel *textLabel_Third;
 @property (nonatomic , strong) UITextField *textField_First;
+// for others public property
+@property (nonatomic , assign) BOOL isDoSomething;
+
 
 /***/
 -(void)setupCell:(id)tempModel withType:(EnumSeparatorTableViewCell)tempEnumSeparatorTableViewCell;

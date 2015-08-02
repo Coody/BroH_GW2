@@ -16,6 +16,8 @@
 		5AB68C9B1B5BB42600B3A49D /* ViewWorldBoss.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AB68C9A1B5BB42600B3A49D /* ViewWorldBoss.m */; };
 		5ADA08241B63A4E800B7B038 /* WorldBossModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ADA08231B63A4E800B7B038 /* WorldBossModel.m */; };
 		5ADAAF7A1B6CDAFF00689789 /* ViewItems.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ADAAF791B6CDAFF00689789 /* ViewItems.m */; };
+		5AF8A5AD1B6E8A0D0002E6AB /* GW2_WebApi_Coins.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF8A5AC1B6E8A0D0002E6AB /* GW2_WebApi_Coins.m */; };
+		5AF8A5B01B6E8A190002E6AB /* GW2_Request_Coins.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF8A5AF1B6E8A190002E6AB /* GW2_Request_Coins.m */; };
 		FB2CA75E1B183F94009ED57F /* GW2BroH_Tools.m in Sources */ = {isa = PBXBuildFile; fileRef = FB2CA75D1B183F94009ED57F /* GW2BroH_Tools.m */; };
 		FB38C4091B1ABDB1001B424C /* ViewControllerStartMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = FB38C4081B1ABDB1001B424C /* ViewControllerStartMenu.m */; };
 		FB38C40C1B1ABDC4001B424C /* ViewControllerWorldBoss.m in Sources */ = {isa = PBXBuildFile; fileRef = FB38C40B1B1ABDC4001B424C /* ViewControllerWorldBoss.m */; };
@@ -56,6 +58,10 @@
 		5ADA08231B63A4E800B7B038 /* WorldBossModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WorldBossModel.m; path = ViewController/WorldBoss/WorldBossModel.m; sourceTree = "<group>"; };
 		5ADAAF781B6CDAFF00689789 /* ViewItems.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewItems.h; path = ViewController/Items/ViewItems.h; sourceTree = "<group>"; };
 		5ADAAF791B6CDAFF00689789 /* ViewItems.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewItems.m; path = ViewController/Items/ViewItems.m; sourceTree = "<group>"; };
+		5AF8A5AB1B6E8A0D0002E6AB /* GW2_WebApi_Coins.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GW2_WebApi_Coins.h; sourceTree = "<group>"; };
+		5AF8A5AC1B6E8A0D0002E6AB /* GW2_WebApi_Coins.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GW2_WebApi_Coins.m; sourceTree = "<group>"; };
+		5AF8A5AE1B6E8A190002E6AB /* GW2_Request_Coins.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GW2_Request_Coins.h; sourceTree = "<group>"; };
+		5AF8A5AF1B6E8A190002E6AB /* GW2_Request_Coins.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GW2_Request_Coins.m; sourceTree = "<group>"; };
 		756E2DBB4E054859046F4273 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1C33BB0A6ABF3B0116DF588 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		FB2CA75C1B183F94009ED57F /* GW2BroH_Tools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GW2BroH_Tools.h; sourceTree = "<group>"; };
@@ -287,6 +293,8 @@
 		FB8987221B5782D000D56917 /* GW2Request */ = {
 			isa = PBXGroup;
 			children = (
+				5AF8A5AE1B6E8A190002E6AB /* GW2_Request_Coins.h */,
+				5AF8A5AF1B6E8A190002E6AB /* GW2_Request_Coins.m */,
 				FB8987231B5782D000D56917 /* GW2_Request_Gems.h */,
 				FB8987241B5782D000D56917 /* GW2_Request_Gems.m */,
 				FB8987251B5782D000D56917 /* GW2_Request_Items.h */,
@@ -298,6 +306,8 @@
 		FB8987271B5782D000D56917 /* GW2WebApi */ = {
 			isa = PBXGroup;
 			children = (
+				5AF8A5AB1B6E8A0D0002E6AB /* GW2_WebApi_Coins.h */,
+				5AF8A5AC1B6E8A0D0002E6AB /* GW2_WebApi_Coins.m */,
 				FB8987281B5782D000D56917 /* GW2_WebApi_Gems.h */,
 				FB8987291B5782D000D56917 /* GW2_WebApi_Gems.m */,
 				FB89872A1B5782D000D56917 /* GW2_WebApi_Items.h */,
@@ -477,8 +487,10 @@
 				5A8EF1281B6CF80600760835 /* TableViewCell_SeparateCell+CoinsAndGems.m in Sources */,
 				5A44D9F51B640362007BA30D /* UINavigationController+Title.m in Sources */,
 				FB8987581B5782D000D56917 /* README.md in Sources */,
+				5AF8A5AD1B6E8A0D0002E6AB /* GW2_WebApi_Coins.m in Sources */,
 				FB2CA75E1B183F94009ED57F /* GW2BroH_Tools.m in Sources */,
 				FB8987511B5782D000D56917 /* GW2_Request_Items.m in Sources */,
+				5AF8A5B01B6E8A190002E6AB /* GW2_Request_Coins.m in Sources */,
 				5A79907B1B67DA7400167484 /* README.md in Sources */,
 				FB8987561B5782D000D56917 /* WebApi.m in Sources */,
 				FB90BC971B5E108B0099EA29 /* TableViewCell_SeparateCell.m in Sources */,

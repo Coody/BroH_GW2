@@ -9,9 +9,14 @@
 #import "TableViewCell_SeparateCell+CoinsAndGems.h"
 
 // for Tools
+#import "Constants.h"
 #import "GW2BroH_Tools.h"
 
+
+
 @implementation TableViewCell_SeparateCell (CoinsAndGems)
+
+//CATEGORY_PROPERTY_GET_SET(GW2_Request_Coins*,coinsRequest, setCoinsRequest:)
 
 #pragma mark - 開放方法
 -(void)setupCellWithConis{
@@ -149,7 +154,9 @@
 
 #pragma mark - Select Cell
 -(void)selectedCoinsAndGemsCell:(BOOL)isSelected{
-    
+    if ( self.isDoSomething == NO) {
+        
+    }
 }
 
 @end

@@ -8,7 +8,12 @@
 
 #import "TableViewCell_SeparateCell.h"
 
-@interface TableViewCell_SeparateCell (CoinsAndGems)
+// for Web Request
+#import "GW2_Request_Coins.h"
+#import "GW2_Request_Gems.h"
+
+@interface TableViewCell_SeparateCell (CoinsAndGems) < GW2_Request_Coins_Protocol,
+                                                       GW2_Request_Gems_Protocol >
 
 -(void)setupCellWithConis;
 
