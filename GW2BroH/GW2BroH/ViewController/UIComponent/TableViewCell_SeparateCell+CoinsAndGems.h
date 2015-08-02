@@ -16,4 +16,6 @@
 
 -(void)selectedCoinsAndGemsCell:(BOOL)isSelected;
 
+-(void)setCoinsAndGemsLabel:(NSInteger)tempGoldsOrGems;
+
 @end

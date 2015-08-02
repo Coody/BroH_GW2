@@ -13,6 +13,7 @@
 
 @implementation TableViewCell_SeparateCell (CoinsAndGems)
 
+#pragma mark - 開放方法
 -(void)setupCellWithConis{
     
     [self setupCellWithConisAndGemsModel:EnumSeparatorTableViewCell_Coins];
@@ -22,6 +23,18 @@
     [self setupCellWithConisAndGemsModel:EnumSeparatorTableViewCell_Gems];
 }
 
+-(void)setCoinsAndGemsLabel:(NSInteger)tempGoldsOrGems{
+    if ( [self.textField_First.text isEqualToString:@""] ||
+         self.textField_First.text == nil ||
+         self.textField_First == nil ) {
+        return;
+    }
+    else{
+        [self.textLabel_Second setText:[NSString stringWithFormat:@"%ld",(long)tempGoldsOrGems]];
+    }
+}
+
+#pragma mark - 私有方法
 -(void)setupCellWithConisAndGemsModel:(EnumSeparatorTableViewCell)tempCoinsAndGemsCellType{
     
     [self createBackgroundViewWithType:tempCoinsAndGemsCellType];
@@ -29,8 +42,11 @@
     [self createTextFieldWithType:tempCoinsAndGemsCellType];
     
     [self createLabel];
+    
+    [self createResultLabelWithType:tempCoinsAndGemsCellType];
 }
 
+#pragma mark - UI
 -(void) createBackgroundViewWithType:(EnumSeparatorTableViewCell)tempCoinsAndGemsCellType{
     if ( self.imageView_First == nil ) {
         self.imageView_First = [[UIImageView alloc] init];
@@ -57,18 +73,27 @@
     }
     switch (tempCoinsAndGemsCellType) {
         case EnumSeparatorTableViewCell_Coins:
+        {
+            UIColor *color = [UIColor yellowColor];
             self.textField_First.frame = CGRectMake(10, 48, 110, 54);
-            [self.textField_First setTextColor:[UIColor yellowColor]];
-            [self.textField_First setText:@"1"];
+            [self.textField_First setTextColor:color];
+            self.textField_First.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"?"
+                                                                                         attributes:@{NSForegroundColorAttributeName:color}];
+        }
             break;
         case EnumSeparatorTableViewCell_Gems:
+        {
+            UIColor *color = [UIColor colorWithRed:0.38f green:0.58f blue:0.82f alpha:1.0f];
             self.textField_First.frame = CGRectMake(10, 48, 98, 54);
-            [self.textField_First setTextColor:[UIColor colorWithRed:0.38f green:0.58f blue:0.82f alpha:1.0f]];
-            [self.textField_First setText:@"10"];
+            [self.textField_First setTextColor:color];
+            self.textField_First.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"?"
+                                                                                         attributes:@{NSForegroundColorAttributeName:color}];
+        }
             break;
         default:
             break;
     }
+    
     
     [self.textField_First setBackgroundColor:[UIColor clearColor]];
     [self.textField_First setFont:[UIFont boldSystemFontOfSize:40.0f]];
@@ -79,7 +104,47 @@
 }
 
 -(void)createLabel{
+    if ( self.textLabel_First == nil ) {
+        self.textLabel_First = [[UILabel alloc] init];
+    }
+    // TODO: 將幾秒鐘的值請 viewController 使用 user default 來取得
+    self.textLabel_First.text = [NSString stringWithFormat:@"每 %d 秒鐘自動詢問一次" , 5];
+    [self.textLabel_First setFont:[UIFont boldSystemFontOfSize:14.0f]];
+    self.textLabel_First.frame = CGRectMake(10, 5, self.frame.size.width - 20, 30);
+    [self.textLabel_First setBackgroundColor:[UIColor clearColor]];
+    [self.textLabel_First setTextColor:[UIColor whiteColor]];
+    [self.textLabel_First setTextAlignment:(NSTextAlignmentRight)];
+    self.textLabel_First.numberOfLines = 0;
+    [self addSubview:self.textLabel_First];
+}
+
+-(void)createResultLabelWithType:(EnumSeparatorTableViewCell)tempCoinsAndGemsCellType{
+    if ( self.textLabel_Second == nil ) {
+        self.textLabel_Second = [[UILabel alloc] init];
+    }
+    switch (tempCoinsAndGemsCellType) {
+        case EnumSeparatorTableViewCell_Coins:
+        {
+            self.textLabel_Second.frame = CGRectMake(195, 48, 82, 54);
+            [self.textLabel_Second setTextColor:[UIColor colorWithRed:0.38f green:0.58f blue:0.82f alpha:1.0f]];
+        }
+            break;
+        case EnumSeparatorTableViewCell_Gems:
+        {
+            self.textLabel_Second.frame = CGRectMake(195, 48, 96, 54);
+            [self.textLabel_Second setTextColor:[UIColor yellowColor]];
+        }
+            break;
+        default:
+            break;
+    }
     
+    [self.textLabel_Second setBackgroundColor:[UIColor clearColor]];
+    [self.textLabel_Second setText:@"0"];
+    [self.textLabel_Second setFont:[UIFont boldSystemFontOfSize:40.0f]];
+    [self.textLabel_Second setTextAlignment:(NSTextAlignmentRight)];
+    
+    [self addSubview:self.textLabel_Second];
 }
 
 #pragma mark - Select Cell

@@ -36,9 +36,9 @@
         CGRect tempFrame = [UIScreen mainScreen].bounds;
         float statusHight = [GW2BroH_Tools statusBarHeight];
         [self setFrame:CGRectMake(0,
-                                  [GW2BroH_Tools statusBarHeight] + 45,
+                                  [GW2BroH_Tools statusBarHeight] + 44.2,
                                   tempFrame.size.width,
-                                  tempFrame.size.height - statusHight - 50 - 45 )];
+                                  tempFrame.size.height - statusHight - 49 - 44.2 )];
         [self setBackgroundColor:VC_OTHERS_BACKGROUND_COLOR];
         
         _itemsArray = [[NSMutableArray alloc] init];
@@ -81,6 +81,7 @@
 
 #pragma mark - 開放方法
 -(void)addItemsWithArray:(NSArray *)tempItemsArray{
+    [_itemsArray removeAllObjects];
     [_itemsArray addObjectsFromArray:tempItemsArray];
     [_itemsTableView reloadData];
 }
@@ -110,7 +111,7 @@
     // 取消選擇
     [tableView deselectRowAtIndexPath:indexPath animated:NO];
     TableViewCell_SeparateCell *cell = (TableViewCell_SeparateCell *)[_itemsTableView cellForRowAtIndexPath:indexPath];
-    [cell setIsSelectCell:YES];
+    [cell setIsSelectCell:NO withAnimation:NO];
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{

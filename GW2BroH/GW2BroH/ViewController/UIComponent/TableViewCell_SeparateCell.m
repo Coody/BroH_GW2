@@ -134,12 +134,12 @@
             break;
         case EnumSeparatorTableViewCell_Coins:
         {
-            
+            [self selectedCoinsAndGemsCell:YES];
         }
             break;
         case EnumSeparatorTableViewCell_Gems:
         {
-            
+            [self selectedCoinsAndGemsCell:YES];
         }
             break;
         case EnumSeparatorTableViewCell_None:
