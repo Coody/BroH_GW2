@@ -34,9 +34,6 @@
         [self.view setFrame:[UIScreen mainScreen].bounds];
         [self.view setBackgroundColor:VC_OTHERS_BACKGROUND_COLOR];
         
-        //        UIImage* anImage = [UIImage imageNamed:@"MyViewControllerImage.png"];
-        //        UITabBarItem* theItem = [[UITabBarItem alloc] initWithTitle:@"Home" image:anImage tag:0];
-        
         UIImage *tabBarImage = [GW2BroH_Tools getImageWithClass:self withImageName:@"tp"];
         UITabBarItem* theItem = [[UITabBarItem alloc] initWithTitle:D_String_TP
                                                               image:tabBarImage
@@ -59,6 +56,8 @@
     [super viewWillAppear:animated];
     
     [self createViewItems];
+    
+    [_itemsView addItemsWithArray:@[@"0",@"1"]];
 }
 
 - (void)viewDidAppear:(BOOL)animated{

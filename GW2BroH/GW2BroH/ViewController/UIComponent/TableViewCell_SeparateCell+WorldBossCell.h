@@ -16,4 +16,6 @@
 
 -(void)selectedWorldBossCell:(BOOL)isSelected;
 
+-(void)isFirstWorldBossCell;
+
 @end

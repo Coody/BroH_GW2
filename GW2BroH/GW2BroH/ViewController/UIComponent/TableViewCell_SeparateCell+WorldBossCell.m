@@ -21,6 +21,7 @@
 -(void)setupCellWithWorldBossModel:(WorldBossModel *)tempWorldBossModel{
     
     // TODO: 設置 view
+    [self createBackground];
     
     [self setIsSelectCell:self.isSelectCell withAnimation:NO];
     
@@ -29,6 +30,32 @@
     [self createBossNameWithString:tempWorldBossModel.bossName];
     
     [self createBriefTextWithString:tempWorldBossModel.brief];
+}
+
+-(void)createBackground{
+    if ( self.cellBoundImageView == nil ) {
+        self.cellBoundImageView = [[UIImageView alloc] initWithFrame:CGRectMake(8,
+                                                                                10,
+                                                                                [UIScreen mainScreen].bounds.size.width - 10,
+                                                                                D_CellHight_Normal - 10)];
+    }
+    
+    // 初始話基礎底圖、以及讓底圖可以擴大
+    CGFloat top = 25; // 頂端高度
+    CGFloat bottom = 25 ; // 底部高度
+    CGFloat left = 10; // 左部寬度
+    CGFloat right = 10; // 右部寬度
+    UIEdgeInsets insets = UIEdgeInsetsMake(top, left, bottom, right);
+    if ( self.image_First == nil ) {
+        self.image_First = [GW2BroH_Tools getImageWithString:@"ViewControllerWorldBoss" withImageName:@"CellBackgroundImage_Red"];
+        self.image_First = [self.image_First resizableImageWithCapInsets:insets resizingMode:UIImageResizingModeStretch];
+    }
+    if ( self.image_Second == nil ) {
+        self.image_Second = [GW2BroH_Tools getImageWithString:@"ViewControllerWorldBoss" withImageName:@"CellBackgroundImage_Blue"];
+        self.image_Second = [self.image_Second resizableImageWithCapInsets:insets resizingMode:UIImageResizingModeStretch];
+    }
+    [self.cellBoundImageView setImage:self.image_Second];
+    [self addSubview:self.cellBoundImageView];
 }
 
 -(void)createBossImageViewWithImageName:(NSString *)tempImageName{
@@ -114,6 +141,11 @@
     }
     [self.textLabel_Third setHidden:!isSelected];
     [self addSubview:self.textLabel_Third];
+}
+
+-(void)isFirstWorldBossCell{
+    // TODO: 跟其他 Cell 有差別（外框顏色變紅色、倒數時間變大）
+    [self.cellBoundImageView setImage:self.image_First];
 }
 
 @end

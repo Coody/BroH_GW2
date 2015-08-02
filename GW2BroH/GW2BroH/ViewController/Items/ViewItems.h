@@ -16,4 +16,6 @@
 #pragma mark - Interface
 @interface ViewItems : UIView
 
+-(void)addItemsWithArray:(NSArray *)tempItemsArray;
+
 @end

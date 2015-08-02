@@ -31,7 +31,10 @@ typedef enum : NSInteger{
 @property (nonatomic , readwrite) BOOL isSelectCell;
 
 // for public UI component
+@property (nonatomic , strong) UIImageView *cellBoundImageView;
 @property (nonatomic , strong) UIImageView *imageView_First;
+@property (nonatomic , strong) UIImage *image_First;
+@property (nonatomic , strong) UIImage *image_Second;
 @property (nonatomic , strong) UILabel *textLabel_First;
 @property (nonatomic , strong) UILabel *textLabel_Second;
 @property (nonatomic , strong) UILabel *textLabel_Third;
