@@ -15,8 +15,11 @@
 /**  */
 typedef enum : NSInteger{
     EnumSeparatorTableViewCell_None = 0,
-    EnumSeparatorTableViewCell_WorldBoss
+    EnumSeparatorTableViewCell_WorldBoss,
+    EnumSeparatorTableViewCell_Coins,
+    EnumSeparatorTableViewCell_Gems
 }EnumSeparatorTableViewCell;
+
 
 /**
  *
@@ -32,6 +35,7 @@ typedef enum : NSInteger{
 @property (nonatomic , strong) UILabel *textLabel_First;
 @property (nonatomic , strong) UILabel *textLabel_Second;
 @property (nonatomic , strong) UILabel *textLabel_Third;
+@property (nonatomic , strong) UITextField *textField_First;
 
 /***/
 -(void)setupCell:(id)tempModel withType:(EnumSeparatorTableViewCell)tempEnumSeparatorTableViewCell;

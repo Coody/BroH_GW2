@@ -10,6 +10,7 @@
 
 // for Category
 #import "TableViewCell_SeparateCell+WorldBossCell.h"
+#import "TableViewCell_SeparateCell+CoinsAndGems.h"
 
 // for Tools
 #import "GW2BroH_Tools.h"
@@ -75,6 +76,18 @@
             _cellType = EnumSeparatorTableViewCell_WorldBoss;
             
             [self setupCellWithWorldBossModel:tempModel];
+        }
+            break;
+        case EnumSeparatorTableViewCell_Coins:
+        {
+            _cellType = EnumSeparatorTableViewCell_Coins;
+            [self setupCellWithConis];
+        }
+            break;
+        case EnumSeparatorTableViewCell_Gems:
+        {
+            _cellType = EnumSeparatorTableViewCell_Gems;
+            [self setupCellWithGems];
         }
             break;
         case EnumSeparatorTableViewCell_None:
@@ -178,6 +191,12 @@
     _textLabel_Third.attributedText = nil;
     _textLabel_Third.hidden = NO;
     
+    _textField_First.text = nil;
+    _textField_First.textColor = [UIColor blackColor];
+    _textField_First.attributedText = nil;
+    _textField_First.placeholder = nil;
+    _textField_First.hidden = NO;
+    _textField_First.backgroundColor = [UIColor clearColor];
 }
 
 -(void)isFirstCell{
