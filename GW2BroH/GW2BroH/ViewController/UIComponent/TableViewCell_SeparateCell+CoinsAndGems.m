@@ -119,6 +119,7 @@
     [self.textLabel_First setBackgroundColor:[UIColor clearColor]];
     [self.textLabel_First setTextColor:[UIColor whiteColor]];
     [self.textLabel_First setTextAlignment:(NSTextAlignmentRight)];
+    [self.textLabel_First setAdjustsFontSizeToFitWidth:YES];
     self.textLabel_First.numberOfLines = 0;
     [self addSubview:self.textLabel_First];
 }
