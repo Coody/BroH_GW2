@@ -29,7 +29,8 @@
     if ( self != nil ) {
         _cellType = EnumSeparatorTableViewCell_None;
         _isSelectCell = NO;
-        _isDoSomething = NO;
+        _isDoSomething_First = NO;
+        _isDoSomething_Second = NO;
         
         self.frame = CGRectMake(0, 0,
                                 [UIScreen mainScreen].bounds.size.width,
@@ -135,12 +136,12 @@
             break;
         case EnumSeparatorTableViewCell_Coins:
         {
-            [self selectedCoinsAndGemsCell:YES];
+            [self selectedCoinsCell:YES];
         }
             break;
         case EnumSeparatorTableViewCell_Gems:
         {
-            [self selectedCoinsAndGemsCell:YES];
+            [self selectedGemsCell:YES];
         }
             break;
         case EnumSeparatorTableViewCell_None:

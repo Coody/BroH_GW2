@@ -153,10 +153,48 @@
 }
 
 #pragma mark - Select Cell
--(void)selectedCoinsAndGemsCell:(BOOL)isSelected{
-    if ( self.isDoSomething == NO) {
-        
+-(void)selectedCoinsCell:(BOOL)isSelected{
+    if ( self.isDoSomething_First == NO &&
+         ![self.textField_First.text isEqualToString:@""] ) {
+        self.isDoSomething_First = YES;
+        if ( self.request_First == nil ) {
+            self.request_First = (GW2_Request_Coins *)[[GW2_Request_Coins alloc] initWithDelegate:self];
+        }
+        [self.request_First setGold:[self.textField_First.text integerValue]];
+        [self.request_First sendRequest];
     }
+}
+
+-(void)selectedGemsCell:(BOOL)isSelected{
+    if ( self.isDoSomething_First == NO &&
+         ![self.textField_First.text isEqualToString:@""] ) {
+        self.isDoSomething_First = YES;
+        if ( self.request_Second == nil ) {
+            self.request_Second = [(GW2_Request_Gems *)[GW2_Request_Gems alloc] initWithDelegate:self];
+        }
+        [self.request_Second setGems:[self.textField_First.text integerValue]];
+        [self.request_Second sendRequest];
+    }
+}
+
+#pragma mark - Coins Request 的 Delegate
+-(void)gotCoinsRequestSuccessWithDic:(GW2_WebApi_Coins_Result *)tempCoinsResult{
+    [self.textLabel_Second setText:[NSString stringWithFormat:@"%lld" , tempCoinsResult.quantity]];
+    self.isDoSomething_First = NO;
+}
+
+-(void)gotCoinsRequestFailWithErrorMsg:(NSString *)tempErrorMsg withErrorCode:(NSInteger)tempErrorCode{
+    self.isDoSomething_First = NO;
+}
+
+#pragma mark - Gems Request 的 Delegate
+-(void)gotGemsRequestSuccessWithDic:(GW2_WebApi_Gems_Result *)tempGemsResult{
+    [self.textLabel_Second setText:[NSString stringWithFormat:@"%d" , (int)(tempGemsResult.quantity/10000)]];
+    self.isDoSomething_First = NO;
+}
+
+-(void)gotGemsRequestFailWithErrorMsg:(NSString *)tempErrorMsg withErrorCode:(NSInteger)tempErrorCode{
+    self.isDoSomething_First = NO;
 }
 
 @end

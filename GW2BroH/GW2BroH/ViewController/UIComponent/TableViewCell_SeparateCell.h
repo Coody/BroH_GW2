@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+// for Request
+
 #define D_CellHight_Normal 112
 #define D_CellHight_Selected 440
 
@@ -39,7 +41,12 @@ typedef enum : NSInteger{
 @property (nonatomic , strong) UILabel *textLabel_Third;
 @property (nonatomic , strong) UITextField *textField_First;
 // for others public property
-@property (nonatomic , assign) BOOL isDoSomething;
+@property (nonatomic , assign) BOOL isDoSomething_First;
+@property (nonatomic , assign) BOOL isDoSomething_Second;
+
+// for Request
+@property (nonatomic , strong) id request_First;
+@property (nonatomic , strong) id request_Second;
 
 
 /***/
