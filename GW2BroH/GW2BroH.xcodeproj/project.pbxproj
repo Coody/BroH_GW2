@@ -11,9 +11,13 @@
 		5A44D9F21B640354007BA30D /* TableViewCell_SeparateCell+WorldBossCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A44D9F11B640354007BA30D /* TableViewCell_SeparateCell+WorldBossCell.m */; };
 		5A44D9F51B640362007BA30D /* UINavigationController+Title.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A44D9F41B640362007BA30D /* UINavigationController+Title.m */; };
 		5A79907B1B67DA7400167484 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 5A79907A1B67DA7400167484 /* README.md */; };
+		5A8EF1281B6CF80600760835 /* TableViewCell_SeparateCell+CoinsAndGems.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A8EF1271B6CF80600760835 /* TableViewCell_SeparateCell+CoinsAndGems.m */; };
 		5AB68C981B5B9EAA00B3A49D /* Datas in Resources */ = {isa = PBXBuildFile; fileRef = 5AB68C971B5B9EAA00B3A49D /* Datas */; };
 		5AB68C9B1B5BB42600B3A49D /* ViewWorldBoss.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AB68C9A1B5BB42600B3A49D /* ViewWorldBoss.m */; };
 		5ADA08241B63A4E800B7B038 /* WorldBossModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ADA08231B63A4E800B7B038 /* WorldBossModel.m */; };
+		5ADAAF7A1B6CDAFF00689789 /* ViewItems.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ADAAF791B6CDAFF00689789 /* ViewItems.m */; };
+		5AF8A5AD1B6E8A0D0002E6AB /* GW2_WebApi_Coins.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF8A5AC1B6E8A0D0002E6AB /* GW2_WebApi_Coins.m */; };
+		5AF8A5B01B6E8A190002E6AB /* GW2_Request_Coins.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF8A5AF1B6E8A190002E6AB /* GW2_Request_Coins.m */; };
 		FB2CA75E1B183F94009ED57F /* GW2BroH_Tools.m in Sources */ = {isa = PBXBuildFile; fileRef = FB2CA75D1B183F94009ED57F /* GW2BroH_Tools.m */; };
 		FB38C4091B1ABDB1001B424C /* ViewControllerStartMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = FB38C4081B1ABDB1001B424C /* ViewControllerStartMenu.m */; };
 		FB38C40C1B1ABDC4001B424C /* ViewControllerWorldBoss.m in Sources */ = {isa = PBXBuildFile; fileRef = FB38C40B1B1ABDC4001B424C /* ViewControllerWorldBoss.m */; };
@@ -45,11 +49,19 @@
 		5A44D9F31B640362007BA30D /* UINavigationController+Title.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UINavigationController+Title.h"; path = "ViewController/UINavigationController+Title.h"; sourceTree = "<group>"; };
 		5A44D9F41B640362007BA30D /* UINavigationController+Title.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UINavigationController+Title.m"; path = "ViewController/UINavigationController+Title.m"; sourceTree = "<group>"; };
 		5A79907A1B67DA7400167484 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../../README.md; sourceTree = "<group>"; };
+		5A8EF1261B6CF80600760835 /* TableViewCell_SeparateCell+CoinsAndGems.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "TableViewCell_SeparateCell+CoinsAndGems.h"; path = "ViewController/UIComponent/TableViewCell_SeparateCell+CoinsAndGems.h"; sourceTree = "<group>"; };
+		5A8EF1271B6CF80600760835 /* TableViewCell_SeparateCell+CoinsAndGems.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "TableViewCell_SeparateCell+CoinsAndGems.m"; path = "ViewController/UIComponent/TableViewCell_SeparateCell+CoinsAndGems.m"; sourceTree = "<group>"; };
 		5AB68C971B5B9EAA00B3A49D /* Datas */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Datas; sourceTree = "<group>"; };
 		5AB68C991B5BB42600B3A49D /* ViewWorldBoss.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewWorldBoss.h; path = ViewController/WorldBoss/ViewWorldBoss.h; sourceTree = "<group>"; };
 		5AB68C9A1B5BB42600B3A49D /* ViewWorldBoss.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewWorldBoss.m; path = ViewController/WorldBoss/ViewWorldBoss.m; sourceTree = "<group>"; };
 		5ADA08221B63A4E800B7B038 /* WorldBossModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WorldBossModel.h; path = ViewController/WorldBoss/WorldBossModel.h; sourceTree = "<group>"; };
 		5ADA08231B63A4E800B7B038 /* WorldBossModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WorldBossModel.m; path = ViewController/WorldBoss/WorldBossModel.m; sourceTree = "<group>"; };
+		5ADAAF781B6CDAFF00689789 /* ViewItems.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewItems.h; path = ViewController/Items/ViewItems.h; sourceTree = "<group>"; };
+		5ADAAF791B6CDAFF00689789 /* ViewItems.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewItems.m; path = ViewController/Items/ViewItems.m; sourceTree = "<group>"; };
+		5AF8A5AB1B6E8A0D0002E6AB /* GW2_WebApi_Coins.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GW2_WebApi_Coins.h; sourceTree = "<group>"; };
+		5AF8A5AC1B6E8A0D0002E6AB /* GW2_WebApi_Coins.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GW2_WebApi_Coins.m; sourceTree = "<group>"; };
+		5AF8A5AE1B6E8A190002E6AB /* GW2_Request_Coins.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GW2_Request_Coins.h; sourceTree = "<group>"; };
+		5AF8A5AF1B6E8A190002E6AB /* GW2_Request_Coins.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GW2_Request_Coins.m; sourceTree = "<group>"; };
 		756E2DBB4E054859046F4273 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1C33BB0A6ABF3B0116DF588 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		FB2CA75C1B183F94009ED57F /* GW2BroH_Tools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GW2BroH_Tools.h; sourceTree = "<group>"; };
@@ -111,6 +123,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5A5AFCD51B6D22BB0007D2BE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		A67E7874F9793F40C106108D /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -172,6 +191,8 @@
 		FB38C4041B1ABCD8001B424C /* Items */ = {
 			isa = PBXGroup;
 			children = (
+				5ADAAF781B6CDAFF00689789 /* ViewItems.h */,
+				5ADAAF791B6CDAFF00689789 /* ViewItems.m */,
 				FB38C40D1B1ABDD9001B424C /* ViewControllerItems.h */,
 				FB38C40E1B1ABDD9001B424C /* ViewControllerItems.m */,
 			);
@@ -272,6 +293,8 @@
 		FB8987221B5782D000D56917 /* GW2Request */ = {
 			isa = PBXGroup;
 			children = (
+				5AF8A5AE1B6E8A190002E6AB /* GW2_Request_Coins.h */,
+				5AF8A5AF1B6E8A190002E6AB /* GW2_Request_Coins.m */,
 				FB8987231B5782D000D56917 /* GW2_Request_Gems.h */,
 				FB8987241B5782D000D56917 /* GW2_Request_Gems.m */,
 				FB8987251B5782D000D56917 /* GW2_Request_Items.h */,
@@ -283,6 +306,8 @@
 		FB8987271B5782D000D56917 /* GW2WebApi */ = {
 			isa = PBXGroup;
 			children = (
+				5AF8A5AB1B6E8A0D0002E6AB /* GW2_WebApi_Coins.h */,
+				5AF8A5AC1B6E8A0D0002E6AB /* GW2_WebApi_Coins.m */,
 				FB8987281B5782D000D56917 /* GW2_WebApi_Gems.h */,
 				FB8987291B5782D000D56917 /* GW2_WebApi_Gems.m */,
 				FB89872A1B5782D000D56917 /* GW2_WebApi_Items.h */,
@@ -321,6 +346,8 @@
 				FB90BC961B5E108B0099EA29 /* TableViewCell_SeparateCell.m */,
 				5A44D9F01B640354007BA30D /* TableViewCell_SeparateCell+WorldBossCell.h */,
 				5A44D9F11B640354007BA30D /* TableViewCell_SeparateCell+WorldBossCell.m */,
+				5A8EF1261B6CF80600760835 /* TableViewCell_SeparateCell+CoinsAndGems.h */,
+				5A8EF1271B6CF80600760835 /* TableViewCell_SeparateCell+CoinsAndGems.m */,
 			);
 			name = UIComponent;
 			sourceTree = "<group>";
@@ -328,6 +355,7 @@
 		FBF47B6D1B124AF8000548B4 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				5A5AFCD51B6D22BB0007D2BE /* Model */,
 				FB90BC941B5E104E0099EA29 /* UIComponent */,
 				FB38C4011B1ABC64001B424C /* StartMenu */,
 				FB38C4021B1ABC70001B424C /* WorldBoss */,
@@ -456,10 +484,13 @@
 				FB8987521B5782D000D56917 /* GW2_WebApi_Gems.m in Sources */,
 				5A44D9F21B640354007BA30D /* TableViewCell_SeparateCell+WorldBossCell.m in Sources */,
 				FB38C4091B1ABDB1001B424C /* ViewControllerStartMenu.m in Sources */,
+				5A8EF1281B6CF80600760835 /* TableViewCell_SeparateCell+CoinsAndGems.m in Sources */,
 				5A44D9F51B640362007BA30D /* UINavigationController+Title.m in Sources */,
 				FB8987581B5782D000D56917 /* README.md in Sources */,
+				5AF8A5AD1B6E8A0D0002E6AB /* GW2_WebApi_Coins.m in Sources */,
 				FB2CA75E1B183F94009ED57F /* GW2BroH_Tools.m in Sources */,
 				FB8987511B5782D000D56917 /* GW2_Request_Items.m in Sources */,
+				5AF8A5B01B6E8A190002E6AB /* GW2_Request_Coins.m in Sources */,
 				5A79907B1B67DA7400167484 /* README.md in Sources */,
 				FB8987561B5782D000D56917 /* WebApi.m in Sources */,
 				FB90BC971B5E108B0099EA29 /* TableViewCell_SeparateCell.m in Sources */,
@@ -473,6 +504,7 @@
 				FB38C4121B1ABDFF001B424C /* ViewControllerDungeons.m in Sources */,
 				FB38C40C1B1ABDC4001B424C /* ViewControllerWorldBoss.m in Sources */,
 				FB420F871B1017FB0007BBD5 /* main.m in Sources */,
+				5ADAAF7A1B6CDAFF00689789 /* ViewItems.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

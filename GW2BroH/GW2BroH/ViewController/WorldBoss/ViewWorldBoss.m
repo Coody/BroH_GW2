@@ -41,9 +41,9 @@
         CGRect tempFrame = [UIScreen mainScreen].bounds;
         float statusHight = [GW2BroH_Tools statusBarHeight];
         [self setFrame:CGRectMake(0,
-                                  [GW2BroH_Tools statusBarHeight] + 45,
+                                  [GW2BroH_Tools statusBarHeight] + 44.2,
                                   tempFrame.size.width,
-                                  tempFrame.size.height - statusHight - 50 - 45 )];
+                                  tempFrame.size.height - statusHight - 49 - 44.2 )];
         [self setBackgroundColor:VC_OTHERS_BACKGROUND_COLOR];
         
         _worldBossArray = [[NSMutableArray alloc] init];

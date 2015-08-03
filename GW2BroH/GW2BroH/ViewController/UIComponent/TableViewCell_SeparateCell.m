@@ -10,16 +10,13 @@
 
 // for Category
 #import "TableViewCell_SeparateCell+WorldBossCell.h"
+#import "TableViewCell_SeparateCell+CoinsAndGems.h"
 
 // for Tools
 #import "GW2BroH_Tools.h"
 
 
 @interface TableViewCell_SeparateCell()
-
-@property (nonatomic , strong) UIImageView *cellBoundImageView;
-@property (nonatomic , strong) UIImage *redCellBoundImage;
-@property (nonatomic , strong) UIImage *blueCellBoundImage;
 
 @property (nonatomic , strong) NSTimer *countTimer;
 
@@ -32,42 +29,24 @@
     if ( self != nil ) {
         _cellType = EnumSeparatorTableViewCell_None;
         _isSelectCell = NO;
+        _isDoSomething = NO;
         
         self.frame = CGRectMake(0, 0,
                                 [UIScreen mainScreen].bounds.size.width,
                                 D_CellHight_Normal);
         [self setBackgroundColor:[UIColor clearColor]];
         [self setSelectionStyle:(UITableViewCellSelectionStyleNone)];
-        
-        _cellBoundImageView = [[UIImageView alloc] initWithFrame:CGRectMake(8,
-                                                                            10,
-                                                                            [UIScreen mainScreen].bounds.size.width - 10,
-                                                                            D_CellHight_Normal - 10)];
-        
-        // 初始話基礎底圖、以及讓底圖可以擴大
-        CGFloat top = 25; // 頂端高度
-        CGFloat bottom = 25 ; // 底部高度
-        CGFloat left = 10; // 左部寬度
-        CGFloat right = 10; // 右部寬度
-        UIEdgeInsets insets = UIEdgeInsetsMake(top, left, bottom, right);
-        _redCellBoundImage = [GW2BroH_Tools getImageWithString:@"ViewControllerWorldBoss" withImageName:@"CellBackgroundImage_Red"];
-        _redCellBoundImage = [_redCellBoundImage resizableImageWithCapInsets:insets resizingMode:UIImageResizingModeStretch];
-        _blueCellBoundImage = [GW2BroH_Tools getImageWithString:@"ViewControllerWorldBoss" withImageName:@"CellBackgroundImage_Blue"];
-        _blueCellBoundImage = [_blueCellBoundImage resizableImageWithCapInsets:insets resizingMode:UIImageResizingModeStretch];
-        
-        [self addSubview:_cellBoundImageView];
     }
     return self;
 }
 
 -(void)setupCell:(id)tempModel withType:(EnumSeparatorTableViewCell)tempEnumSeparatorTableViewCell{
     
-    [_cellBoundImageView setImage:_blueCellBoundImage];
-    
-    // 判斷 Cell type 是否相同，相同不處理，只替換內部顯示內容；不同才要 Clear
-    if ( _cellType != tempEnumSeparatorTableViewCell ) {
-        [self clear];
-    }
+//    // 判斷 Cell type 是否相同，相同不處理，只替換內部顯示內容；不同才要 Clear
+//    if ( _cellType != tempEnumSeparatorTableViewCell ) {
+//        [self clear];
+//    }
+    [self clear];
     
     switch (tempEnumSeparatorTableViewCell) {
         case EnumSeparatorTableViewCell_WorldBoss:
@@ -75,6 +54,18 @@
             _cellType = EnumSeparatorTableViewCell_WorldBoss;
             
             [self setupCellWithWorldBossModel:tempModel];
+        }
+            break;
+        case EnumSeparatorTableViewCell_Coins:
+        {
+            _cellType = EnumSeparatorTableViewCell_Coins;
+            [self setupCellWithConis];
+        }
+            break;
+        case EnumSeparatorTableViewCell_Gems:
+        {
+            _cellType = EnumSeparatorTableViewCell_Gems;
+            [self setupCellWithGems];
         }
             break;
         case EnumSeparatorTableViewCell_None:
@@ -142,6 +133,16 @@
             [self selectedWorldBossCell:isSelectCell];
         }
             break;
+        case EnumSeparatorTableViewCell_Coins:
+        {
+            [self selectedCoinsAndGemsCell:YES];
+        }
+            break;
+        case EnumSeparatorTableViewCell_Gems:
+        {
+            [self selectedCoinsAndGemsCell:YES];
+        }
+            break;
         case EnumSeparatorTableViewCell_None:
         default:
             break;
@@ -150,14 +151,19 @@
 
 -(void)clear{
     /*
+    @property (nonatomic , strong) UIImageView *cellBoundImageView;
     @property (nonatomic , strong) UIImageView *imageView_First;
     @property (nonatomic , strong) UILabel *textLabel_First;
     @property (nonatomic , strong) UILabel *textLabel_Second;
     @property (nonatomic , strong) UILabel *textLabel_Third;
      */
     
+    // _cellBoundImageView
+    _cellBoundImageView.image = nil;
+    _cellBoundImageView.hidden = NO;
+    
     // _imageView_First
-    _imageView_First.image = nil;
+    [_imageView_First setImage:nil];
     _imageView_First.hidden = NO;
     
     // _textLabel_First
@@ -178,11 +184,17 @@
     _textLabel_Third.attributedText = nil;
     _textLabel_Third.hidden = NO;
     
+    _textField_First.text = nil;
+    _textField_First.textColor = [UIColor blackColor];
+    _textField_First.attributedText = nil;
+    _textField_First.placeholder = nil;
+    _textField_First.hidden = NO;
+    _textField_First.backgroundColor = [UIColor clearColor];
 }
 
 -(void)isFirstCell{
     // TODO: 跟其他 Cell 有差別（外框顏色變紅色、倒數時間變大）
-    [_cellBoundImageView setImage:_redCellBoundImage];
+    [self isFirstWorldBossCell];
 }
 
 @end
