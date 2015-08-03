@@ -19,7 +19,9 @@
 
 -(void)setupCellWithGems;
 
--(void)selectedCoinsAndGemsCell:(BOOL)isSelected;
+-(void)selectedCoinsCell:(BOOL)isSelected;
+
+-(void)selectedGemsCell:(BOOL)isSelected;
 
 -(void)setCoinsAndGemsLabel:(NSInteger)tempGoldsOrGems;
 
