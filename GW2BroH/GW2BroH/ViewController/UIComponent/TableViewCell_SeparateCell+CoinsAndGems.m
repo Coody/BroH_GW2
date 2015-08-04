@@ -119,7 +119,6 @@
     [self.textLabel_First setBackgroundColor:[UIColor clearColor]];
     [self.textLabel_First setTextColor:[UIColor whiteColor]];
     [self.textLabel_First setTextAlignment:(NSTextAlignmentRight)];
-    [self.textLabel_First setAdjustsFontSizeToFitWidth:YES];
     self.textLabel_First.numberOfLines = 0;
     [self addSubview:self.textLabel_First];
 }
@@ -148,6 +147,7 @@
     [self.textLabel_Second setBackgroundColor:[UIColor clearColor]];
     [self.textLabel_Second setText:@"0"];
     [self.textLabel_Second setFont:[UIFont boldSystemFontOfSize:40.0f]];
+    [self.textLabel_Second setAdjustsFontSizeToFitWidth:YES];
     [self.textLabel_Second setTextAlignment:(NSTextAlignmentRight)];
     
     [self addSubview:self.textLabel_Second];
