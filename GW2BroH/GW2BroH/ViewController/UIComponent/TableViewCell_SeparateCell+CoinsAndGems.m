@@ -12,15 +12,17 @@
 #import "Constants.h"
 #import "GW2BroH_Tools.h"
 
-
+// for USer Default
+#define KEY_FOR_GOLD @"KEY_FOR_GOLD"
+#define KEY_FOR_GOLD_EXCHANGE_GEM @"KEY_FOR_GOLD_EXCHANGE_GEM"
+#define KEY_FOR_GEM  @"KEY_FOR_GEM"
+#define KEY_FOR_GEM_EXCHANGE_GOLD @"KEY_FOR_GEM_EXCHANGE_GOLD"
 
 @implementation TableViewCell_SeparateCell (CoinsAndGems)
 
 //CATEGORY_PROPERTY_GET_SET(GW2_Request_Coins*,coinsRequest, setCoinsRequest:)
-
 #pragma mark - 開放方法
 -(void)setupCellWithConis{
-    
     [self setupCellWithConisAndGemsModel:EnumSeparatorTableViewCell_Coins];
 }
 
@@ -30,8 +32,8 @@
 
 -(void)setCoinsAndGemsLabel:(NSInteger)tempGoldsOrGems{
     if ( [self.textField_First.text isEqualToString:@""] ||
-         self.textField_First.text == nil ||
-         self.textField_First == nil ) {
+        self.textField_First.text == nil ||
+        self.textField_First == nil ) {
         return;
     }
     else{
@@ -41,14 +43,39 @@
 
 #pragma mark - 私有方法
 -(void)setupCellWithConisAndGemsModel:(EnumSeparatorTableViewCell)tempCoinsAndGemsCellType{
-    
     [self createBackgroundViewWithType:tempCoinsAndGemsCellType];
-    
     [self createTextFieldWithType:tempCoinsAndGemsCellType];
-    
     [self createLabel];
-    
     [self createResultLabelWithType:tempCoinsAndGemsCellType];
+}
+
+-(NSInteger)getDefaultGoldOrGem:(EnumSeparatorTableViewCell)tempCellType{
+    if ( tempCellType == EnumSeparatorTableViewCell_Coins ) {
+        return [[NSUserDefaults standardUserDefaults] integerForKey:KEY_FOR_GOLD];
+    }
+    else{
+        return [[NSUserDefaults standardUserDefaults] integerForKey:KEY_FOR_GEM];
+    }
+}
+
+-(void)setDefaultGoldOrGem:(NSInteger)tempGoldOrGem withCellType:(EnumSeparatorTableViewCell)tempCellType{
+    [[NSUserDefaults standardUserDefaults] setInteger:tempGoldOrGem
+                                               forKey:( tempCellType == EnumSeparatorTableViewCell_Coins ? KEY_FOR_GOLD:KEY_FOR_GEM)];
+}
+
+-(NSInteger)getDefaultExchange:(EnumSeparatorTableViewCell)tempCellType{
+    if ( tempCellType == EnumSeparatorTableViewCell_Coins ) {
+        return [[NSUserDefaults standardUserDefaults] integerForKey:KEY_FOR_GOLD_EXCHANGE_GEM];
+    }
+    else{
+        return ([[NSUserDefaults standardUserDefaults] integerForKey:KEY_FOR_GEM_EXCHANGE_GOLD]/10000);
+    }
+}
+
+-(void)setDefaultExchange:(NSInteger)tempExchangeNumber
+             withCellType:(EnumSeparatorTableViewCell)tempCellType{
+    [[NSUserDefaults standardUserDefaults] setInteger:tempExchangeNumber
+                                               forKey:( tempCellType == EnumSeparatorTableViewCell_Coins ? KEY_FOR_GOLD_EXCHANGE_GEM:KEY_FOR_GEM_EXCHANGE_GOLD )];
 }
 
 #pragma mark - UI
@@ -68,7 +95,6 @@
             break;
     }
     [self addSubview:self.imageView_First];
-    
 }
 
 -(void)createTextFieldWithType:(EnumSeparatorTableViewCell)tempCoinsAndGemsCellType{
@@ -98,8 +124,10 @@
         default:
             break;
     }
-    
-    
+    NSInteger defaultValue = [self getDefaultGoldOrGem:tempCoinsAndGemsCellType];
+    if ( defaultValue != 0 ) {
+        [self.textField_First setText:[NSString stringWithFormat:@"%ld" , defaultValue]];
+    }
     [self.textField_First setBackgroundColor:[UIColor clearColor]];
     [self.textField_First setFont:[UIFont boldSystemFontOfSize:40.0f]];
     [self.textField_First setTextAlignment:(NSTextAlignmentRight)];
@@ -112,6 +140,7 @@
     if ( self.textLabel_First == nil ) {
         self.textLabel_First = [[UILabel alloc] init];
     }
+    
     // TODO: 將幾秒鐘的值請 viewController 使用 user default 來取得
     self.textLabel_First.text = [NSString stringWithFormat:@"每 %d 秒鐘自動詢問一次" , 5];
     [self.textLabel_First setFont:[UIFont boldSystemFontOfSize:14.0f]];
@@ -145,41 +174,46 @@
     }
     
     [self.textLabel_Second setBackgroundColor:[UIColor clearColor]];
-    [self.textLabel_Second setText:@"0"];
+    [self.textLabel_Second setText:[NSString stringWithFormat:@"%d",(int)[self getDefaultExchange: tempCoinsAndGemsCellType]]];
     [self.textLabel_Second setFont:[UIFont boldSystemFontOfSize:40.0f]];
-    [self.textLabel_Second setAdjustsFontSizeToFitWidth:YES];
     [self.textLabel_Second setTextAlignment:(NSTextAlignmentRight)];
-    
+    [self.textLabel_Second setAdjustsFontSizeToFitWidth:YES];
     [self addSubview:self.textLabel_Second];
 }
 
 #pragma mark - Select Cell
 -(void)selectedCoinsCell:(BOOL)isSelected{
     if ( self.isDoSomething_First == NO &&
-         ![self.textField_First.text isEqualToString:@""] ) {
+        ![self.textField_First.text isEqualToString:@""] ) {
         self.isDoSomething_First = YES;
         if ( self.request_First == nil ) {
             self.request_First = (GW2_Request_Coins *)[[GW2_Request_Coins alloc] initWithDelegate:self];
         }
-        [self.request_First setGold:[self.textField_First.text integerValue]];
+        NSInteger sendGold = [self.textField_First.text integerValue];
+        [self.request_First setGold:sendGold];
         [self.request_First sendRequest];
+        [self setDefaultGoldOrGem:sendGold withCellType:EnumSeparatorTableViewCell_Coins];
     }
 }
 
 -(void)selectedGemsCell:(BOOL)isSelected{
     if ( self.isDoSomething_First == NO &&
-         ![self.textField_First.text isEqualToString:@""] ) {
+        ![self.textField_First.text isEqualToString:@""] ) {
         self.isDoSomething_First = YES;
         if ( self.request_Second == nil ) {
             self.request_Second = [(GW2_Request_Gems *)[GW2_Request_Gems alloc] initWithDelegate:self];
         }
-        [self.request_Second setGems:[self.textField_First.text integerValue]];
+        NSInteger sendGem = [self.textField_First.text integerValue];
+        [self.request_Second setGems:sendGem];
         [self.request_Second sendRequest];
+        [self setDefaultGoldOrGem:sendGem withCellType:EnumSeparatorTableViewCell_Gems];
     }
 }
 
 #pragma mark - Coins Request 的 Delegate
 -(void)gotCoinsRequestSuccessWithDic:(GW2_WebApi_Coins_Result *)tempCoinsResult{
+    [self setDefaultExchange:tempCoinsResult.quantity
+                withCellType:EnumSeparatorTableViewCell_Coins];
     [self.textLabel_Second setText:[NSString stringWithFormat:@"%lld" , tempCoinsResult.quantity]];
     self.isDoSomething_First = NO;
 }
@@ -190,6 +224,8 @@
 
 #pragma mark - Gems Request 的 Delegate
 -(void)gotGemsRequestSuccessWithDic:(GW2_WebApi_Gems_Result *)tempGemsResult{
+    [self setDefaultExchange:tempGemsResult.quantity
+                withCellType:EnumSeparatorTableViewCell_Gems];
     [self.textLabel_Second setText:[NSString stringWithFormat:@"%d" , (int)(tempGemsResult.quantity/10000)]];
     self.isDoSomething_First = NO;
 }
