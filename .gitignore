@@ -247,3 +247,4 @@ GW2BroH/Pods/Target Support Files/JSONModel/JSONModel-dummy.m
 GW2BroH/Pods/Target Support Files/JSONModel/JSONModel-prefix.pch
 Podfile.lock
 Manifest.lock
+.gitmodules
