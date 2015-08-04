@@ -1,0 +1,3 @@
+[submodule "GW2BroH/GW2BroH/WebSiteHelper"]
+	path = GW2BroH/GW2BroH/WebSiteHelper
+	url = https://coody@github.com/Coody/GW2_iOS_WebApi.git
