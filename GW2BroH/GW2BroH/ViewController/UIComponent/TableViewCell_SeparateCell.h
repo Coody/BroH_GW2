@@ -40,6 +40,7 @@ typedef enum : NSInteger{
 @property (nonatomic , strong) UILabel *textLabel_Second;
 @property (nonatomic , strong) UILabel *textLabel_Third;
 @property (nonatomic , strong) UITextField *textField_First;
+@property (nonatomic , strong) UIActivityIndicatorView *loadingView;
 // for others public property
 @property (nonatomic , assign) BOOL isDoSomething_First;
 @property (nonatomic , assign) BOOL isDoSomething_Second;

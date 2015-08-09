@@ -29,8 +29,8 @@
     if ( self != nil ) {
         _cellType = EnumSeparatorTableViewCell_None;
         _isSelectCell = NO;
-        _isDoSomething_First = NO;
-        _isDoSomething_Second = NO;
+//        _isDoSomething_First = NO;
+//        _isDoSomething_Second = NO;
         
         self.frame = CGRectMake(0, 0,
                                 [UIScreen mainScreen].bounds.size.width,
@@ -152,11 +152,7 @@
 
 -(void)clear{
     /*
-    @property (nonatomic , strong) UIImageView *cellBoundImageView;
-    @property (nonatomic , strong) UIImageView *imageView_First;
-    @property (nonatomic , strong) UILabel *textLabel_First;
-    @property (nonatomic , strong) UILabel *textLabel_Second;
-    @property (nonatomic , strong) UILabel *textLabel_Third;
+     每次的 View 不同的時候要來這裡清除
      */
     
     // _cellBoundImageView
@@ -185,12 +181,16 @@
     _textLabel_Third.attributedText = nil;
     _textLabel_Third.hidden = NO;
     
+    // _textField_First
     _textField_First.text = nil;
     _textField_First.textColor = [UIColor blackColor];
     _textField_First.attributedText = nil;
     _textField_First.placeholder = nil;
     _textField_First.hidden = NO;
     _textField_First.backgroundColor = [UIColor clearColor];
+    
+    // _loadingView
+    [_loadingView stopAnimating];
 }
 
 -(void)isFirstCell{

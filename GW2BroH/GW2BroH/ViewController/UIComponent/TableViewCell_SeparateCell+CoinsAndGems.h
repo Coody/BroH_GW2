@@ -25,4 +25,6 @@
 
 -(void)setCoinsAndGemsLabel:(NSInteger)tempGoldsOrGems;
 
+-(void)setIsDoSomething_First:(BOOL)isDoSomething_First;
+
 @end
