@@ -140,7 +140,10 @@
         case EnumSeparatorTableViewCell_Coins:
         {
             UIColor *color = [UIColor yellowColor];
-            self.textField_First.frame = CGRectMake(10, 48, 110, 54);
+            self.textField_First.frame = CGRectMake(self.frame.size.width*0.026,
+                                                    48,
+                                                    self.frame.size.width*0.3,
+                                                    54);
             [self.textField_First setTextColor:color];
             self.textField_First.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"?"
                                                                                          attributes:@{NSForegroundColorAttributeName:color}];
@@ -149,7 +152,10 @@
         case EnumSeparatorTableViewCell_Gems:
         {
             UIColor *color = [UIColor colorWithRed:0.38f green:0.58f blue:0.82f alpha:1.0f];
-            self.textField_First.frame = CGRectMake(10, 48, 98, 54);
+            self.textField_First.frame = CGRectMake(self.frame.size.width*0.026,
+                                                    48,
+                                                    self.frame.size.width*0.26,
+                                                    54);
             [self.textField_First setTextColor:color];
             self.textField_First.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"?"
                                                                                          attributes:@{NSForegroundColorAttributeName:color}];
@@ -160,7 +166,7 @@
     }
     NSInteger defaultValue = [self getDefaultGoldOrGem];
     if ( defaultValue != 0 ) {
-        [self.textField_First setText:[NSString stringWithFormat:@"%ld" , defaultValue]];
+        [self.textField_First setText:[NSString stringWithFormat:@"%ld" , (long)defaultValue]];
     }
     [self.textField_First setBackgroundColor:[UIColor clearColor]];
     [self.textField_First setFont:[UIFont boldSystemFontOfSize:40.0f]];
@@ -201,13 +207,18 @@
     switch ( self.cellType ) {
         case EnumSeparatorTableViewCell_Coins:
         {
-            self.textLabel_Second.frame = CGRectMake(195, 48, 82, 54);
+            self.textLabel_Second.frame = CGRectMake(self.frame.size.width*0.52,
+                                                     48,
+                                                     self.frame.size.width*0.22,
+                                                     54);
             [self.textLabel_Second setTextColor:[UIColor colorWithRed:0.38f green:0.58f blue:0.82f alpha:1.0f]];
         }
             break;
         case EnumSeparatorTableViewCell_Gems:
         {
-            self.textLabel_Second.frame = CGRectMake(195, 48, 96, 54);
+            self.textLabel_Second.frame = CGRectMake(self.frame.size.width*0.52,
+                                                     48,self.frame.size.width*0.256,
+                                                     54);
             [self.textLabel_Second setTextColor:[UIColor yellowColor]];
         }
             break;

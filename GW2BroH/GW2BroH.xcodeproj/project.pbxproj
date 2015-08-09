@@ -30,6 +30,7 @@
 		5AE9D2711B7751B800B6A5B9 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AE9D2701B7751B800B6A5B9 /* libsqlite3.dylib */; };
 		5AE9D2761B77539E00B6A5B9 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AE9D2721B7751D900B6A5B9 /* Accounts.framework */; };
 		5AE9D2771B7753B000B6A5B9 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AE9D2741B7751E200B6A5B9 /* Social.framework */; };
+		5AE9D2791B77709400B6A5B9 /* icon.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5AE9D2781B77709400B6A5B9 /* icon.xcassets */; };
 		5AF8A5AD1B6E8A0D0002E6AB /* GW2_WebApi_Coins.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF8A5AC1B6E8A0D0002E6AB /* GW2_WebApi_Coins.m */; };
 		5AF8A5B01B6E8A190002E6AB /* GW2_Request_Coins.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF8A5AF1B6E8A190002E6AB /* GW2_Request_Coins.m */; };
 		FB2CA75E1B183F94009ED57F /* GW2BroH_Tools.m in Sources */ = {isa = PBXBuildFile; fileRef = FB2CA75D1B183F94009ED57F /* GW2BroH_Tools.m */; };
@@ -41,7 +42,6 @@
 		FB38C4181B1ABE1D001B424C /* ViewControllerMore.m in Sources */ = {isa = PBXBuildFile; fileRef = FB38C4171B1ABE1D001B424C /* ViewControllerMore.m */; };
 		FB420F871B1017FB0007BBD5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FB420F861B1017FB0007BBD5 /* main.m */; };
 		FB420F8A1B1017FB0007BBD5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FB420F891B1017FB0007BBD5 /* AppDelegate.m */; };
-		FB420F921B1017FB0007BBD5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB420F911B1017FB0007BBD5 /* Images.xcassets */; };
 		FB420F951B1017FB0007BBD5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB420F931B1017FB0007BBD5 /* LaunchScreen.xib */; };
 		FB82A9C11B50E592006A5F07 /* ViewControllerTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = FB82A9C01B50E592006A5F07 /* ViewControllerTabBar.m */; };
 		FB8987501B5782D000D56917 /* GW2_Request_Gems.m in Sources */ = {isa = PBXBuildFile; fileRef = FB8987241B5782D000D56917 /* GW2_Request_Gems.m */; };
@@ -90,6 +90,7 @@
 		5AE9D2701B7751B800B6A5B9 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		5AE9D2721B7751D900B6A5B9 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		5AE9D2741B7751E200B6A5B9 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		5AE9D2781B77709400B6A5B9 /* icon.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = icon.xcassets; sourceTree = "<group>"; };
 		5AF8A5AB1B6E8A0D0002E6AB /* GW2_WebApi_Coins.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GW2_WebApi_Coins.h; sourceTree = "<group>"; };
 		5AF8A5AC1B6E8A0D0002E6AB /* GW2_WebApi_Coins.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GW2_WebApi_Coins.m; sourceTree = "<group>"; };
 		5AF8A5AE1B6E8A190002E6AB /* GW2_Request_Coins.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GW2_Request_Coins.h; sourceTree = "<group>"; };
@@ -116,7 +117,6 @@
 		FB420F861B1017FB0007BBD5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		FB420F881B1017FB0007BBD5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		FB420F891B1017FB0007BBD5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		FB420F911B1017FB0007BBD5 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		FB420F941B1017FB0007BBD5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		FB420F9F1B1017FB0007BBD5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FB420FA01B1017FB0007BBD5 /* GW2BroHTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GW2BroHTests.m; sourceTree = "<group>"; };
@@ -327,9 +327,9 @@
 				FBF47B6D1B124AF8000548B4 /* ViewController */,
 				FB420F881B1017FB0007BBD5 /* AppDelegate.h */,
 				FB420F891B1017FB0007BBD5 /* AppDelegate.m */,
-				FB420F911B1017FB0007BBD5 /* Images.xcassets */,
 				FB420F931B1017FB0007BBD5 /* LaunchScreen.xib */,
 				FB420F841B1017FB0007BBD5 /* Supporting Files */,
+				5AE9D2781B77709400B6A5B9 /* icon.xcassets */,
 			);
 			path = GW2BroH;
 			sourceTree = "<group>";
@@ -512,8 +512,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				FB420F951B1017FB0007BBD5 /* LaunchScreen.xib in Resources */,
+				5AE9D2791B77709400B6A5B9 /* icon.xcassets in Resources */,
 				5AB68C981B5B9EAA00B3A49D /* Datas in Resources */,
-				FB420F921B1017FB0007BBD5 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

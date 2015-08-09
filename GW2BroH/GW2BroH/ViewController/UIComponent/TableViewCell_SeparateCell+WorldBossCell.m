@@ -70,7 +70,10 @@
     else{
         [self.imageView_First setHidden:NO];
     }
-    [self.imageView_First setFrame:CGRectMake(20, 22, 146 , 73)];
+    [self.imageView_First setFrame:CGRectMake(self.frame.size.width*0.053,
+                                              22,
+                                              self.frame.size.width*0.39,
+                                              73)];
     [self.imageView_First setImage:[GW2BroH_Tools getImageWithString:@"ViewControllerWorldBoss" withImageName:tempImageName]];
     
     [self addSubview:self.imageView_First];
@@ -96,7 +99,7 @@
     [self.textLabel_First
      setFrame:CGRectMake(self.imageView_First.frame.origin.x + self.imageView_First.frame.size.width + 5,
                          15,
-                         80,
+                         self.frame.size.width*0.22,
                          tempSize.height)];
     [self.textLabel_First setText:tempName];
     [self.textLabel_First setTextColor:[UIColor whiteColor]];
