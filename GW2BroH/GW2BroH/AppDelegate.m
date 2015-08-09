@@ -10,6 +10,10 @@
 
 #import "ViewControllerTabBar.h"
 
+#import <Parse/Parse.h>
+
+#import "Constants.h"
+
 @interface AppDelegate ()
 
 @property (nonatomic , strong) UINavigationController *navController;
@@ -21,6 +25,14 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    [Parse enableLocalDatastore];
+    
+    // Initialize Parse.
+    [Parse setApplicationId:GW2_PARSE_APP_ID
+                  clientKey:GW2_PARSE_CLIENT_KEY];
+    
+    // [Optional] Track statistics around application opens.
+    [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
     
     /* 設定 bundle */
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
