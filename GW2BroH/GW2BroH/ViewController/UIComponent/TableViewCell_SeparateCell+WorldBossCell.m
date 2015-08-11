@@ -106,6 +106,7 @@
     [self.textLabel_First setTextAlignment:(NSTextAlignmentLeft)];
     [self.textLabel_First setFont:nameFont];
     [self.textLabel_First setNumberOfLines:0];
+    [self.textLabel_First setAdjustsFontSizeToFitWidth:YES];
     [self addSubview:self.textLabel_First];
 }
 
