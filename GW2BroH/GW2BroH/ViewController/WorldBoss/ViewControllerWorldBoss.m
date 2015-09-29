@@ -36,7 +36,7 @@
     if ( self ) {
         [self.view setFrame:[UIScreen mainScreen].bounds];
         [self.view setBackgroundColor:VC_OTHERS_BACKGROUND_COLOR];
-
+        
         
         UIImage *tabBarImage = [GW2BroH_Tools getImageWithClass:self withImageName:@"Boss"];
         UITabBarItem* theItem = [[UITabBarItem alloc] initWithTitle:D_String_Boss
@@ -74,6 +74,8 @@
         [testArray addObject:tempModel];
     }
 #endif
+    [self loadRecentWorldBossXML];
+    
     [_worldBossView addWorldBossWithArray:testArray];
 }
 
@@ -102,6 +104,20 @@
     }
     
     [self.view addSubview:_worldBossView];
+}
+
+#pragma mark - 內部方法
+
+-(void)loadRecentWorldBossXML{
+    
+    // TODO:讀取本地端 xml
+    
+    // TODO:下載 server 端 xml
+    
+    // TODO:比對兩者、更新
+    
+    // TODO:將資料序列化後，存近 NSArray
+    
 }
 
 @end
