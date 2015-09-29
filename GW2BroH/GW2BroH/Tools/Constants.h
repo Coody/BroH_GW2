@@ -9,6 +9,7 @@
 #ifndef GW2BroH_Constants_h
 #define GW2BroH_Constants_h
 
+#pragma mark - Enum
 typedef enum : NSInteger{
     EnumTabBarIndexStartMenu = 0,
     EnumTabBarIndexWorldBoss = 10,
@@ -17,6 +18,11 @@ typedef enum : NSInteger{
     EnumTabBarIndexGuild = 13,
     EnumTabBarIndexMore = 14
 }EnumTabBarIndex;
+
+
+#define mark - Define
+#define GW2_PARSE_APP_ID @"UbjUF3sKIhzM9TL9ODmcz3fRwTvtuIivUCPpxt9v"
+#define GW2_PARSE_CLIENT_KEY @"NbvSO5FNMeqNM8z4PoHjWp2hlQEeot1bS9aMekEW"
 
 #define VC_START_MENU_BACKGROUND_COLOR [UIColor colorWithRed:0.36 green:0.47 blue:0.66 alpha:1.0f]
 #define VC_OTHERS_BACKGROUND_COLOR [UIColor colorWithRed:0.91f green:0.95f blue:1.0f alpha:1.0f]

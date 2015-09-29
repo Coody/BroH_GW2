@@ -62,15 +62,18 @@
     if ( self.imageView_First == nil ) {
         self.imageView_First = [[UIImageView alloc] init];
         self.imageView_First.layer.shadowColor = [UIColor blackColor].CGColor;
-        self.imageView_First.layer.shadowOffset = CGSizeMake(0, 1);
-        self.imageView_First.layer.shadowOpacity = 1;
-        self.imageView_First.layer.shadowRadius = 1.0;
-        self.imageView_First.clipsToBounds = NO;
+//        self.imageView_First.layer.shadowOffset = CGSizeMake(0, 1);
+//        self.imageView_First.layer.shadowOpacity = 1;
+//        self.imageView_First.layer.shadowRadius = 1.0;
+//        self.imageView_First.clipsToBounds = NO;
     }
     else{
         [self.imageView_First setHidden:NO];
     }
-    [self.imageView_First setFrame:CGRectMake(20, 22, 146 , 73)];
+    [self.imageView_First setFrame:CGRectMake(self.frame.size.width*0.053,
+                                              22,
+                                              self.frame.size.width*0.39,
+                                              73)];
     [self.imageView_First setImage:[GW2BroH_Tools getImageWithString:@"ViewControllerWorldBoss" withImageName:tempImageName]];
     
     [self addSubview:self.imageView_First];
@@ -80,10 +83,10 @@
     if ( self.textLabel_First == nil ) {
         self.textLabel_First = [[UILabel alloc] init];
         self.textLabel_First.layer.shadowColor = [UIColor blackColor].CGColor;
-        self.textLabel_First.layer.shadowOffset = CGSizeMake(0, 1);
-        self.textLabel_First.layer.shadowOpacity = 1;
-        self.textLabel_First.layer.shadowRadius = 1.0;
-        self.textLabel_First.clipsToBounds = NO;
+//        self.textLabel_First.layer.shadowOffset = CGSizeMake(0, 1);
+//        self.textLabel_First.layer.shadowOpacity = 1;
+//        self.textLabel_First.layer.shadowRadius = 1.0;
+//        self.textLabel_First.clipsToBounds = NO;
 #ifdef D_Dev_Ver
 //        [self.textLabel_First setBackgroundColor:[UIColor greenColor]];
 #endif
@@ -96,13 +99,14 @@
     [self.textLabel_First
      setFrame:CGRectMake(self.imageView_First.frame.origin.x + self.imageView_First.frame.size.width + 5,
                          15,
-                         80,
+                         self.frame.size.width*0.22,
                          tempSize.height)];
     [self.textLabel_First setText:tempName];
     [self.textLabel_First setTextColor:[UIColor whiteColor]];
     [self.textLabel_First setTextAlignment:(NSTextAlignmentLeft)];
     [self.textLabel_First setFont:nameFont];
     [self.textLabel_First setNumberOfLines:0];
+    [self.textLabel_First setAdjustsFontSizeToFitWidth:YES];
     [self addSubview:self.textLabel_First];
 }
 
