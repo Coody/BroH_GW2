@@ -247,6 +247,10 @@
         [self.request_First sendRequest];
         [self setDefaultGoldOrGem:sendGold];
     }
+    else if( [self.textField_First.text isEqualToString:@""] ){
+        // 提示使用者要在 ? 輸入數字
+        [self showEnterCoinOrGemsNumberAlert];
+    }
 }
 
 -(void)selectedGemsCell:(BOOL)isSelected{
@@ -261,6 +265,29 @@
         [self.request_Second sendRequest];
         [self setDefaultGoldOrGem:sendGem];
     }
+    else if( [self.textField_First.text isEqualToString:@""] ){
+        // 提示使用者要在 ? 輸入數字
+        [self showEnterCoinOrGemsNumberAlert];
+    }
+}
+
+-(void)showEnterCoinOrGemsNumberAlert{
+    NSString *showString = @"";
+    switch (self.cellType) {
+        case EnumSeparatorTableViewCell_Coins:
+            showString = @"請點擊 Gold 前面的 ? 來輸入數字！";
+            break;
+        case EnumSeparatorTableViewCell_Gems:
+            showString = @"請點擊 Gems 前面的 ? 來輸入數字！";
+        default:
+            break;
+    }
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"錯誤!!"
+                                                    message:showString
+                                                   delegate:nil
+                                          cancelButtonTitle:@"確定"
+                                          otherButtonTitles:nil];
+    [alert show];
 }
 
 #pragma mark - Coins Request 的 Delegate
