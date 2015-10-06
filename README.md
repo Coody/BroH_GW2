@@ -21,6 +21,7 @@
 - AFNetworking
 - JSONModel
 - GW2_iOS_WebApi
+- GDataXML
 
 ### 安裝方式
 
