@@ -1,3 +1,6 @@
 [submodule "GW2BroH/GW2BroH/WebSiteHelper"]
 	path = GW2BroH/GW2BroH/WebSiteHelper
 url=/Users/coodychou/GW2_WebSite
+[submodule "GW2BroH/GW2BroH/ClockManager"]
+	path = GW2BroH/GW2BroH/ClockManager
+	url = https://coody@github.com/Coody/ClockManager.git
