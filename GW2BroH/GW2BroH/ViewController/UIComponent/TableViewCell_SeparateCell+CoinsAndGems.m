@@ -135,6 +135,7 @@
     [[UITextField appearance] setTintColor:[UIColor whiteColor]];
     if ( self.textField_First == nil ) {
         self.textField_First = [[UITextField alloc] init];
+        [self addSubview:self.textField_First];
     }
     switch ( self.cellType ) {
         case EnumSeparatorTableViewCell_Coins:
@@ -164,21 +165,23 @@
         default:
             break;
     }
-    NSInteger defaultValue = [self getDefaultGoldOrGem];
-    if ( defaultValue != 0 ) {
-        [self.textField_First setText:[NSString stringWithFormat:@"%ld" , (long)defaultValue]];
-    }
     [self.textField_First setBackgroundColor:[UIColor clearColor]];
     [self.textField_First setFont:[UIFont boldSystemFontOfSize:40.0f]];
     [self.textField_First setTextAlignment:(NSTextAlignmentRight)];
     [self.textField_First setKeyboardType:(UIKeyboardTypeNumberPad)];
     [self.textField_First setAdjustsFontSizeToFitWidth:YES];
-    [self addSubview:self.textField_First];
+    
+    NSInteger defaultValue = [self getDefaultGoldOrGem];
+    if ( defaultValue != 0 ) {
+        [self.textField_First setText:[NSString stringWithFormat:@"%ld" , (long)defaultValue]];
+    }
 }
 
 -(void)createLabel{
     if ( self.textLabel_First == nil ) {
         self.textLabel_First = [[UILabel alloc] init];
+        self.textLabel_First.numberOfLines = 0;
+        [self addSubview:self.textLabel_First];
     }
     
     // TODO: 將幾秒鐘的值請 viewController 使用 user default 來取得
@@ -188,8 +191,7 @@
     [self.textLabel_First setBackgroundColor:[UIColor clearColor]];
     [self.textLabel_First setTextColor:[UIColor whiteColor]];
     [self.textLabel_First setTextAlignment:(NSTextAlignmentRight)];
-    self.textLabel_First.numberOfLines = 0;
-    [self addSubview:self.textLabel_First];
+    
 }
 
 -(void)createLoadingView{

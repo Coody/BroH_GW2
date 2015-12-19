@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewControllerWorldBoss : UINavigationController
+extern NSString *const K_WORLDBOSS_VERSION_KEY;
+extern NSString *const K_WORLDBOSS_DATA_KEY;
 
+@interface ViewControllerWorldBoss : UINavigationController
+@property (nonatomic , strong) NSMutableDictionary *worldBossPlistDic;
+-(void)reloadData;
 @end

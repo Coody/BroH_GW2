@@ -14,5 +14,7 @@
 @property (nonatomic , strong) NSString *bossName;
 @property (nonatomic , strong) NSString *brief;
 @property (nonatomic , strong) NSString *details;
+@property (nonatomic , strong) NSNumber *startTime;
+@property (nonatomic , strong) NSNumber *endTime;
 
 @end

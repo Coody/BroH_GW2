@@ -44,10 +44,9 @@
 -(void)setupCell:(id)tempModel withType:(EnumSeparatorTableViewCell)tempEnumSeparatorTableViewCell{
     
 //    // 判斷 Cell type 是否相同，相同不處理，只替換內部顯示內容；不同才要 Clear
-//    if ( _cellType != tempEnumSeparatorTableViewCell ) {
-//        [self clear];
-//    }
-    [self clear];
+    if ( _cellType != tempEnumSeparatorTableViewCell ) {
+        [self clear];
+    }
     
     switch (tempEnumSeparatorTableViewCell) {
         case EnumSeparatorTableViewCell_WorldBoss:
@@ -156,7 +155,7 @@
      */
     
     // _cellBoundImageView
-    _cellBoundImageView.image = nil;
+    [_cellBoundImageView setImage:nil];
     _cellBoundImageView.hidden = NO;
     
     // _imageView_First
@@ -164,25 +163,25 @@
     _imageView_First.hidden = NO;
     
     // _textLabel_First
-    _textLabel_First.text = nil;
+    _textLabel_First.text = @"";
     _textLabel_First.textColor = [UIColor blackColor];
     _textLabel_First.attributedText = nil;
     _textLabel_First.hidden = NO;
     
     // _TextLabel_Second
-    _textLabel_Second.text = nil;
+    _textLabel_Second.text = @"";
     _textLabel_Second.textColor = [UIColor blackColor];
     _textLabel_Second.attributedText = nil;
     _textLabel_Second.hidden = NO;
     
     // _textLabel_Third
-    _textLabel_Third.text = nil;
+    _textLabel_Third.text = @"";
     _textLabel_Third.textColor = [UIColor blackColor];
     _textLabel_Third.attributedText = nil;
     _textLabel_Third.hidden = NO;
     
     // _textField_First
-    _textField_First.text = nil;
+    _textField_First.text = @"";
     _textField_First.textColor = [UIColor blackColor];
     _textField_First.attributedText = nil;
     _textField_First.placeholder = nil;
