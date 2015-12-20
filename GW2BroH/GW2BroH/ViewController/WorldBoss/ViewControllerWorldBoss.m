@@ -69,21 +69,8 @@ NSString *const K_WORLDBOSS_DATA_KEY = @"Data";
     
     [self createWorldBossView];
     
-    
     [self startGetLocalPlist];
-//#define CoodyTest
-//#ifdef CoodyTest
-//    NSMutableArray *testArray = [NSMutableArray array];
-//    for ( int i = 0 ; i < 10 ; i++ ) {
-//        WorldBossModel *tempModel = [[WorldBossModel alloc] init];
-//        tempModel.bossName = @"屍龍";
-//        tempModel.bossImageName = @"teq";
-//        tempModel.brief = @"位在 ooxx 的地圖位置。\n點擊看詳細訊息....";
-//        tempModel.details = @"打法：請疊在屍龍腳底下，技能請帶反射牆、堅定、減傷。";
-//        [testArray addObject:tempModel];
-//    }
-//#endif
-//    [_worldBossView addWorldBossWithArray:testArray];
+
 }
 
 - (void)viewDidAppear:(BOOL)animated{
