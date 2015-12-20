@@ -8,9 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		595F1F394C0A58A7F7B2B7C1 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 756E2DBB4E054859046F4273 /* libPods.a */; };
-		5A00881D1C259AB500DE7783 /* ClockManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A0088051C259AB500DE7783 /* ClockManager.m */; };
-		5A0088201C259AB500DE7783 /* NSDate+Interval.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A00880A1C259AB500DE7783 /* NSDate+Interval.m */; };
-		5A0088211C259AB500DE7783 /* NSUserDefaults+Global.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A00880C1C259AB500DE7783 /* NSUserDefaults+Global.m */; };
 		5A44D9F21B640354007BA30D /* TableViewCell_SeparateCell+WorldBossCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A44D9F11B640354007BA30D /* TableViewCell_SeparateCell+WorldBossCell.m */; };
 		5A44D9F51B640362007BA30D /* UINavigationController+Title.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A44D9F41B640362007BA30D /* UINavigationController+Title.m */; };
 		5A7824951C217D120055D11E /* WorldBoss.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5A7824941C217D120055D11E /* WorldBoss.plist */; };
@@ -62,12 +59,6 @@
 
 /* Begin PBXFileReference section */
 		3B7586483FBE633A96ED3A40 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
-		5A0088041C259AB500DE7783 /* ClockManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClockManager.h; sourceTree = "<group>"; };
-		5A0088051C259AB500DE7783 /* ClockManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClockManager.m; sourceTree = "<group>"; };
-		5A0088091C259AB500DE7783 /* NSDate+Interval.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Interval.h"; sourceTree = "<group>"; };
-		5A00880A1C259AB500DE7783 /* NSDate+Interval.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Interval.m"; sourceTree = "<group>"; };
-		5A00880B1C259AB500DE7783 /* NSUserDefaults+Global.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSUserDefaults+Global.h"; sourceTree = "<group>"; };
-		5A00880C1C259AB500DE7783 /* NSUserDefaults+Global.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSUserDefaults+Global.m"; sourceTree = "<group>"; };
 		5A39D6651B761972006DEDF3 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		5A39D6661B761972006DEDF3 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		5A39D6671B761972006DEDF3 /* ParseCrashReporting.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseCrashReporting.framework; sourceTree = "<group>"; };
@@ -181,37 +172,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		5A0087F81C259AB500DE7783 /* ClockManager */ = {
-			isa = PBXGroup;
-			children = (
-				5A0088031C259AB500DE7783 /* ClockManager */,
-				5A0088081C259AB500DE7783 /* Tools */,
-			);
-			path = ClockManager;
-			sourceTree = "<group>";
-		};
-		5A0088031C259AB500DE7783 /* ClockManager */ = {
-			isa = PBXGroup;
-			children = (
-				5A0088041C259AB500DE7783 /* ClockManager.h */,
-				5A0088051C259AB500DE7783 /* ClockManager.m */,
-			);
-			name = ClockManager;
-			path = TestColckManager/TestColckManager/ClockManager;
-			sourceTree = "<group>";
-		};
-		5A0088081C259AB500DE7783 /* Tools */ = {
-			isa = PBXGroup;
-			children = (
-				5A0088091C259AB500DE7783 /* NSDate+Interval.h */,
-				5A00880A1C259AB500DE7783 /* NSDate+Interval.m */,
-				5A00880B1C259AB500DE7783 /* NSUserDefaults+Global.h */,
-				5A00880C1C259AB500DE7783 /* NSUserDefaults+Global.m */,
-			);
-			name = Tools;
-			path = TestColckManager/TestColckManager/Tools;
-			sourceTree = "<group>";
-		};
 		5A39D65F1B761894006DEDF3 /* ThirdParty */ = {
 			isa = PBXGroup;
 			children = (
@@ -368,7 +328,6 @@
 				5AB68C971B5B9EAA00B3A49D /* Datas */,
 				5A39D65F1B761894006DEDF3 /* ThirdParty */,
 				FB8987211B5782D000D56917 /* WebSiteHelper */,
-				5A0087F81C259AB500DE7783 /* ClockManager */,
 				FB2CA75B1B183F94009ED57F /* Tools */,
 				FBF47B6D1B124AF8000548B4 /* ViewController */,
 				FB420F881B1017FB0007BBD5 /* AppDelegate.h */,
@@ -618,12 +577,9 @@
 				5AF8A5AD1B6E8A0D0002E6AB /* GW2_WebApi_Coins.m in Sources */,
 				FB2CA75E1B183F94009ED57F /* GW2BroH_Tools.m in Sources */,
 				FB8987511B5782D000D56917 /* GW2_Request_Items.m in Sources */,
-				5A0088211C259AB500DE7783 /* NSUserDefaults+Global.m in Sources */,
 				5AF8A5B01B6E8A190002E6AB /* GW2_Request_Coins.m in Sources */,
-				5A00881D1C259AB500DE7783 /* ClockManager.m in Sources */,
 				5A79907B1B67DA7400167484 /* README.md in Sources */,
 				FB8987561B5782D000D56917 /* WebApi.m in Sources */,
-				5A0088201C259AB500DE7783 /* NSDate+Interval.m in Sources */,
 				FB90BC971B5E108B0099EA29 /* TableViewCell_SeparateCell.m in Sources */,
 				FB420F8A1B1017FB0007BBD5 /* AppDelegate.m in Sources */,
 				FB8987501B5782D000D56917 /* GW2_Request_Gems.m in Sources */,
