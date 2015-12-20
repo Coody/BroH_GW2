@@ -245,10 +245,19 @@ GW2BroH/Pods/JSONModel/JSONModel/JSONModelTransformations/JSONValueTransformer.h
 GW2BroH/Pods/JSONModel/JSONModel/JSONModelTransformations/JSONValueTransformer.m
 GW2BroH/Pods/Target Support Files/JSONModel/JSONModel-dummy.m
 GW2BroH/Pods/Target Support Files/JSONModel/JSONModel-prefix.pch
+<<<<<<< HEAD
 Podfile.lock
 Manifest.lock
 GW2BroH.xcscmblueprint
+<<<<<<< HEAD
 GW2BroH/Pods/AFNetworking/UIKit+AFNetworking/UIImage+AFNetworking.h
+=======
+=======
+GW2BroH/Podfile.lock
+GW2BroH/Pods/Manifest.lock
+GW2BroH/GW2BroH.xcodeproj/project.xcworkspace/xcshareddata/GW2BroH.xcscmblueprint
+GW2BroH/GW2BroH.xcworkspace/xcshareddata/GW2BroH.xcscmblueprint
+>>>>>>> develop
 GW2BroH/Pods/GDataXML-HTML/LICENSE
 GW2BroH/Pods/GDataXML-HTML/README.md
 GW2BroH/Pods/GDataXML-HTML/Pod/Classes/GDataXMLNode.h
@@ -259,3 +268,7 @@ GW2BroH/Pods/Headers/Public/AFNetworking/UIImage+AFNetworking.h
 GW2BroH/Pods/Headers/Public/GDataXML-HTML/GDataXMLNode.h
 GW2BroH/Pods/Target Support Files/GDataXML-HTML/GDataXML-HTML-dummy.m
 GW2BroH/Pods/Target Support Files/GDataXML-HTML/GDataXML-HTML-prefix.pch
+<<<<<<< HEAD
+=======
+>>>>>>> develop-WorldBoss
+>>>>>>> develop

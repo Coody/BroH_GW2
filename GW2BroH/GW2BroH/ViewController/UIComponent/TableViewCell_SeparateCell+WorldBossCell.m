@@ -38,104 +38,86 @@
                                                                                 10,
                                                                                 [UIScreen mainScreen].bounds.size.width - 10,
                                                                                 D_CellHight_Normal - 10)];
-    }
-    
-    // 初始話基礎底圖、以及讓底圖可以擴大
-    CGFloat top = 25; // 頂端高度
-    CGFloat bottom = 25 ; // 底部高度
-    CGFloat left = 10; // 左部寬度
-    CGFloat right = 10; // 右部寬度
-    UIEdgeInsets insets = UIEdgeInsetsMake(top, left, bottom, right);
-    if ( self.image_First == nil ) {
-        self.image_First = [GW2BroH_Tools getImageWithString:@"ViewControllerWorldBoss" withImageName:@"CellBackgroundImage_Red"];
-        self.image_First = [self.image_First resizableImageWithCapInsets:insets resizingMode:UIImageResizingModeStretch];
-    }
-    if ( self.image_Second == nil ) {
-        self.image_Second = [GW2BroH_Tools getImageWithString:@"ViewControllerWorldBoss" withImageName:@"CellBackgroundImage_Blue"];
-        self.image_Second = [self.image_Second resizableImageWithCapInsets:insets resizingMode:UIImageResizingModeStretch];
+        // 初始化基礎底圖、以及讓底圖可以擴大
+        CGFloat top = 25; // 頂端高度
+        CGFloat bottom = 25 ; // 底部高度
+        CGFloat left = 10; // 左部寬度
+        CGFloat right = 10; // 右部寬度
+        UIEdgeInsets insets = UIEdgeInsetsMake(top, left, bottom, right);
+        if ( self.image_First == nil ) {
+            self.image_First = [GW2BroH_Tools getImageWithString:@"ViewControllerWorldBoss" withImageName:@"CellBackgroundImage_Red"];
+            self.image_First = [self.image_First resizableImageWithCapInsets:insets resizingMode:UIImageResizingModeStretch];
+        }
+        if ( self.image_Second == nil ) {
+            self.image_Second = [GW2BroH_Tools getImageWithString:@"ViewControllerWorldBoss" withImageName:@"CellBackgroundImage_Blue"];
+            self.image_Second = [self.image_Second resizableImageWithCapInsets:insets resizingMode:UIImageResizingModeStretch];
+        }
+        
+        [self addSubview:self.cellBoundImageView];
     }
     [self.cellBoundImageView setImage:self.image_Second];
-    [self addSubview:self.cellBoundImageView];
+    
 }
 
 -(void)createBossImageViewWithImageName:(NSString *)tempImageName{
     if ( self.imageView_First == nil ) {
         self.imageView_First = [[UIImageView alloc] init];
-        self.imageView_First.layer.shadowColor = [UIColor blackColor].CGColor;
-//        self.imageView_First.layer.shadowOffset = CGSizeMake(0, 1);
-//        self.imageView_First.layer.shadowOpacity = 1;
-//        self.imageView_First.layer.shadowRadius = 1.0;
-//        self.imageView_First.clipsToBounds = NO;
+        [self.imageView_First setFrame:CGRectMake(self.frame.size.width*0.053,
+                                                  22,
+                                                  self.frame.size.width*0.39,
+                                                  73)];
+        
+        [self addSubview:self.imageView_First];
     }
     else{
         [self.imageView_First setHidden:NO];
     }
-    [self.imageView_First setFrame:CGRectMake(self.frame.size.width*0.053,
-                                              22,
-                                              self.frame.size.width*0.39,
-                                              73)];
     [self.imageView_First setImage:[GW2BroH_Tools getImageWithString:@"ViewControllerWorldBoss" withImageName:tempImageName]];
-    
-    [self addSubview:self.imageView_First];
 }
 
 -(void)createBossNameWithString:(NSString *)tempName{
     if ( self.textLabel_First == nil ) {
         self.textLabel_First = [[UILabel alloc] init];
-        self.textLabel_First.layer.shadowColor = [UIColor blackColor].CGColor;
-//        self.textLabel_First.layer.shadowOffset = CGSizeMake(0, 1);
-//        self.textLabel_First.layer.shadowOpacity = 1;
-//        self.textLabel_First.layer.shadowRadius = 1.0;
-//        self.textLabel_First.clipsToBounds = NO;
-#ifdef D_Dev_Ver
-//        [self.textLabel_First setBackgroundColor:[UIColor greenColor]];
-#endif
-    }
-    UIFont *nameFont = [UIFont boldSystemFontOfSize:28.0f];
-    CGSize tempSize = FRAME_SIZE(tempName,nameFont);
-    if ( tempSize.height >= self.imageView_First.frame.size.height*0.5 ) {
-        tempSize.height = self.imageView_First.frame.size.height*0.5;
+        [self.textLabel_First setTextColor:[UIColor whiteColor]];
+        [self.textLabel_First setTextAlignment:(NSTextAlignmentLeft)];
+        [self.textLabel_First setNumberOfLines:0];
+        [self addSubview:self.textLabel_First];
     }
     [self.textLabel_First
      setFrame:CGRectMake(self.imageView_First.frame.origin.x + self.imageView_First.frame.size.width + 5,
-                         15,
-                         self.frame.size.width*0.22,
-                         tempSize.height)];
-    [self.textLabel_First setText:tempName];
-    [self.textLabel_First setTextColor:[UIColor whiteColor]];
-    [self.textLabel_First setTextAlignment:(NSTextAlignmentLeft)];
+                         18,
+                         self.frame.size.width*0.3,
+                         30)];
+    UIFont *nameFont = [UIFont boldSystemFontOfSize:24.0f];
     [self.textLabel_First setFont:nameFont];
-    [self.textLabel_First setNumberOfLines:0];
-    [self.textLabel_First setAdjustsFontSizeToFitWidth:YES];
-    [self addSubview:self.textLabel_First];
+    [self.textLabel_First setText:tempName];
+    
 }
 
 -(void)createBriefTextWithString:(NSString *)tempBrief{
     if ( self.textLabel_Second == nil ) {
         self.textLabel_Second = [[UILabel alloc] init];
-#ifdef D_Dev_Ver
-//        [self.textLabel_Second setBackgroundColor:[UIColor grayColor]];
-#endif
+        [self.textLabel_Second setNumberOfLines:0];
+        [self.textLabel_Second setTextColor:[UIColor whiteColor]];
+        [self.textLabel_Second setTextAlignment:(NSTextAlignmentLeft)];
+        [self addSubview:self.textLabel_Second];
     }
-    UIFont *briefFont = [UIFont systemFontOfSize:14.0f];
+    UIFont *briefFont = [UIFont systemFontOfSize:13.0f];
     CGSize tempSize = FRAME_SIZE(tempBrief, briefFont);
-    if ( tempSize.width >= 160.0f ) {
-        tempSize.width = 160.0f;
+    if ( tempSize.width > self.frame.size.width*0.48 ) {
+        tempSize.width = self.frame.size.width*0.48;
+        tempSize = FRAME_SIZE_WITH_WIDTH(tempSize.width, tempBrief, briefFont);
     }
-    if ( tempSize.height >= self.imageView_First.frame.size.height*0.6 ) {
-        tempSize.height = self.imageView_First.frame.size.height*0.6;
+    if ( tempSize.height > 50 ) {
+        tempSize.height = 50;
     }
     [self.textLabel_Second
-     setFrame:CGRectMake(self.textLabel_First.frame.origin.x,
-                         self.imageView_First.frame.size.height*0.5+self.imageView_First.frame.origin.y,
+     setFrame:CGRectMake(self.textLabel_First.frame.origin.x + 5,
+                         self.textLabel_First.frame.origin.y + self.textLabel_First.frame.size.height,
                          tempSize.width,
                          tempSize.height)];
-    [self.textLabel_Second setText:tempBrief];
-    [self.textLabel_Second setTextColor:[UIColor whiteColor]];
-    [self.textLabel_Second setTextAlignment:(NSTextAlignmentLeft)];
     [self.textLabel_Second setFont:briefFont];
-    [self.textLabel_Second setNumberOfLines:0];
-    [self addSubview:self.textLabel_Second];
+    [self.textLabel_Second setText:tempBrief];
 }
 
 #pragma mark - Select Cell

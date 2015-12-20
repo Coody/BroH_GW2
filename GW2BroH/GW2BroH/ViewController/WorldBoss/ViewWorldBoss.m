@@ -179,19 +179,19 @@
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-//    // 設定 Cell 的識別符號
-//    NSString *worldBossCell = @"WorldBossCell";
-//    
-//    [tableView registerClass:[TableViewCell_SeparateCell class] forCellReuseIdentifier:worldBossCell];
-//    
-//    // 從 TableView 中取用是別的 Cell 來 reuse
-//    id cell = [tableView dequeueReusableCellWithIdentifier:worldBossCell];
-//    if ( cell == nil ) {
-//        cell = [[TableViewCell_SeparateCell alloc] init];
-//    }
+    // 設定 Cell 的識別符號
+    NSString *worldBossCell = @"WorldBossCell";
+    
+    [tableView registerClass:[TableViewCell_SeparateCell class] forCellReuseIdentifier:worldBossCell];
+    
+    // 從 TableView 中取用是別的 Cell 來 reuse
+    id cell = [tableView dequeueReusableCellWithIdentifier:worldBossCell];
+    if ( cell == nil ) {
+        cell = [[TableViewCell_SeparateCell alloc] init];
+    }
     
     // 贊時不用 cell reuse ，讓 OS 自行處理 Cell 的記憶體（使用上面的 cell reuse 測試後，發現記憶體會莫名上升）
-    TableViewCell_SeparateCell *cell = [[TableViewCell_SeparateCell alloc] init];
+//    TableViewCell_SeparateCell *cell = [[TableViewCell_SeparateCell alloc] init];
     
     // 設置
     [cell setupCell:_worldBossArray[indexPath.row] withType:EnumSeparatorTableViewCell_WorldBoss];

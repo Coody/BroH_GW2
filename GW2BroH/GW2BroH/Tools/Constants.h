@@ -29,6 +29,7 @@ typedef enum : NSInteger{
 #define VC_NAVIGATION_BAR_COLOR [UIColor colorWithRed:0.1f green:0.35f blue:0.63f alpha:1.0f]
 
 #define FRAME_SIZE(TEXT,FONT) [(TEXT) boundingRectWithSize: CGSizeMake( CGFLOAT_MAX, CGFLOAT_MAX) options: NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName: FONT} context: nil].size
+#define FRAME_SIZE_WITH_WIDTH(WIDTH,TEXT,FONT) [(TEXT) boundingRectWithSize: CGSizeMake( WIDTH , CGFLOAT_MAX ) options: NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName: FONT} context: nil].size
 
 #define D_Default_Font_Name @"Helvetica Neue"
 

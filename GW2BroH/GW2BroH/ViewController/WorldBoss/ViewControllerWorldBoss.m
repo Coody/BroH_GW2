@@ -9,6 +9,9 @@
 #import "ViewControllerWorldBoss.h"
 #import "UINavigationController+Title.h"
 
+// for Category
+#import "ViewControllerWorldBoss+GatLocalData.h"
+
 // for view
 #import "ViewWorldBoss.h"
 
@@ -23,6 +26,9 @@
 #define D_String_WorldBoss @"世界王時間"
 #define D_String_Boss @"世界王"
 
+NSString *const K_WORLDBOSS_VERSION_KEY = @"WorldBossVersion";
+NSString *const K_WORLDBOSS_DATA_KEY = @"Data";
+
 @interface ViewControllerWorldBoss ()
 
 @property (nonatomic , strong) ViewWorldBoss *worldBossView;
@@ -36,7 +42,8 @@
     if ( self ) {
         [self.view setFrame:[UIScreen mainScreen].bounds];
         [self.view setBackgroundColor:VC_OTHERS_BACKGROUND_COLOR];
-
+        
+        _worldBossPlistDic = [[NSMutableDictionary alloc] init];
         
         UIImage *tabBarImage = [GW2BroH_Tools getImageWithClass:self withImageName:@"Boss"];
         UITabBarItem* theItem = [[UITabBarItem alloc] initWithTitle:D_String_Boss
@@ -62,19 +69,21 @@
     
     [self createWorldBossView];
     
-#define CoodyTest
-#ifdef CoodyTest
-    NSMutableArray *testArray = [NSMutableArray array];
-    for ( int i = 0 ; i < 10 ; i++ ) {
-        WorldBossModel *tempModel = [[WorldBossModel alloc] init];
-        tempModel.bossName = @"屍龍";
-        tempModel.bossImageName = @"teq";
-        tempModel.brief = @"位在 ooxx 的地圖位置。\n點擊看詳細訊息....";
-        tempModel.details = @"打法：請疊在屍龍腳底下，技能請帶反射牆、堅定、減傷。";
-        [testArray addObject:tempModel];
-    }
-#endif
-    [_worldBossView addWorldBossWithArray:testArray];
+    
+    [self startGetLocalPlist];
+//#define CoodyTest
+//#ifdef CoodyTest
+//    NSMutableArray *testArray = [NSMutableArray array];
+//    for ( int i = 0 ; i < 10 ; i++ ) {
+//        WorldBossModel *tempModel = [[WorldBossModel alloc] init];
+//        tempModel.bossName = @"屍龍";
+//        tempModel.bossImageName = @"teq";
+//        tempModel.brief = @"位在 ooxx 的地圖位置。\n點擊看詳細訊息....";
+//        tempModel.details = @"打法：請疊在屍龍腳底下，技能請帶反射牆、堅定、減傷。";
+//        [testArray addObject:tempModel];
+//    }
+//#endif
+//    [_worldBossView addWorldBossWithArray:testArray];
 }
 
 - (void)viewDidAppear:(BOOL)animated{
@@ -102,6 +111,11 @@
     }
     
     [self.view addSubview:_worldBossView];
+}
+
+#pragma makr - 開放方法
+-(void)reloadData{
+    [_worldBossView addWorldBossWithArray:[_worldBossPlistDic allValues]];
 }
 
 @end
