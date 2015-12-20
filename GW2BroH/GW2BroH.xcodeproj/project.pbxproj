@@ -10,6 +10,8 @@
 		595F1F394C0A58A7F7B2B7C1 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 756E2DBB4E054859046F4273 /* libPods.a */; };
 		5A44D9F21B640354007BA30D /* TableViewCell_SeparateCell+WorldBossCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A44D9F11B640354007BA30D /* TableViewCell_SeparateCell+WorldBossCell.m */; };
 		5A44D9F51B640362007BA30D /* UINavigationController+Title.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A44D9F41B640362007BA30D /* UINavigationController+Title.m */; };
+		5A5458131C26CFEE00B14903 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A5458121C26CFEE00B14903 /* libsqlite3.tbd */; };
+		5A5458151C26CFFB00B14903 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A5458141C26CFFB00B14903 /* libz.tbd */; };
 		5A7824951C217D120055D11E /* WorldBoss.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5A7824941C217D120055D11E /* WorldBoss.plist */; };
 		5A79907B1B67DA7400167484 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 5A79907A1B67DA7400167484 /* README.md */; };
 		5A8EF1281B6CF80600760835 /* TableViewCell_SeparateCell+CoinsAndGems.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A8EF1271B6CF80600760835 /* TableViewCell_SeparateCell+CoinsAndGems.m */; };
@@ -69,6 +71,8 @@
 		5A44D9F11B640354007BA30D /* TableViewCell_SeparateCell+WorldBossCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "TableViewCell_SeparateCell+WorldBossCell.m"; path = "ViewController/UIComponent/TableViewCell_SeparateCell+WorldBossCell.m"; sourceTree = "<group>"; };
 		5A44D9F31B640362007BA30D /* UINavigationController+Title.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UINavigationController+Title.h"; path = "ViewController/UINavigationController+Title.h"; sourceTree = "<group>"; };
 		5A44D9F41B640362007BA30D /* UINavigationController+Title.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UINavigationController+Title.m"; path = "ViewController/UINavigationController+Title.m"; sourceTree = "<group>"; };
+		5A5458121C26CFEE00B14903 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		5A5458141C26CFFB00B14903 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		5A7824941C217D120055D11E /* WorldBoss.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = WorldBoss.plist; sourceTree = "<group>"; };
 		5A79907A1B67DA7400167484 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../../README.md; sourceTree = "<group>"; };
 		5A8EF1261B6CF80600760835 /* TableViewCell_SeparateCell+CoinsAndGems.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "TableViewCell_SeparateCell+CoinsAndGems.h"; path = "ViewController/UIComponent/TableViewCell_SeparateCell+CoinsAndGems.h"; sourceTree = "<group>"; };
@@ -151,6 +155,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A5458151C26CFFB00B14903 /* libz.tbd in Frameworks */,
+				5A5458131C26CFEE00B14903 /* libsqlite3.tbd in Frameworks */,
 				5AE9D2771B7753B000B6A5B9 /* Social.framework in Frameworks */,
 				5AE9D2761B77539E00B6A5B9 /* Accounts.framework in Frameworks */,
 				5AE9D2711B7751B800B6A5B9 /* libsqlite3.dylib in Frameworks */,
@@ -213,6 +219,8 @@
 		F20D92DA0EA90914060ED6EE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5A5458141C26CFFB00B14903 /* libz.tbd */,
+				5A5458121C26CFEE00B14903 /* libsqlite3.tbd */,
 				5AE9D2741B7751E200B6A5B9 /* Social.framework */,
 				5AE9D2721B7751D900B6A5B9 /* Accounts.framework */,
 				5AE9D2701B7751B800B6A5B9 /* libsqlite3.dylib */,
