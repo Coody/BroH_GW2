@@ -13,6 +13,9 @@
 #import "GW2BroH_Tools.h"
 //#import <Foundation/Foundation.h>
 
+// for Website
+#import "GW2_WebApi_Gems.h"
+
 // for USer Default
 #define KEY_FOR_GOLD_TIME @"KEY_FOR_GOLD_TIME"
 #define KEY_FOR_GOLD @"KEY_FOR_GOLD"
