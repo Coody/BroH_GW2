@@ -13,6 +13,7 @@
 		5A5457FF1C26C97800B14903 /* ClockManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A5457E71C26C97800B14903 /* ClockManager.m */; };
 		5A5458021C26C97800B14903 /* NSDate+Interval.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A5457EC1C26C97800B14903 /* NSDate+Interval.m */; };
 		5A5458031C26C97800B14903 /* NSUserDefaults+Global.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A5457EE1C26C97800B14903 /* NSUserDefaults+Global.m */; };
+		5A5A0D111C2F0F870062601D /* WorldBoss.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5A5A0D101C2F0F870062601D /* WorldBoss.plist */; };
 		5A8802991C2EA6070017AD0A /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A8802931C2EA6070017AD0A /* Bolts.framework */; };
 		5A88029A1C2EA6070017AD0A /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A8802941C2EA6070017AD0A /* Parse.framework */; };
 		5A88029E1C2EA6070017AD0A /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A8802981C2EA6070017AD0A /* ParseUI.framework */; };
@@ -70,6 +71,7 @@
 		5A5457EC1C26C97800B14903 /* NSDate+Interval.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Interval.m"; sourceTree = "<group>"; };
 		5A5457ED1C26C97800B14903 /* NSUserDefaults+Global.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSUserDefaults+Global.h"; sourceTree = "<group>"; };
 		5A5457EE1C26C97800B14903 /* NSUserDefaults+Global.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSUserDefaults+Global.m"; sourceTree = "<group>"; };
+		5A5A0D101C2F0F870062601D /* WorldBoss.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = WorldBoss.plist; path = GW2BroH/WorldBoss.plist; sourceTree = SOURCE_ROOT; };
 		5A8802931C2EA6070017AD0A /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		5A8802941C2EA6070017AD0A /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		5A8802951C2EA6070017AD0A /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtils.framework; sourceTree = "<group>"; };
@@ -385,6 +387,7 @@
 		FB420F9E1B1017FB0007BBD5 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				5A5A0D101C2F0F870062601D /* WorldBoss.plist */,
 				FB420F9F1B1017FB0007BBD5 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -541,6 +544,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A5A0D111C2F0F870062601D /* WorldBoss.plist in Resources */,
 				FB420F951B1017FB0007BBD5 /* LaunchScreen.xib in Resources */,
 				5AACF2801C26D345002503CA /* icon.xcassets in Resources */,
 				5AB68C981B5B9EAA00B3A49D /* Datas in Resources */,
