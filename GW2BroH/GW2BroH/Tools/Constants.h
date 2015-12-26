@@ -21,8 +21,8 @@ typedef enum : NSInteger{
 
 
 #define mark - Define
-#define GW2_PARSE_APP_ID @"UbjUF3sKIhzM9TL9ODmcz3fRwTvtuIivUCPpxt9v"
-#define GW2_PARSE_CLIENT_KEY @"NbvSO5FNMeqNM8z4PoHjWp2hlQEeot1bS9aMekEW"
+#define GW2_PARSE_APP_ID @"ylvtstbHBXh1yaQPQivsz3vElvAuq9XyQhygGYn8"
+#define GW2_PARSE_CLIENT_KEY @"JYx31l1tUBTIKy05bcA1YS3s0W7EE6GZMxNFLZ5s"
 
 #define VC_START_MENU_BACKGROUND_COLOR [UIColor colorWithRed:0.36 green:0.47 blue:0.66 alpha:1.0f]
 #define VC_OTHERS_BACKGROUND_COLOR [UIColor colorWithRed:0.91f green:0.95f blue:1.0f alpha:1.0f]
