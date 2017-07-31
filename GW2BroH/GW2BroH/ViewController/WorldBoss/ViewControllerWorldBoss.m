@@ -7,7 +7,6 @@
 //
 
 #import "ViewControllerWorldBoss.h"
-#import "UINavigationController+Title.h"
 
 // for Category
 #import "ViewControllerWorldBoss+GatLocalData.h"
@@ -24,7 +23,6 @@
 
 // TODO:多國語系
 #define D_String_WorldBoss @"世界王時間"
-#define D_String_Boss @"世界王"
 
 NSString *const K_WORLDBOSS_VERSION_KEY = @"WorldBossVersion";
 NSString *const K_WORLDBOSS_DATA_KEY = @"Data";
@@ -44,16 +42,6 @@ NSString *const K_WORLDBOSS_DATA_KEY = @"Data";
         [self.view setBackgroundColor:VC_OTHERS_BACKGROUND_COLOR];
         
         _worldBossPlistDic = [[NSMutableDictionary alloc] init];
-        
-        UIImage *tabBarImage = [GW2BroH_Tools getImageWithClass:self withImageName:@"Boss"];
-        UITabBarItem* theItem = [[UITabBarItem alloc] initWithTitle:D_String_Boss
-                                                              image:tabBarImage
-                                                      selectedImage:tabBarImage];
-        self.tabBarItem = theItem;
-        
-        self.navigationBar.barTintColor = VC_NAVIGATION_BAR_COLOR;
-        
-        [self setTitleWithString:D_String_WorldBoss];
     }
     return self;
 }

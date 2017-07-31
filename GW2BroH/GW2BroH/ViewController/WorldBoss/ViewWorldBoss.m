@@ -39,11 +39,10 @@
     self = [super init];
     if ( self != nil ) {
         CGRect tempFrame = [UIScreen mainScreen].bounds;
-        float statusHight = [GW2BroH_Tools statusBarHeight];
         [self setFrame:CGRectMake(0,
-                                  [GW2BroH_Tools statusBarHeight] + 44.2,
+                                  0,
                                   tempFrame.size.width,
-                                  tempFrame.size.height - statusHight - 49 - 44.2 )];
+                                  tempFrame.size.height)];
         [self setBackgroundColor:VC_OTHERS_BACKGROUND_COLOR];
         
         _worldBossArray = [[NSMutableArray alloc] init];

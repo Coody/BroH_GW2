@@ -12,7 +12,7 @@
 /* startMenu ViewController */
 #import "ViewControllerStartMenu.h"
 /* Other ViewControllers */
-#import "ViewControllerWorldBoss.h"
+#import "NavigationControllerWorldBoss.h"
 #import "ViewControllerItems.h"
 #import "ViewControllerDungeons.h"
 #import "ViewControllerGuild.h"
@@ -38,7 +38,7 @@
     if ( self != nil ) {
         self.delegate = self;
         _startMenuArray = @[([[ViewControllerStartMenu alloc] init])];
-        _otherVCArray = @[([[ViewControllerWorldBoss alloc] init]),
+        _otherVCArray = @[([[NavigationControllerWorldBoss alloc] init]),
                           ([[ViewControllerItems alloc] init]),
                           ([[ViewControllerDungeons alloc] init]),
                           ([[ViewControllerGuild alloc] init]),
