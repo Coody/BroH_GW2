@@ -1,5 +1,6 @@
 # BroH_GW2 iOS App
 ![建立者](https://img.shields.io/badge/建立者-Coody-orange.svg)
+![License](https://img.shields.io/dub/l/vibe-d.svg)
 
 ### 專案目標：
 為了 GW2 所做的 iOS App
@@ -27,7 +28,7 @@
 
 - 請先確認是否有安裝 cocoaPods
 - 下載後，請打開有 podfile 的資料夾，並且在此資料夾路徑下，輸入 ```pod update``` 來安裝第三方 framework
-- WebSiteHelper 是用來跟 GW2 網站發起 webApi request 的工具，詳細請看 GitHub 中的 [GW2_iOS_WebApi][] 測試專案，這裡只要下```git submodule init``` 然後再下 ```git submodule update``` 即可。
+- WebSiteHelper 是用來跟 GW2 網站發起 webApi request 的工具，詳細請看 GitHub 中的 [GW2_iOS_WebApi][] 測試專案，另外有工具也適用 submodule 的方式拉近來，因此這裡只要下```git submodule init``` 然後再下 ```git submodule update``` 即可。
 - 用 xcode 打開 cocoapods 所產生的 ```GW2BroH.xcworkspace``` 即可 build and run ， enjoy it.
 
 [GW2_iOS_WebApi]: https://github.com/Coody/GW2_iOS_WebApi
