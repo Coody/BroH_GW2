@@ -13,9 +13,6 @@
 		5A5458021C26C97800B14903 /* NSDate+Interval.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A5457EC1C26C97800B14903 /* NSDate+Interval.m */; };
 		5A5458031C26C97800B14903 /* NSUserDefaults+Global.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A5457EE1C26C97800B14903 /* NSUserDefaults+Global.m */; };
 		5A5A0D111C2F0F870062601D /* WorldBoss.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5A5A0D101C2F0F870062601D /* WorldBoss.plist */; };
-		5A8802991C2EA6070017AD0A /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A8802931C2EA6070017AD0A /* Bolts.framework */; };
-		5A88029A1C2EA6070017AD0A /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A8802941C2EA6070017AD0A /* Parse.framework */; };
-		5A88029E1C2EA6070017AD0A /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A8802981C2EA6070017AD0A /* ParseUI.framework */; };
 		5A8802A11C2EA6500017AD0A /* GW2_Request_Coins.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A8802A01C2EA6500017AD0A /* GW2_Request_Coins.m */; };
 		5A8802A41C2EA6720017AD0A /* GW2_WebApi_Coins.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A8802A31C2EA6720017AD0A /* GW2_WebApi_Coins.m */; };
 		5A8802A61C2EA71E0017AD0A /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A8802A51C2EA71E0017AD0A /* AudioToolbox.framework */; };
@@ -73,12 +70,6 @@
 		5A5457ED1C26C97800B14903 /* NSUserDefaults+Global.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSUserDefaults+Global.h"; sourceTree = "<group>"; };
 		5A5457EE1C26C97800B14903 /* NSUserDefaults+Global.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSUserDefaults+Global.m"; sourceTree = "<group>"; };
 		5A5A0D101C2F0F870062601D /* WorldBoss.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = WorldBoss.plist; path = GW2BroH/WorldBoss.plist; sourceTree = SOURCE_ROOT; };
-		5A8802931C2EA6070017AD0A /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
-		5A8802941C2EA6070017AD0A /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
-		5A8802951C2EA6070017AD0A /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtils.framework; sourceTree = "<group>"; };
-		5A8802961C2EA6070017AD0A /* ParseFacebookUtilsV4.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtilsV4.framework; sourceTree = "<group>"; };
-		5A8802971C2EA6070017AD0A /* ParseTwitterUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseTwitterUtils.framework; sourceTree = "<group>"; };
-		5A8802981C2EA6070017AD0A /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseUI.framework; sourceTree = "<group>"; };
 		5A88029F1C2EA6500017AD0A /* GW2_Request_Coins.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GW2_Request_Coins.h; sourceTree = "<group>"; };
 		5A8802A01C2EA6500017AD0A /* GW2_Request_Coins.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GW2_Request_Coins.m; sourceTree = "<group>"; };
 		5A8802A21C2EA6720017AD0A /* GW2_WebApi_Coins.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GW2_WebApi_Coins.h; sourceTree = "<group>"; };
@@ -167,9 +158,6 @@
 				5A8802AC1C2EA7400017AD0A /* CoreLocation.framework in Frameworks */,
 				5A8802AA1C2EA7340017AD0A /* CoreGraphics.framework in Frameworks */,
 				5A8802A81C2EA72A0017AD0A /* CFNetwork.framework in Frameworks */,
-				5A88029A1C2EA6070017AD0A /* Parse.framework in Frameworks */,
-				5A88029E1C2EA6070017AD0A /* ParseUI.framework in Frameworks */,
-				5A8802991C2EA6070017AD0A /* Bolts.framework in Frameworks */,
 				D06AC7CB261DB08A5155D621 /* libPods-GW2BroH.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -211,23 +199,9 @@
 		5A8802911C2EA6070017AD0A /* ThirdParty */ = {
 			isa = PBXGroup;
 			children = (
-				5A8802921C2EA6070017AD0A /* ParseFrameworks */,
 			);
 			name = ThirdParty;
 			path = GW2BroH/ThirdParty;
-			sourceTree = "<group>";
-		};
-		5A8802921C2EA6070017AD0A /* ParseFrameworks */ = {
-			isa = PBXGroup;
-			children = (
-				5A8802931C2EA6070017AD0A /* Bolts.framework */,
-				5A8802941C2EA6070017AD0A /* Parse.framework */,
-				5A8802951C2EA6070017AD0A /* ParseFacebookUtils.framework */,
-				5A8802961C2EA6070017AD0A /* ParseFacebookUtilsV4.framework */,
-				5A8802971C2EA6070017AD0A /* ParseTwitterUtils.framework */,
-				5A8802981C2EA6070017AD0A /* ParseUI.framework */,
-			);
-			path = ParseFrameworks;
 			sourceTree = "<group>";
 		};
 		F20D92DA0EA90914060ED6EE /* Frameworks */ = {
