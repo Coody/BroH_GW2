@@ -12,7 +12,6 @@
 		5A5457FF1C26C97800B14903 /* ClockManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A5457E71C26C97800B14903 /* ClockManager.m */; };
 		5A5458021C26C97800B14903 /* NSDate+Interval.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A5457EC1C26C97800B14903 /* NSDate+Interval.m */; };
 		5A5458031C26C97800B14903 /* NSUserDefaults+Global.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A5457EE1C26C97800B14903 /* NSUserDefaults+Global.m */; };
-		5A5A0D111C2F0F870062601D /* WorldBoss.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5A5A0D101C2F0F870062601D /* WorldBoss.plist */; };
 		5A8802A11C2EA6500017AD0A /* GW2_Request_Coins.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A8802A01C2EA6500017AD0A /* GW2_Request_Coins.m */; };
 		5A8802A41C2EA6720017AD0A /* GW2_WebApi_Coins.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A8802A31C2EA6720017AD0A /* GW2_WebApi_Coins.m */; };
 		5A8802A61C2EA71E0017AD0A /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A8802A51C2EA71E0017AD0A /* AudioToolbox.framework */; };
@@ -41,9 +40,10 @@
 		FB38C4121B1ABDFF001B424C /* ViewControllerDungeons.m in Sources */ = {isa = PBXBuildFile; fileRef = FB38C4111B1ABDFF001B424C /* ViewControllerDungeons.m */; };
 		FB38C4151B1ABE0E001B424C /* ViewControllerGuild.m in Sources */ = {isa = PBXBuildFile; fileRef = FB38C4141B1ABE0E001B424C /* ViewControllerGuild.m */; };
 		FB38C4181B1ABE1D001B424C /* ViewControllerMore.m in Sources */ = {isa = PBXBuildFile; fileRef = FB38C4171B1ABE1D001B424C /* ViewControllerMore.m */; };
-		FB420F871B1017FB0007BBD5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FB420F861B1017FB0007BBD5 /* main.m */; };
 		FB420F8A1B1017FB0007BBD5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FB420F891B1017FB0007BBD5 /* AppDelegate.m */; };
 		FB420F951B1017FB0007BBD5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB420F931B1017FB0007BBD5 /* LaunchScreen.xib */; };
+		FB7DA19F1F34141E00E22E47 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FB7DA19C1F34141E00E22E47 /* main.m */; };
+		FB7DA1A01F34141E00E22E47 /* WorldBoss.plist in Resources */ = {isa = PBXBuildFile; fileRef = FB7DA19D1F34141E00E22E47 /* WorldBoss.plist */; };
 		FB82A9C11B50E592006A5F07 /* ViewControllerTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = FB82A9C01B50E592006A5F07 /* ViewControllerTabBar.m */; };
 		FB8987501B5782D000D56917 /* GW2_Request_Gems.m in Sources */ = {isa = PBXBuildFile; fileRef = FB8987241B5782D000D56917 /* GW2_Request_Gems.m */; };
 		FB8987511B5782D000D56917 /* GW2_Request_Items.m in Sources */ = {isa = PBXBuildFile; fileRef = FB8987261B5782D000D56917 /* GW2_Request_Items.m */; };
@@ -52,7 +52,6 @@
 		FB8987551B5782D000D56917 /* GW2_Details_Armor.m in Sources */ = {isa = PBXBuildFile; fileRef = FB8987301B5782D000D56917 /* GW2_Details_Armor.m */; };
 		FB8987561B5782D000D56917 /* WebApi.m in Sources */ = {isa = PBXBuildFile; fileRef = FB8987331B5782D000D56917 /* WebApi.m */; };
 		FB8987571B5782D000D56917 /* WebSiteRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = FB8987351B5782D000D56917 /* WebSiteRequest.m */; };
-		FB8987581B5782D000D56917 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = FB8987361B5782D000D56917 /* README.md */; };
 		FB90BC971B5E108B0099EA29 /* TableViewCell_SeparateCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FB90BC961B5E108B0099EA29 /* TableViewCell_SeparateCell.m */; };
 /* End PBXBuildFile section */
 
@@ -69,7 +68,6 @@
 		5A5457EC1C26C97800B14903 /* NSDate+Interval.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Interval.m"; sourceTree = "<group>"; };
 		5A5457ED1C26C97800B14903 /* NSUserDefaults+Global.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSUserDefaults+Global.h"; sourceTree = "<group>"; };
 		5A5457EE1C26C97800B14903 /* NSUserDefaults+Global.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSUserDefaults+Global.m"; sourceTree = "<group>"; };
-		5A5A0D101C2F0F870062601D /* WorldBoss.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = WorldBoss.plist; path = GW2BroH/WorldBoss.plist; sourceTree = SOURCE_ROOT; };
 		5A88029F1C2EA6500017AD0A /* GW2_Request_Coins.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GW2_Request_Coins.h; sourceTree = "<group>"; };
 		5A8802A01C2EA6500017AD0A /* GW2_Request_Coins.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GW2_Request_Coins.m; sourceTree = "<group>"; };
 		5A8802A21C2EA6720017AD0A /* GW2_WebApi_Coins.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GW2_WebApi_Coins.h; sourceTree = "<group>"; };
@@ -115,13 +113,14 @@
 		FB38C4171B1ABE1D001B424C /* ViewControllerMore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewControllerMore.m; path = ViewController/More/ViewControllerMore.m; sourceTree = "<group>"; };
 		FB38C4191B1AD26C001B424C /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		FB420F811B1017FB0007BBD5 /* GW2BroH.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GW2BroH.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		FB420F851B1017FB0007BBD5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FB420F861B1017FB0007BBD5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		FB420F881B1017FB0007BBD5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		FB420F891B1017FB0007BBD5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		FB420F941B1017FB0007BBD5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		FB420F9F1B1017FB0007BBD5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FB420FA01B1017FB0007BBD5 /* GW2BroHTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GW2BroHTests.m; sourceTree = "<group>"; };
+		FB7DA19B1F34141E00E22E47 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FB7DA19C1F34141E00E22E47 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		FB7DA19D1F34141E00E22E47 /* WorldBoss.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = WorldBoss.plist; sourceTree = "<group>"; };
 		FB82A9BF1B50E592006A5F07 /* ViewControllerTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewControllerTabBar.h; path = ViewController/ViewControllerTabBar.h; sourceTree = "<group>"; };
 		FB82A9C01B50E592006A5F07 /* ViewControllerTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewControllerTabBar.m; path = ViewController/ViewControllerTabBar.m; sourceTree = "<group>"; };
 		FB8987231B5782D000D56917 /* GW2_Request_Gems.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GW2_Request_Gems.h; sourceTree = "<group>"; };
@@ -138,7 +137,6 @@
 		FB8987331B5782D000D56917 /* WebApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebApi.m; sourceTree = "<group>"; };
 		FB8987341B5782D000D56917 /* WebSiteRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebSiteRequest.h; sourceTree = "<group>"; };
 		FB8987351B5782D000D56917 /* WebSiteRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebSiteRequest.m; sourceTree = "<group>"; };
-		FB8987361B5782D000D56917 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		FB90BC951B5E108B0099EA29 /* TableViewCell_SeparateCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TableViewCell_SeparateCell.h; path = ViewController/UIComponent/TableViewCell_SeparateCell.h; sourceTree = "<group>"; };
 		FB90BC961B5E108B0099EA29 /* TableViewCell_SeparateCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TableViewCell_SeparateCell.m; path = ViewController/UIComponent/TableViewCell_SeparateCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -319,6 +317,7 @@
 		FB420F831B1017FB0007BBD5 /* GW2BroH */ = {
 			isa = PBXGroup;
 			children = (
+				FB7DA19A1F34141E00E22E47 /* Supporting Files */,
 				5AACF27F1C26D345002503CA /* icon.xcassets */,
 				5AB68C971B5B9EAA00B3A49D /* Datas */,
 				FB8987211B5782D000D56917 /* WebSiteHelper */,
@@ -328,18 +327,8 @@
 				FB420F881B1017FB0007BBD5 /* AppDelegate.h */,
 				FB420F891B1017FB0007BBD5 /* AppDelegate.m */,
 				FB420F931B1017FB0007BBD5 /* LaunchScreen.xib */,
-				FB420F841B1017FB0007BBD5 /* Supporting Files */,
 			);
 			path = GW2BroH;
-			sourceTree = "<group>";
-		};
-		FB420F841B1017FB0007BBD5 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				FB420F851B1017FB0007BBD5 /* Info.plist */,
-				FB420F861B1017FB0007BBD5 /* main.m */,
-			);
-			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		FB420F9D1B1017FB0007BBD5 /* GW2BroHTests */ = {
@@ -354,10 +343,19 @@
 		FB420F9E1B1017FB0007BBD5 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				5A5A0D101C2F0F870062601D /* WorldBoss.plist */,
 				FB420F9F1B1017FB0007BBD5 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FB7DA19A1F34141E00E22E47 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FB7DA19B1F34141E00E22E47 /* Info.plist */,
+				FB7DA19C1F34141E00E22E47 /* main.m */,
+				FB7DA19D1F34141E00E22E47 /* WorldBoss.plist */,
+			);
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		FB8987211B5782D000D56917 /* WebSiteHelper */ = {
@@ -366,7 +364,6 @@
 				FB8987221B5782D000D56917 /* GW2Request */,
 				FB8987271B5782D000D56917 /* GW2WebApi */,
 				FB8987311B5782D000D56917 /* GW2WebsiteBase */,
-				FB8987361B5782D000D56917 /* README.md */,
 			);
 			path = WebSiteHelper;
 			sourceTree = "<group>";
@@ -518,7 +515,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5A5A0D111C2F0F870062601D /* WorldBoss.plist in Resources */,
+				FB7DA1A01F34141E00E22E47 /* WorldBoss.plist in Resources */,
 				FB420F951B1017FB0007BBD5 /* LaunchScreen.xib in Resources */,
 				5AACF2801C26D345002503CA /* icon.xcassets in Resources */,
 				5AB68C981B5B9EAA00B3A49D /* Datas in Resources */,
@@ -586,13 +583,13 @@
 				5A5458021C26C97800B14903 /* NSDate+Interval.m in Sources */,
 				FB8987551B5782D000D56917 /* GW2_Details_Armor.m in Sources */,
 				FB8987531B5782D000D56917 /* GW2_WebApi_Items.m in Sources */,
+				FB7DA19F1F34141E00E22E47 /* main.m in Sources */,
 				5AB68C9B1B5BB42600B3A49D /* ViewWorldBoss.m in Sources */,
 				FB8987521B5782D000D56917 /* GW2_WebApi_Gems.m in Sources */,
 				5A44D9F21B640354007BA30D /* TableViewCell_SeparateCell+WorldBossCell.m in Sources */,
 				FB38C4091B1ABDB1001B424C /* ViewControllerStartMenu.m in Sources */,
 				5AC7199B1C26D701004DFBBE /* ViewControllerWorldBoss+GatLocalData.m in Sources */,
 				5A44D9F51B640362007BA30D /* UINavigationController+Title.m in Sources */,
-				FB8987581B5782D000D56917 /* README.md in Sources */,
 				FB1AE1641F2ED372001DCAD1 /* NavigationControllerWorldBoss.m in Sources */,
 				FB2CA75E1B183F94009ED57F /* GW2BroH_Tools.m in Sources */,
 				FB8987511B5782D000D56917 /* GW2_Request_Items.m in Sources */,
@@ -610,7 +607,6 @@
 				FB38C4121B1ABDFF001B424C /* ViewControllerDungeons.m in Sources */,
 				5A8802A41C2EA6720017AD0A /* GW2_WebApi_Coins.m in Sources */,
 				FB38C40C1B1ABDC4001B424C /* ViewControllerWorldBoss.m in Sources */,
-				FB420F871B1017FB0007BBD5 /* main.m in Sources */,
 				5A5458031C26C97800B14903 /* NSUserDefaults+Global.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -668,7 +664,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PROVISIONING_PROFILE = "";
@@ -707,7 +703,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
@@ -725,7 +721,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/GW2BroH/ThirdParty/ParseFrameworks",
 				);
-				INFOPLIST_FILE = GW2BroH/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/GW2BroH/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = tw.com.normi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -743,7 +739,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/GW2BroH/ThirdParty/ParseFrameworks",
 				);
-				INFOPLIST_FILE = GW2BroH/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/GW2BroH/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = tw.com.normi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
