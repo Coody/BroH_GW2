@@ -2,8 +2,7 @@
 //  UINavigationController+Title.h
 //  GW2BroH
 //
-//  Created by CoodyChou on 2015/7/26.
-//  Copyright (c) 2015年 CoodyChou. All rights reserved.
+//  Created by CoodyChou on 2015/7/26
 //
 
 #import <UIKit/UIKit.h>

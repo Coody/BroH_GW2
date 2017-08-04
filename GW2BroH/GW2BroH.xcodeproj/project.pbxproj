@@ -7,16 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		595F1F394C0A58A7F7B2B7C1 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 756E2DBB4E054859046F4273 /* libPods.a */; };
 		5A44D9F21B640354007BA30D /* TableViewCell_SeparateCell+WorldBossCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A44D9F11B640354007BA30D /* TableViewCell_SeparateCell+WorldBossCell.m */; };
 		5A44D9F51B640362007BA30D /* UINavigationController+Title.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A44D9F41B640362007BA30D /* UINavigationController+Title.m */; };
 		5A5457FF1C26C97800B14903 /* ClockManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A5457E71C26C97800B14903 /* ClockManager.m */; };
 		5A5458021C26C97800B14903 /* NSDate+Interval.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A5457EC1C26C97800B14903 /* NSDate+Interval.m */; };
 		5A5458031C26C97800B14903 /* NSUserDefaults+Global.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A5457EE1C26C97800B14903 /* NSUserDefaults+Global.m */; };
-		5A5A0D111C2F0F870062601D /* WorldBoss.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5A5A0D101C2F0F870062601D /* WorldBoss.plist */; };
-		5A8802991C2EA6070017AD0A /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A8802931C2EA6070017AD0A /* Bolts.framework */; };
-		5A88029A1C2EA6070017AD0A /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A8802941C2EA6070017AD0A /* Parse.framework */; };
-		5A88029E1C2EA6070017AD0A /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A8802981C2EA6070017AD0A /* ParseUI.framework */; };
 		5A8802A11C2EA6500017AD0A /* GW2_Request_Coins.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A8802A01C2EA6500017AD0A /* GW2_Request_Coins.m */; };
 		5A8802A41C2EA6720017AD0A /* GW2_WebApi_Coins.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A8802A31C2EA6720017AD0A /* GW2_WebApi_Coins.m */; };
 		5A8802A61C2EA71E0017AD0A /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A8802A51C2EA71E0017AD0A /* AudioToolbox.framework */; };
@@ -36,6 +31,7 @@
 		5AC7199E1C26DC83004DFBBE /* ViewItems.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AC7199D1C26DC83004DFBBE /* ViewItems.m */; };
 		5AC719A11C26DCBB004DFBBE /* TableViewCell_SeparateCell+CoinsAndGems.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AC719A01C26DCBB004DFBBE /* TableViewCell_SeparateCell+CoinsAndGems.m */; };
 		5ADA08241B63A4E800B7B038 /* WorldBossModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ADA08231B63A4E800B7B038 /* WorldBossModel.m */; };
+		D06AC7CB261DB08A5155D621 /* libPods-GW2BroH.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F0B4510B5FEA21C1FD590EB /* libPods-GW2BroH.a */; };
 		FB1AE1641F2ED372001DCAD1 /* NavigationControllerWorldBoss.m in Sources */ = {isa = PBXBuildFile; fileRef = FB1AE1631F2ED372001DCAD1 /* NavigationControllerWorldBoss.m */; };
 		FB2CA75E1B183F94009ED57F /* GW2BroH_Tools.m in Sources */ = {isa = PBXBuildFile; fileRef = FB2CA75D1B183F94009ED57F /* GW2BroH_Tools.m */; };
 		FB38C4091B1ABDB1001B424C /* ViewControllerStartMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = FB38C4081B1ABDB1001B424C /* ViewControllerStartMenu.m */; };
@@ -44,24 +40,24 @@
 		FB38C4121B1ABDFF001B424C /* ViewControllerDungeons.m in Sources */ = {isa = PBXBuildFile; fileRef = FB38C4111B1ABDFF001B424C /* ViewControllerDungeons.m */; };
 		FB38C4151B1ABE0E001B424C /* ViewControllerGuild.m in Sources */ = {isa = PBXBuildFile; fileRef = FB38C4141B1ABE0E001B424C /* ViewControllerGuild.m */; };
 		FB38C4181B1ABE1D001B424C /* ViewControllerMore.m in Sources */ = {isa = PBXBuildFile; fileRef = FB38C4171B1ABE1D001B424C /* ViewControllerMore.m */; };
-		FB420F871B1017FB0007BBD5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FB420F861B1017FB0007BBD5 /* main.m */; };
 		FB420F8A1B1017FB0007BBD5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FB420F891B1017FB0007BBD5 /* AppDelegate.m */; };
 		FB420F951B1017FB0007BBD5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB420F931B1017FB0007BBD5 /* LaunchScreen.xib */; };
+		FB7DA19F1F34141E00E22E47 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FB7DA19C1F34141E00E22E47 /* main.m */; };
+		FB7DA1A01F34141E00E22E47 /* WorldBoss.plist in Resources */ = {isa = PBXBuildFile; fileRef = FB7DA19D1F34141E00E22E47 /* WorldBoss.plist */; };
 		FB82A9C11B50E592006A5F07 /* ViewControllerTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = FB82A9C01B50E592006A5F07 /* ViewControllerTabBar.m */; };
 		FB8987501B5782D000D56917 /* GW2_Request_Gems.m in Sources */ = {isa = PBXBuildFile; fileRef = FB8987241B5782D000D56917 /* GW2_Request_Gems.m */; };
 		FB8987511B5782D000D56917 /* GW2_Request_Items.m in Sources */ = {isa = PBXBuildFile; fileRef = FB8987261B5782D000D56917 /* GW2_Request_Items.m */; };
 		FB8987521B5782D000D56917 /* GW2_WebApi_Gems.m in Sources */ = {isa = PBXBuildFile; fileRef = FB8987291B5782D000D56917 /* GW2_WebApi_Gems.m */; };
 		FB8987531B5782D000D56917 /* GW2_WebApi_Items.m in Sources */ = {isa = PBXBuildFile; fileRef = FB89872B1B5782D000D56917 /* GW2_WebApi_Items.m */; };
-		FB8987541B5782D000D56917 /* GW2_WebApi_Items_Armor.m in Sources */ = {isa = PBXBuildFile; fileRef = FB89872D1B5782D000D56917 /* GW2_WebApi_Items_Armor.m */; };
 		FB8987551B5782D000D56917 /* GW2_Details_Armor.m in Sources */ = {isa = PBXBuildFile; fileRef = FB8987301B5782D000D56917 /* GW2_Details_Armor.m */; };
 		FB8987561B5782D000D56917 /* WebApi.m in Sources */ = {isa = PBXBuildFile; fileRef = FB8987331B5782D000D56917 /* WebApi.m */; };
 		FB8987571B5782D000D56917 /* WebSiteRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = FB8987351B5782D000D56917 /* WebSiteRequest.m */; };
-		FB8987581B5782D000D56917 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = FB8987361B5782D000D56917 /* README.md */; };
 		FB90BC971B5E108B0099EA29 /* TableViewCell_SeparateCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FB90BC961B5E108B0099EA29 /* TableViewCell_SeparateCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3B7586483FBE633A96ED3A40 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		0F0B4510B5FEA21C1FD590EB /* libPods-GW2BroH.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GW2BroH.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		49EB9F6E06C02DD6B1706F55 /* Pods-GW2BroH.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GW2BroH.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GW2BroH/Pods-GW2BroH.debug.xcconfig"; sourceTree = "<group>"; };
 		5A44D9F01B640354007BA30D /* TableViewCell_SeparateCell+WorldBossCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "TableViewCell_SeparateCell+WorldBossCell.h"; path = "ViewController/UIComponent/TableViewCell_SeparateCell+WorldBossCell.h"; sourceTree = "<group>"; };
 		5A44D9F11B640354007BA30D /* TableViewCell_SeparateCell+WorldBossCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "TableViewCell_SeparateCell+WorldBossCell.m"; path = "ViewController/UIComponent/TableViewCell_SeparateCell+WorldBossCell.m"; sourceTree = "<group>"; };
 		5A44D9F31B640362007BA30D /* UINavigationController+Title.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UINavigationController+Title.h"; path = "ViewController/UINavigationController+Title.h"; sourceTree = "<group>"; };
@@ -72,13 +68,6 @@
 		5A5457EC1C26C97800B14903 /* NSDate+Interval.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Interval.m"; sourceTree = "<group>"; };
 		5A5457ED1C26C97800B14903 /* NSUserDefaults+Global.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSUserDefaults+Global.h"; sourceTree = "<group>"; };
 		5A5457EE1C26C97800B14903 /* NSUserDefaults+Global.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSUserDefaults+Global.m"; sourceTree = "<group>"; };
-		5A5A0D101C2F0F870062601D /* WorldBoss.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = WorldBoss.plist; path = GW2BroH/WorldBoss.plist; sourceTree = SOURCE_ROOT; };
-		5A8802931C2EA6070017AD0A /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
-		5A8802941C2EA6070017AD0A /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
-		5A8802951C2EA6070017AD0A /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtils.framework; sourceTree = "<group>"; };
-		5A8802961C2EA6070017AD0A /* ParseFacebookUtilsV4.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtilsV4.framework; sourceTree = "<group>"; };
-		5A8802971C2EA6070017AD0A /* ParseTwitterUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseTwitterUtils.framework; sourceTree = "<group>"; };
-		5A8802981C2EA6070017AD0A /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseUI.framework; sourceTree = "<group>"; };
 		5A88029F1C2EA6500017AD0A /* GW2_Request_Coins.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GW2_Request_Coins.h; sourceTree = "<group>"; };
 		5A8802A01C2EA6500017AD0A /* GW2_Request_Coins.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GW2_Request_Coins.m; sourceTree = "<group>"; };
 		5A8802A21C2EA6720017AD0A /* GW2_WebApi_Coins.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GW2_WebApi_Coins.h; sourceTree = "<group>"; };
@@ -105,8 +94,7 @@
 		5AC719A01C26DCBB004DFBBE /* TableViewCell_SeparateCell+CoinsAndGems.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "TableViewCell_SeparateCell+CoinsAndGems.m"; path = "ViewController/UIComponent/TableViewCell_SeparateCell+CoinsAndGems.m"; sourceTree = "<group>"; };
 		5ADA08221B63A4E800B7B038 /* WorldBossModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WorldBossModel.h; path = ViewController/WorldBoss/WorldBossModel.h; sourceTree = "<group>"; };
 		5ADA08231B63A4E800B7B038 /* WorldBossModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WorldBossModel.m; path = ViewController/WorldBoss/WorldBossModel.m; sourceTree = "<group>"; };
-		756E2DBB4E054859046F4273 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		B1C33BB0A6ABF3B0116DF588 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		6EAD6A1C74329DED7E47FC9C /* Pods-GW2BroH.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GW2BroH.release.xcconfig"; path = "Pods/Target Support Files/Pods-GW2BroH/Pods-GW2BroH.release.xcconfig"; sourceTree = "<group>"; };
 		FB1AE1621F2ED372001DCAD1 /* NavigationControllerWorldBoss.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NavigationControllerWorldBoss.h; path = ViewController/WorldBoss/NavigationControllerWorldBoss.h; sourceTree = "<group>"; };
 		FB1AE1631F2ED372001DCAD1 /* NavigationControllerWorldBoss.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NavigationControllerWorldBoss.m; path = ViewController/WorldBoss/NavigationControllerWorldBoss.m; sourceTree = "<group>"; };
 		FB2CA75C1B183F94009ED57F /* GW2BroH_Tools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GW2BroH_Tools.h; sourceTree = "<group>"; };
@@ -125,13 +113,14 @@
 		FB38C4171B1ABE1D001B424C /* ViewControllerMore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewControllerMore.m; path = ViewController/More/ViewControllerMore.m; sourceTree = "<group>"; };
 		FB38C4191B1AD26C001B424C /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		FB420F811B1017FB0007BBD5 /* GW2BroH.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GW2BroH.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		FB420F851B1017FB0007BBD5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FB420F861B1017FB0007BBD5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		FB420F881B1017FB0007BBD5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		FB420F891B1017FB0007BBD5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		FB420F941B1017FB0007BBD5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		FB420F9F1B1017FB0007BBD5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FB420FA01B1017FB0007BBD5 /* GW2BroHTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GW2BroHTests.m; sourceTree = "<group>"; };
+		FB7DA19B1F34141E00E22E47 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FB7DA19C1F34141E00E22E47 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		FB7DA19D1F34141E00E22E47 /* WorldBoss.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = WorldBoss.plist; sourceTree = "<group>"; };
 		FB82A9BF1B50E592006A5F07 /* ViewControllerTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewControllerTabBar.h; path = ViewController/ViewControllerTabBar.h; sourceTree = "<group>"; };
 		FB82A9C01B50E592006A5F07 /* ViewControllerTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewControllerTabBar.m; path = ViewController/ViewControllerTabBar.m; sourceTree = "<group>"; };
 		FB8987231B5782D000D56917 /* GW2_Request_Gems.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GW2_Request_Gems.h; sourceTree = "<group>"; };
@@ -142,15 +131,12 @@
 		FB8987291B5782D000D56917 /* GW2_WebApi_Gems.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GW2_WebApi_Gems.m; sourceTree = "<group>"; };
 		FB89872A1B5782D000D56917 /* GW2_WebApi_Items.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GW2_WebApi_Items.h; sourceTree = "<group>"; };
 		FB89872B1B5782D000D56917 /* GW2_WebApi_Items.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GW2_WebApi_Items.m; sourceTree = "<group>"; };
-		FB89872C1B5782D000D56917 /* GW2_WebApi_Items_Armor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GW2_WebApi_Items_Armor.h; sourceTree = "<group>"; };
-		FB89872D1B5782D000D56917 /* GW2_WebApi_Items_Armor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GW2_WebApi_Items_Armor.m; sourceTree = "<group>"; };
 		FB89872F1B5782D000D56917 /* GW2_Details_Armor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GW2_Details_Armor.h; sourceTree = "<group>"; };
 		FB8987301B5782D000D56917 /* GW2_Details_Armor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GW2_Details_Armor.m; sourceTree = "<group>"; };
 		FB8987321B5782D000D56917 /* WebApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebApi.h; sourceTree = "<group>"; };
 		FB8987331B5782D000D56917 /* WebApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebApi.m; sourceTree = "<group>"; };
 		FB8987341B5782D000D56917 /* WebSiteRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebSiteRequest.h; sourceTree = "<group>"; };
 		FB8987351B5782D000D56917 /* WebSiteRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebSiteRequest.m; sourceTree = "<group>"; };
-		FB8987361B5782D000D56917 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		FB90BC951B5E108B0099EA29 /* TableViewCell_SeparateCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TableViewCell_SeparateCell.h; path = ViewController/UIComponent/TableViewCell_SeparateCell.h; sourceTree = "<group>"; };
 		FB90BC961B5E108B0099EA29 /* TableViewCell_SeparateCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TableViewCell_SeparateCell.m; path = ViewController/UIComponent/TableViewCell_SeparateCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -170,10 +156,7 @@
 				5A8802AC1C2EA7400017AD0A /* CoreLocation.framework in Frameworks */,
 				5A8802AA1C2EA7340017AD0A /* CoreGraphics.framework in Frameworks */,
 				5A8802A81C2EA72A0017AD0A /* CFNetwork.framework in Frameworks */,
-				595F1F394C0A58A7F7B2B7C1 /* libPods.a in Frameworks */,
-				5A88029A1C2EA6070017AD0A /* Parse.framework in Frameworks */,
-				5A88029E1C2EA6070017AD0A /* ParseUI.framework in Frameworks */,
-				5A8802991C2EA6070017AD0A /* Bolts.framework in Frameworks */,
+				D06AC7CB261DB08A5155D621 /* libPods-GW2BroH.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -214,32 +197,9 @@
 		5A8802911C2EA6070017AD0A /* ThirdParty */ = {
 			isa = PBXGroup;
 			children = (
-				5A8802921C2EA6070017AD0A /* ParseFrameworks */,
 			);
 			name = ThirdParty;
 			path = GW2BroH/ThirdParty;
-			sourceTree = "<group>";
-		};
-		5A8802921C2EA6070017AD0A /* ParseFrameworks */ = {
-			isa = PBXGroup;
-			children = (
-				5A8802931C2EA6070017AD0A /* Bolts.framework */,
-				5A8802941C2EA6070017AD0A /* Parse.framework */,
-				5A8802951C2EA6070017AD0A /* ParseFacebookUtils.framework */,
-				5A8802961C2EA6070017AD0A /* ParseFacebookUtilsV4.framework */,
-				5A8802971C2EA6070017AD0A /* ParseTwitterUtils.framework */,
-				5A8802981C2EA6070017AD0A /* ParseUI.framework */,
-			);
-			path = ParseFrameworks;
-			sourceTree = "<group>";
-		};
-		A67E7874F9793F40C106108D /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				B1C33BB0A6ABF3B0116DF588 /* Pods.debug.xcconfig */,
-				3B7586483FBE633A96ED3A40 /* Pods.release.xcconfig */,
-			);
-			name = Pods;
 			sourceTree = "<group>";
 		};
 		F20D92DA0EA90914060ED6EE /* Frameworks */ = {
@@ -255,7 +215,7 @@
 				5A8802A91C2EA7340017AD0A /* CoreGraphics.framework */,
 				5A8802A71C2EA72A0017AD0A /* CFNetwork.framework */,
 				5A8802A51C2EA71E0017AD0A /* AudioToolbox.framework */,
-				756E2DBB4E054859046F4273 /* libPods.a */,
+				0F0B4510B5FEA21C1FD590EB /* libPods-GW2BroH.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -340,9 +300,9 @@
 				FB420F831B1017FB0007BBD5 /* GW2BroH */,
 				FB420F9D1B1017FB0007BBD5 /* GW2BroHTests */,
 				FB420F821B1017FB0007BBD5 /* Products */,
-				A67E7874F9793F40C106108D /* Pods */,
 				5A8802911C2EA6070017AD0A /* ThirdParty */,
 				F20D92DA0EA90914060ED6EE /* Frameworks */,
+				FCC855DA76F593642D104371 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -357,6 +317,7 @@
 		FB420F831B1017FB0007BBD5 /* GW2BroH */ = {
 			isa = PBXGroup;
 			children = (
+				FB7DA19A1F34141E00E22E47 /* Supporting Files */,
 				5AACF27F1C26D345002503CA /* icon.xcassets */,
 				5AB68C971B5B9EAA00B3A49D /* Datas */,
 				FB8987211B5782D000D56917 /* WebSiteHelper */,
@@ -366,18 +327,8 @@
 				FB420F881B1017FB0007BBD5 /* AppDelegate.h */,
 				FB420F891B1017FB0007BBD5 /* AppDelegate.m */,
 				FB420F931B1017FB0007BBD5 /* LaunchScreen.xib */,
-				FB420F841B1017FB0007BBD5 /* Supporting Files */,
 			);
 			path = GW2BroH;
-			sourceTree = "<group>";
-		};
-		FB420F841B1017FB0007BBD5 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				FB420F851B1017FB0007BBD5 /* Info.plist */,
-				FB420F861B1017FB0007BBD5 /* main.m */,
-			);
-			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		FB420F9D1B1017FB0007BBD5 /* GW2BroHTests */ = {
@@ -392,10 +343,19 @@
 		FB420F9E1B1017FB0007BBD5 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				5A5A0D101C2F0F870062601D /* WorldBoss.plist */,
 				FB420F9F1B1017FB0007BBD5 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FB7DA19A1F34141E00E22E47 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FB7DA19B1F34141E00E22E47 /* Info.plist */,
+				FB7DA19C1F34141E00E22E47 /* main.m */,
+				FB7DA19D1F34141E00E22E47 /* WorldBoss.plist */,
+			);
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		FB8987211B5782D000D56917 /* WebSiteHelper */ = {
@@ -404,7 +364,6 @@
 				FB8987221B5782D000D56917 /* GW2Request */,
 				FB8987271B5782D000D56917 /* GW2WebApi */,
 				FB8987311B5782D000D56917 /* GW2WebsiteBase */,
-				FB8987361B5782D000D56917 /* README.md */,
 			);
 			path = WebSiteHelper;
 			sourceTree = "<group>";
@@ -431,8 +390,6 @@
 				FB8987291B5782D000D56917 /* GW2_WebApi_Gems.m */,
 				FB89872A1B5782D000D56917 /* GW2_WebApi_Items.h */,
 				FB89872B1B5782D000D56917 /* GW2_WebApi_Items.m */,
-				FB89872C1B5782D000D56917 /* GW2_WebApi_Items_Armor.h */,
-				FB89872D1B5782D000D56917 /* GW2_WebApi_Items_Armor.m */,
 				FB89872E1B5782D000D56917 /* Items */,
 			);
 			path = GW2WebApi;
@@ -489,6 +446,15 @@
 			name = ViewController;
 			sourceTree = "<group>";
 		};
+		FCC855DA76F593642D104371 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				49EB9F6E06C02DD6B1706F55 /* Pods-GW2BroH.debug.xcconfig */,
+				6EAD6A1C74329DED7E47FC9C /* Pods-GW2BroH.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -496,12 +462,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FB420FA41B1017FB0007BBD5 /* Build configuration list for PBXNativeTarget "GW2BroH" */;
 			buildPhases = (
-				F4B919AD65EC1462EB9A7F06 /* Check Pods Manifest.lock */,
+				1BE9EBCEE6FDD408F6046C15 /* [CP] Check Pods Manifest.lock */,
 				FB420F7D1B1017FB0007BBD5 /* Sources */,
 				FB420F7E1B1017FB0007BBD5 /* Frameworks */,
 				FB420F7F1B1017FB0007BBD5 /* Resources */,
-				395D0523E45F2A30AF41BEAD /* Copy Pods Resources */,
-				8B05622F187344D9C7456532 /* Embed Pods Frameworks */,
+				8CFD1F2B18BB30F6D1D16ACA /* [CP] Embed Pods Frameworks */,
+				5D4E0F680E5F3FCF6427951B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -549,7 +515,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5A5A0D111C2F0F870062601D /* WorldBoss.plist in Resources */,
+				FB7DA1A01F34141E00E22E47 /* WorldBoss.plist in Resources */,
 				FB420F951B1017FB0007BBD5 /* LaunchScreen.xib in Resources */,
 				5AACF2801C26D345002503CA /* icon.xcassets in Resources */,
 				5AB68C981B5B9EAA00B3A49D /* Datas in Resources */,
@@ -559,49 +525,49 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		395D0523E45F2A30AF41BEAD /* Copy Pods Resources */ = {
+		1BE9EBCEE6FDD408F6046C15 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		8B05622F187344D9C7456532 /* Embed Pods Frameworks */ = {
+		5D4E0F680E5F3FCF6427951B /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GW2BroH/Pods-GW2BroH-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		F4B919AD65EC1462EB9A7F06 /* Check Pods Manifest.lock */ = {
+		8CFD1F2B18BB30F6D1D16ACA /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GW2BroH/Pods-GW2BroH-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -617,14 +583,13 @@
 				5A5458021C26C97800B14903 /* NSDate+Interval.m in Sources */,
 				FB8987551B5782D000D56917 /* GW2_Details_Armor.m in Sources */,
 				FB8987531B5782D000D56917 /* GW2_WebApi_Items.m in Sources */,
-				FB8987541B5782D000D56917 /* GW2_WebApi_Items_Armor.m in Sources */,
+				FB7DA19F1F34141E00E22E47 /* main.m in Sources */,
 				5AB68C9B1B5BB42600B3A49D /* ViewWorldBoss.m in Sources */,
 				FB8987521B5782D000D56917 /* GW2_WebApi_Gems.m in Sources */,
 				5A44D9F21B640354007BA30D /* TableViewCell_SeparateCell+WorldBossCell.m in Sources */,
 				FB38C4091B1ABDB1001B424C /* ViewControllerStartMenu.m in Sources */,
 				5AC7199B1C26D701004DFBBE /* ViewControllerWorldBoss+GatLocalData.m in Sources */,
 				5A44D9F51B640362007BA30D /* UINavigationController+Title.m in Sources */,
-				FB8987581B5782D000D56917 /* README.md in Sources */,
 				FB1AE1641F2ED372001DCAD1 /* NavigationControllerWorldBoss.m in Sources */,
 				FB2CA75E1B183F94009ED57F /* GW2BroH_Tools.m in Sources */,
 				FB8987511B5782D000D56917 /* GW2_Request_Items.m in Sources */,
@@ -642,7 +607,6 @@
 				FB38C4121B1ABDFF001B424C /* ViewControllerDungeons.m in Sources */,
 				5A8802A41C2EA6720017AD0A /* GW2_WebApi_Coins.m in Sources */,
 				FB38C40C1B1ABDC4001B424C /* ViewControllerWorldBoss.m in Sources */,
-				FB420F871B1017FB0007BBD5 /* main.m in Sources */,
 				5A5458031C26C97800B14903 /* NSUserDefaults+Global.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -663,7 +627,6 @@
 /* Begin XCBuildConfiguration section */
 		FB420FA21B1017FB0007BBD5 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B1C33BB0A6ABF3B0116DF588 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -701,7 +664,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PROVISIONING_PROFILE = "";
@@ -711,7 +674,6 @@
 		};
 		FB420FA31B1017FB0007BBD5 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3B7586483FBE633A96ED3A40 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -741,7 +703,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
@@ -751,7 +713,7 @@
 		};
 		FB420FA51B1017FB0007BBD5 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B1C33BB0A6ABF3B0116DF588 /* Pods.debug.xcconfig */;
+			baseConfigurationReference = 49EB9F6E06C02DD6B1706F55 /* Pods-GW2BroH.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -759,17 +721,17 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/GW2BroH/ThirdParty/ParseFrameworks",
 				);
-				INFOPLIST_FILE = GW2BroH/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/GW2BroH/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = tw.com.normi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "283c6294-f4b0-4aee-bc18-f042f56e1672";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
 		FB420FA61B1017FB0007BBD5 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3B7586483FBE633A96ED3A40 /* Pods.release.xcconfig */;
+			baseConfigurationReference = 6EAD6A1C74329DED7E47FC9C /* Pods-GW2BroH.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -777,11 +739,11 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/GW2BroH/ThirdParty/ParseFrameworks",
 				);
-				INFOPLIST_FILE = GW2BroH/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/GW2BroH/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = tw.com.normi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "283c6294-f4b0-4aee-bc18-f042f56e1672";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

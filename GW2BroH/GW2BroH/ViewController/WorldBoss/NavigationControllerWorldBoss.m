@@ -7,6 +7,7 @@
 //
 
 #import "NavigationControllerWorldBoss.h"
+#import "UINavigationController+Title.h"
 
 // for ViewController
 #import "ViewControllerWorldBoss.h"
@@ -34,6 +35,7 @@
         self.tabBarItem = theItem;
         
         self.navigationBar.barTintColor = VC_NAVIGATION_BAR_COLOR;
+        [self setTitleWithString:D_String_Boss];
     }
     return self;
 }
